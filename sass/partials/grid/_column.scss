@@ -1,77 +1,320 @@
+$gap-0: 0rem;
+$gap-1: 0.25rem;
+$gap-2: 0.50rem;
+$gap-3: 0.75rem;
+$gap-4: 1.00rem;
+$gap-5: 1.50rem;
+$gap-6: 2.00rem;
+$default-gap: $gap-2;
+
+
 // cols class
 .cols {
-	display: block;
+	display: flex;
+	flex-wrap: wrap;
+	&-mobile,
+	&-tablet,
+	&-desktop,
+	&-widescreen,
+	&-mobile-only,
+	&-tablet-only,
+	&-desktop-only,
+	&-widescreen-only {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&-mobile,
+	&-tablet,
+	&-desktop,
+	&-widescreen {
+		display: flex;
+		flex-wrap: wrap;
+	}
 	// in mobile
 	@media screen and (max-width: $mobile) {
-		&-mobile {
-			
+		&-tablet, &-desktop, &-widescreen {
+			display: block;
+		}
+		&-tablet-only,
+		&-desktop-only,
+		&-widescreen-only {
+			display: none;
+		}
+		&-tablet > .col,
+		&-tablet > .col-1,
+		&-tablet > .col-2,
+		&-tablet > .col-3,
+		&-tablet > .col-4,
+		&-tablet > .col-5,
+		&-tablet > .col-6,
+		&-tablet > .col-7,
+		&-tablet > .col-8,
+		&-tablet > .col-9,
+		&-tablet > .col-10,
+		&-tablet > .col-11,
+		&-tablet > .col-12 {
+			display: block;
+			width: 100%;
+			margin: 0;
+		}
+		&-desktop > .col,
+		&-desktop > .col-1,
+		&-desktop > .col-2,
+		&-desktop > .col-3,
+		&-desktop > .col-4,
+		&-desktop > .col-5,
+		&-desktop > .col-6,
+		&-desktop > .col-7,
+		&-desktop > .col-8,
+		&-desktop > .col-9,
+		&-desktop > .col-10,
+		&-desktop > .col-11,
+		&-desktop > .col-12 {
+			display: block;
+			width: 100%;
+			margin: 0;
+		}
+		&-widescreen > .col,
+		&-widescreen > .col-1,
+		&-widescreen > .col-2,
+		&-widescreen > .col-3,
+		&-widescreen > .col-4,
+		&-widescreen > .col-5,
+		&-widescreen > .col-6,
+		&-widescreen > .col-7,
+		&-widescreen > .col-8,
+		&-widescreen > .col-9,
+		&-widescreen > .col-10,
+		&-widescreen > .col-11,
+		&-widescreen > .col-12 {
+			display: block;
+			width: 100%;
+			margin: 0;
 		}
 	}
+	// in tablet
 	@media screen and (min-width: $mobile) and (max-width: $tablet) {
-		&-tablet {
-			
+		&-desktop, &-widescreen {
+			display: block;
+		}
+		&-mobile-only,
+		&-desktop-only,
+		&-widescreen-only {
+			display: none;
+		}
+		&-desktop > .col,
+		&-desktop > .col-1,
+		&-desktop > .col-2,
+		&-desktop > .col-3,
+		&-desktop > .col-4,
+		&-desktop > .col-5,
+		&-desktop > .col-6,
+		&-desktop > .col-7,
+		&-desktop > .col-8,
+		&-desktop > .col-9,
+		&-desktop > .col-10,
+		&-desktop > .col-11,
+		&-desktop > .col-12 {
+			display: block;
+			width: 100%;
+			margin: 0;
+		}
+		&-widescreen > .col,
+		&-widescreen > .col-1,
+		&-widescreen > .col-2,
+		&-widescreen > .col-3,
+		&-widescreen > .col-4,
+		&-widescreen > .col-5,
+		&-widescreen > .col-6,
+		&-widescreen > .col-7,
+		&-widescreen > .col-8,
+		&-widescreen > .col-9,
+		&-widescreen > .col-10,
+		&-widescreen > .col-11,
+		&-widescreen > .col-12 {
+			display: block;
+			width: 100%;
+			margin: 0;
 		}
 	}
+	// in desktop
 	@media screen and (min-width: $tablet) and (max-width: $desktop) {
-		&-desktop {
-			
+		&-widescreen {
+			display: block;
+		}
+		&-mobile-only,
+		&-tablet-only,
+		&-widescreen-only {
+			display: none;
+		}
+		&-widescreen > .col,
+		&-widescreen > .col-1,
+		&-widescreen > .col-2,
+		&-widescreen > .col-3,
+		&-widescreen > .col-4,
+		&-widescreen > .col-5,
+		&-widescreen > .col-6,
+		&-widescreen > .col-7,
+		&-widescreen > .col-8,
+		&-widescreen > .col-9,
+		&-widescreen > .col-10,
+		&-widescreen > .col-11,
+		&-widescreen > .col-12 {
+			display: block;
+			width: 100%;
+			margin: 0;
 		}
 	}
-	@media screen and (min-width: $desktop) and (max-width: $wide-screen) {
-		&-widescreen {
-			
+	@media screen and (min-width: $desktop) {
+		&-mobile-only,
+		&-tablet-only,
+		&-desktop-only {
+			display: none;
 		}
 	}
 }
 
 // col class
 .col {
-	&-1 {
-		display: flex;
+	display: inline-flex;
+	flex: 1;
+	padding: 0 $default-gap;    
+		&:first-child {
+			padding-left: 0px;
+		}
+		&:last-child {
+			padding-right: 0px;
+		}
+	&-1, &-offset-1 {
+		display: inline-flex;
 		width: 8.333334%;
+		padding: 0 $default-gap;
+		&:first-child {
+			padding-left: 0px;
+		}
+		&:last-child {
+			padding-right: 0px;
+		}
 	}
-	&-2 {
-		display: flex;
+	&-2, &-offset-2 {
+		display: inline-flex;
 		width: 16.666667%;
+		padding: 0 $default-gap;
+		&:first-child {
+			padding-left: 0px;
+		}
+		&:last-child {
+			padding-right: 0px;
+		}
 	}
-	&-3 {
-		display: flex;
+	&-3, &-offset-3 {
+		display: inline-flex;
 		width: 25%;
+		padding: 0 $default-gap;
+		&:first-child {
+			padding-left: 0px;
+		}
+		&:last-child {
+			padding-right: 0px;
+		}
 	}
-	&-4 {
-		display: flex;
+	&-4, &-offset-4 {
+		display: inline-flex;
 		width: 33.333334%;
+		padding: 0 $default-gap;
+		&:first-child {
+			padding-left: 0px;
+		}
+		&:last-child {
+			padding-right: 0px;
+		}
 	}
-	&-5 {
-		display: flex;
+	&-5, &-offset-5 {
+		display: inline-flex;
 		width: 41.666667%;
+		padding: 0 $default-gap;
+		&:first-child {
+			padding-left: 0px;
+		}
+		&:last-child {
+			padding-right: 0px;
+		}
 	}
-	&-6 {
-		display: flex;
+	&-6, &-offset-6 {
+		display: inline-flex;
 		width: 50%;
+		padding: 0 $default-gap;
+		&:first-child {
+			padding-left: 0px;
+		}
+		&:last-child {
+			padding-right: 0px;
+		}
 	}
-	&-7 {
-		display: flex;
+	&-7, &-offset-7 {
+		display: inline-flex;
 		width: 58.333%;
+		padding: 0 $default-gap;
+		&:first-child {
+			padding-left: 0px;
+		}
+		&:last-child {
+			padding-right: 0px;
+		}
 	}
-	&-8 {
-		display: flex;
+	&-8, &-offset-8 {
+		display: inline-flex;
 		width: 66.666667%;
+		padding: 0 $default-gap;
+		&:first-child {
+			padding-left: 0px;
+		}
+		&:last-child {
+			padding-right: 0px;
+		}
 	}
-	&-9 {
-		display: flex;
+	&-9, &-offset-9 {
+		display: inline-flex;
 		width: 75%;
+		padding: 0 $default-gap;
+		&:first-child {
+			padding-left: 0px;
+		}
+		&:last-child {
+			padding-right: 0px;
+		}
 	}
-	&-10 {
-		display: flex;
+	&-10, &-offset-10 {
+		display: inline-flex;
 		width: 83.333334%;
+		padding: 0 $default-gap;
+		&:first-child {
+			padding-left: 0px;
+		}
+		&:last-child {
+			padding-right: 0px;
+		}
 	}
-	&-11 {
-		display: flex;
+	&-11, &-offset-11 {
+		display: inline-flex;
 		width: 91.666667%;
+		padding: 0 $default-gap;
+		&:first-child {
+			padding-left: 0px;
+		}
+		&:last-child {
+			padding-right: 0px;
+		}
 	}
-	&-12 {
-		display: flex;
+	&-12, &-offset-12 {
+		display: inline-flex;
 		width: 100%;
+		padding: 0 $default-gap;
+		&:first-child {
+			padding-left: 0px;
+		}
+		&:last-child {
+			padding-right: 0px;
+		}
 	}
 }
