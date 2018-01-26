@@ -6,11 +6,11 @@
 // Elements
 @import "elements/_title"; 
 
+// Grid
+@import "grid/_column"; 
+@import "grid/_resposive";
+
 // Layouts
 @import "layouts/_section"; 
 @import "layouts/_container"; 
-@import "layouts/_resposive"; 
-
-// Grid
-@import "grid/_column"; 
 	
