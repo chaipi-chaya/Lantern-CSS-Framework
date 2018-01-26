@@ -13,7 +13,8 @@
 	@media screen and (min-width: $desktop) and (max-width: $wide-screen) {
 		max-width: $desktop;
 	}
-	&.is-fluid {
+	&-fluid {
+		display: block;
 		max-width: none;
 	}
 }

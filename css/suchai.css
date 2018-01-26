@@ -196,6 +196,60 @@ hr {
     max-width: 1200px;
   }
 }
-.container.is-fluid {
+.container-fluid {
+  display: block;
   max-width: none;
+}
+
+.cols {
+  display: block;
+}
+
+.col-1 {
+  display: flex;
+  width: 8.333334%;
+}
+.col-2 {
+  display: flex;
+  width: 16.666667%;
+}
+.col-3 {
+  display: flex;
+  width: 25%;
+}
+.col-4 {
+  display: flex;
+  width: 33.333334%;
+}
+.col-5 {
+  display: flex;
+  width: 41.666667%;
+}
+.col-6 {
+  display: flex;
+  width: 50%;
+}
+.col-7 {
+  display: flex;
+  width: 58.333%;
+}
+.col-8 {
+  display: flex;
+  width: 66.666667%;
+}
+.col-9 {
+  display: flex;
+  width: 75%;
+}
+.col-10 {
+  display: flex;
+  width: 83.333334%;
+}
+.col-11 {
+  display: flex;
+  width: 91.666667%;
+}
+.col-12 {
+  display: flex;
+  width: 100%;
 }

@@ -1,0 +1,77 @@
+// cols class
+.cols {
+	display: block;
+	// in mobile
+	@media screen and (max-width: $mobile) {
+		&-mobile {
+			
+		}
+	}
+	@media screen and (min-width: $mobile) and (max-width: $tablet) {
+		&-tablet {
+			
+		}
+	}
+	@media screen and (min-width: $tablet) and (max-width: $desktop) {
+		&-desktop {
+			
+		}
+	}
+	@media screen and (min-width: $desktop) and (max-width: $wide-screen) {
+		&-widescreen {
+			
+		}
+	}
+}
+
+// col class
+.col {
+	&-1 {
+		display: flex;
+		width: 8.333334%;
+	}
+	&-2 {
+		display: flex;
+		width: 16.666667%;
+	}
+	&-3 {
+		display: flex;
+		width: 25%;
+	}
+	&-4 {
+		display: flex;
+		width: 33.333334%;
+	}
+	&-5 {
+		display: flex;
+		width: 41.666667%;
+	}
+	&-6 {
+		display: flex;
+		width: 50%;
+	}
+	&-7 {
+		display: flex;
+		width: 58.333%;
+	}
+	&-8 {
+		display: flex;
+		width: 66.666667%;
+	}
+	&-9 {
+		display: flex;
+		width: 75%;
+	}
+	&-10 {
+		display: flex;
+		width: 83.333334%;
+	}
+	&-11 {
+		display: flex;
+		width: 91.666667%;
+	}
+	&-12 {
+		display: flex;
+		width: 100%;
+	}
+}
