@@ -4,12 +4,16 @@ $default-gap: $gap-2;
 .cols {
 	display: flex;
 	flex-wrap: wrap;
+	align-items: flex-start;
 	margin-left: -$default-gap;
 	margin-right: -$default-gap;
-	.cols {
+	& .cols {
 		width: 100%;
 		margin-left: 0;
 		margin-right: 0;
+	}
+	&.is-tile {
+		align-items: stretch;
 	}
 	&-mobile,
 	&-tablet,

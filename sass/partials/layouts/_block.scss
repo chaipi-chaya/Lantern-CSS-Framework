@@ -29,7 +29,7 @@ $default-gap: $gap-2;
 			margin-right: $default-gap;
 		}
 	}
-	// go 100% on mobile
+	
 	@media screen and (max-width: $mobile) {
 		flex-wrap: wrap;
 		& .block-left,

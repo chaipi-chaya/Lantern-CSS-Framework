@@ -162,6 +162,7 @@ hr {
 .cols {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   margin-left: -0.5rem;
   margin-right: -0.5rem;
 }
@@ -169,6 +170,9 @@ hr {
   width: 100%;
   margin-left: 0;
   margin-right: 0;
+}
+.cols.is-tile {
+  align-items: stretch;
 }
 .cols-mobile, .cols-tablet, .cols-desktop, .cols-widescreen {
   display: flex;
