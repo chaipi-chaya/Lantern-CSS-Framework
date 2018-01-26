@@ -79,3 +79,81 @@ th {
   padding: 0;
   text-align: left;
 }
+
+html {
+  background-color: #FFFFFF;
+  font-size: 1rem;
+  font-family: BlinkMacSystemFont, -apple-system, "system-ui", "Segoe UI", "Roboto", "Helvetica Neue", "sans-serif";
+  min-width: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: #2980B9;
+  cursor: pointer;
+  text-decoration: none;
+}
+a:hover, a:focus, a:active {
+  color: #003B74;
+}
+
+strong {
+  font-weight: 700;
+}
+
+hr {
+  border: 1px;
+  border-style: solid;
+  border-color: #A7ADBA;
+  margin: 10px;
+  margin-left: 0px;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.title.size-1 {
+  font-size: 3rem;
+}
+.title.size-2 {
+  font-size: 2.5rem;
+}
+.title.size-3 {
+  font-size: 2rem;
+}
+.title.size-4 {
+  font-size: 1.5rem;
+}
+.title.size-5 {
+  font-size: 1.25rem;
+}
+.title.size-6 {
+  font-size: 1rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.subtitle.size-1 {
+  font-size: 3rem;
+}
+.subtitle.size-2 {
+  font-size: 2.5rem;
+}
+.subtitle.size-3 {
+  font-size: 2rem;
+}
+.subtitle.size-4 {
+  font-size: 1.5rem;
+}
+.subtitle.size-5 {
+  font-size: 1.25rem;
+}
+.subtitle.size-6 {
+  font-size: 1rem;
+}
