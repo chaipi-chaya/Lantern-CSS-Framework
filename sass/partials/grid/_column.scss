@@ -10,6 +10,7 @@ $default-gap: $gap-2;
 
 // cols class
 .cols {
+	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	&-mobile,

@@ -1,0 +1,31 @@
+// in mobile
+@media screen and (max-width: $mobile) {
+	.tablet-only,
+	.desktop-only,
+	.widescreen-only {
+		display: none;
+	}
+}
+// in tablet
+@media screen and (min-width: $mobile) and (max-width: $tablet) {
+	.mobile-only,
+	.desktop-only,
+	.widescreen-only {
+		display: none;
+	}
+}
+// in desktop
+@media screen and (min-width: $tablet) and (max-width: $desktop) {
+	.mobile-only,
+	.tablet-only,
+	.widescreen-only {
+		display: none;
+	}
+}
+@media screen and (min-width: $desktop) {
+	.mobile-only,
+	.tablet-only,
+	.desktop-only {
+		display: none;
+	}
+}

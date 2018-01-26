@@ -201,7 +201,36 @@ hr {
   max-width: none;
 }
 
+@media screen and (max-width: 600px) {
+  .tablet-only,
+  .desktop-only,
+  .widescreen-only {
+    display: none;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .mobile-only,
+  .desktop-only,
+  .widescreen-only {
+    display: none;
+  }
+}
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  .mobile-only,
+  .tablet-only,
+  .widescreen-only {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mobile-only,
+  .tablet-only,
+  .desktop-only {
+    display: none;
+  }
+}
 .cols {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
