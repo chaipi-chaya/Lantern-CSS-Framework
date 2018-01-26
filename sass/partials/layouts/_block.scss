@@ -1,4 +1,9 @@
 $default-gap: $gap-2;
+$media-image-margin-right: $gap-2;
+$media-padding: 0.5rem;
+$media-border-size: 1px;
+$media-border-style: solid;
+$media-border-color: $grey;
 
 .block {
 	display: flex;
@@ -47,5 +52,25 @@ $default-gap: $gap-2;
 				margin-bottom: $default-gap;
 			}
 		}
+	}
+}
+
+.block-media {
+	padding: $media-padding;
+	display: flex;
+	.media-image {
+		margin-right: $media-image-margin-right;
+	}
+	.media-content {
+		flex: 1;
+	}
+	.media-close {
+		
+	}
+	& .block-media {
+		border-top: $media-border-size $media-border-style $media-border-color;
+	}
+	& + .block-media {
+		border-top: $media-border-size $media-border-style $media-border-color;
 	}
 }
