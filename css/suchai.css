@@ -109,7 +109,7 @@ hr {
   border-color: #A7ADBA;
   height: 0px;
   margin: 1rem;
-  margin-left: 0px;
+  margin-left: 0;
   margin-right: 0.5rem;
 }
 
@@ -173,6 +173,7 @@ button, input {
   padding: 0.5rem 1rem;
   border: 1px solid #4F5B66;
   border-radius: 5px;
+  cursor: pointer;
 }
 .button:hover {
   color: #343D46;
@@ -322,6 +323,14 @@ button, input {
 }
 .button.text:hover {
   background: #ECF0F1;
+}
+.button.text.outlined {
+  color: #4F5B66;
+  background: transparent;
+}
+.button.text.outlined:hover {
+  color: #FFFFFF;
+  background: #4F5B66;
 }
 .button.text.inverted {
   color: #4F5B66;
@@ -876,6 +885,12 @@ button, input {
   content: "\25b6";
 }
 
+.dropdown {
+  display: inline-block;
+}
+.dropdown .dropdown-trigger {
+  display: inline-block;
+}
 .dropdown .button {
   display: flex;
   align-items: center;
@@ -891,4 +906,41 @@ button, input {
   border-bottom: 3px solid #4F5B66;
   border-radius: 3px 0px;
   transform: rotate(45deg);
+}
+.dropdown .dropdown-menu {
+  display: none;
+  border: 1px solid #4F5B66;
+  margin-top: 0.2rem;
+  margin-left: 0.2rem;
+  padding: 0.5rem 0;
+  border-radius: 5px;
+  background: #FFFFFF;
+  box-shadow: 0.2rem 0.2rem 0.5rem #C0C5CE;
+}
+.dropdown .dropdown-menu .dropdown-content .dropdown-item {
+  display: block;
+  color: #4F5B66;
+  padding: 0.5rem 1rem;
+}
+.dropdown .dropdown-menu .dropdown-content .dropdown-item:hover {
+  color: #4F5B66;
+  background: #ECF0F1;
+}
+.dropdown .dropdown-menu .dropdown-content .dropdown-item:last-child {
+  margin-bottom: 0;
+}
+.dropdown .dropdown-menu .dropdown-content .dropdown-item.active {
+  color: #FFFFFF;
+  background: #3498DB;
+}
+.dropdown .dropdown-menu .dropdown-content .dropdown-divider {
+  margin: 0.5rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+.dropdown.hoverable:hover .dropdown-menu {
+  display: block;
+}
+.dropdown .button:focus + .dropdown-menu {
+  display: block;
 }

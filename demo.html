@@ -51,12 +51,12 @@
 					<div class="col-1" style="background: #ddd;"></div>
 					<div class="col" style="background: #000;"></div>
 				</div>
-				<div class="cols-desktop is-tile">
+				<div class="cols-desktop tile">
 					<div class="col-1" style="height: 100px; background: #ddd;"></div>
 					<div class="col-10" style="height: 100px; background: #000;"></div>
 					<div class="col-1" style="height: 100px; background: #eee;"></div>
 				</div>
-				<div class="cols is-tile">
+				<div class="cols tile">
 					<div class="col-10" style="height: 100px; background: #fff;">
 						<div class="cols">
 							<div class="col-6" style="background: #777;"></div>
@@ -66,7 +66,7 @@
 					<div class="col-1" style="height: 100px; background: #eee;"></div>
 					<div class="col-1" style="height: 100px; background: #ddd;"></div>
 				</div>
-				<div class="cols desktop-only is-tile">
+				<div class="cols desktop-only tile">
 					<div class="col-1" style="height: 100px; background: #ddd;"></div>
 					<div class="col-10" style="height: 100px; background: #000;"></div>
 					<div class="col-1" style="height: 100px; background: #eee;"></div>
@@ -85,7 +85,7 @@
 					<!-- Left side -->
 					<div class="block-left">
 						<div class="block-item">
-							<p class="subtitle is-5">
+							<p class="subtitle">
 								<strong>123</strong> posts
 							</p>
 						</div>
@@ -106,7 +106,7 @@
 						<p class="block-item"><a>Published</a></p>
 						<p class="block-item"><a>Drafts</a></p>
 						<p class="block-item"><a>Deleted</a></p>
-						<p class="block-item"><a class="button is-success">New</a></p>
+						<p class="block-item"><a class="button success">New</a></p>
 					</div>
 				</nav>
 			</div>
@@ -233,31 +233,31 @@
 			</div>
 		</section>
 		<section class="section">
-		<div class="dropdown active">
+		<div class="dropdown">
 		  <div class="dropdown-trigger">
 			<button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-			  <span>Dropdown button</span>
+				<span>Dropdown button</span>
 			</button>
-		  </div>
-		  <div class="dropdown-menu" id="dropdown-menu" role="menu">
-			<div class="dropdown-content">
-			  <a href="#" class="dropdown-item">
-				Dropdown item
-			  </a>
-			  <a class="dropdown-item">
-				Other dropdown item
-			  </a>
-			  <a href="#" class="dropdown-item active">
-				Active dropdown item
-			  </a>
-			  <a href="#" class="dropdown-item">
-				Other dropdown item
-			  </a>
-			  <hr class="dropdown-divider">
-			  <a href="#" class="dropdown-item">
-				With a divider
-			  </a>
-			</div>
+			  <div class="dropdown-menu" id="dropdown-menu" role="menu">
+				<div class="dropdown-content">
+				  <a href="#" class="dropdown-item">
+					Dropdown item
+				  </a>
+				  <a class="dropdown-item">
+					Other dropdown item
+				  </a>
+				  <a href="#" class="dropdown-item active">
+					Active dropdown item
+				  </a>
+				  <a href="#" class="dropdown-item">
+					Other dropdown item
+				  </a>
+				  <hr class="dropdown-divider">
+				  <a href="#" class="dropdown-item">
+					With a divider
+				  </a>
+				</div>
+			  </div>
 		  </div>
 		</div>
 		</section>
@@ -326,5 +326,15 @@
 			<a class="button warning" title="Disabled button" disabled>Disabled</a>
 			<a class="button danger" title="Disabled button" disabled>Disabled</a>
 		</section>
+		<li class="active">
+		   <a href="#3a" class="btn btn-default btn-lg" data-toggle="tab" aria-expanded="true"> 
+			   <span class="network-name">Google+</span>
+		   </a>
+		</li>
+		<li class="active">
+		   <a href="#3a" class="btn btn-default btn-lg" data-toggle="tab" aria-expanded="false"> 
+			   <span class="network-name">Google+</span>
+		   </a>
+		</li>
 	</body>
 </html>

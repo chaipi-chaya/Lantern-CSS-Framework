@@ -15,6 +15,7 @@ button,input {
     padding: $button-padding-top-bottom $button-padding-left-right;
 	border: $button-border-size $button-border-style $button-border-color;
     border-radius: $radius;
+	cursor: pointer;
 	&:hover {
 		color: $dark;
 		border-color: $button-border-hover-color;	
@@ -162,6 +163,14 @@ button,input {
 		text-decoration: underline;
 		&:hover {
 			background: $text-hover;
+		}
+		&.outlined {
+			color: $text;
+			background: transparent;
+			&:hover {
+				color: $text-invert;
+				background: $text;
+			}
 		}
 		&.inverted {
 			color: $text;

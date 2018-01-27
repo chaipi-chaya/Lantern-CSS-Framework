@@ -1,5 +1,15 @@
+$dropdown-item-hover-color: $text;
+$dropdown-item-hover-background: $light;
+$dropdown-item-active-color: $white;
+$dropdown-item-active-background: $primary;
+$dropdown-border-color: $text;
+$dropdown-border-radius: $radius;
 
 .dropdown {
+	display: inline-block;
+	.dropdown-trigger {
+		display: inline-block;
+	}
 	.button {
 		display: flex;
 		align-items: center;
@@ -11,12 +21,48 @@
 		height: 0.6rem;
 		margin-left: 0.6rem;
 		margin-bottom: 0.2rem;
-		border-right: 3px solid $text;
-		border-bottom: 3px solid $text;
+		border-right: 3px solid $dropdown-border-color;
+		border-bottom: 3px solid $dropdown-border-color;
     	border-radius: 3px 0px;
 		transform: rotate(45deg);
 	}
 	.dropdown-menu {
-		
+		display: none;
+		border: 1px solid $dropdown-border-color;
+		margin-top: 0.2rem;
+		margin-left: 0.2rem;
+		padding: 0.5rem 0;
+		border-radius: $dropdown-border-radius;
+		background: $white;
+		box-shadow: 0.2rem 0.2rem 0.5rem $light-grey;
+		.dropdown-content {
+			.dropdown-item {
+				display: block;
+				color: $text;
+				padding: 0.5rem 1rem;
+				&:hover {
+					color: $dropdown-item-hover-color;
+					background: $dropdown-item-hover-background;
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+				&.active {
+					color: $dropdown-item-active-color;
+					background: $dropdown-item-active-background;
+				}
+			}
+			.dropdown-divider {
+				margin: 0.5rem;
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+	}
+	&.hoverable:hover .dropdown-menu {
+		display: block;
+	}
+	.button:focus + .dropdown-menu {
+		display: block;
 	}
 }
