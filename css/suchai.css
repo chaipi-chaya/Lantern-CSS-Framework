@@ -431,3 +431,100 @@ p {
   max-width: none;
   padding: 0 0.5rem;
 }
+
+.breadcrumb ul, .breadcrumb ol,
+.breadcrumb.align-center ul,
+.breadcrumb.align-center ol,
+.breadcrumb.align-left ul,
+.breadcrumb.align-left ol,
+.breadcrumb.align-right ul,
+.breadcrumb.align-right ol {
+  line-height: 40px;
+}
+.breadcrumb ul li, .breadcrumb ol li,
+.breadcrumb.align-center ul li,
+.breadcrumb.align-center ol li,
+.breadcrumb.align-left ul li,
+.breadcrumb.align-left ol li,
+.breadcrumb.align-right ul li,
+.breadcrumb.align-right ol li {
+  margin-right: 0.25rem;
+  margin-left: 0.25rem;
+  display: inline-block;
+}
+.breadcrumb ul li a, .breadcrumb ol li a,
+.breadcrumb.align-center ul li a,
+.breadcrumb.align-center ol li a,
+.breadcrumb.align-left ul li a,
+.breadcrumb.align-left ol li a,
+.breadcrumb.align-right ul li a,
+.breadcrumb.align-right ol li a {
+  color: #2980B9;
+}
+.breadcrumb ul li:hover a, .breadcrumb ol li:hover a,
+.breadcrumb.align-center ul li:hover a,
+.breadcrumb.align-center ol li:hover a,
+.breadcrumb.align-left ul li:hover a,
+.breadcrumb.align-left ol li:hover a,
+.breadcrumb.align-right ul li:hover a,
+.breadcrumb.align-right ol li:hover a {
+  color: #003B74;
+}
+.breadcrumb ul li.is-active a, .breadcrumb ol li.is-active a,
+.breadcrumb.align-center ul li.is-active a,
+.breadcrumb.align-center ol li.is-active a,
+.breadcrumb.align-left ul li.is-active a,
+.breadcrumb.align-left ol li.is-active a,
+.breadcrumb.align-right ul li.is-active a,
+.breadcrumb.align-right ol li.is-active a {
+  color: #4F5B66;
+}
+.breadcrumb ul li + li::before, .breadcrumb ol li + li::before,
+.breadcrumb.align-center ul li + li::before,
+.breadcrumb.align-center ol li + li::before,
+.breadcrumb.align-left ul li + li::before,
+.breadcrumb.align-left ol li + li::before,
+.breadcrumb.align-right ul li + li::before,
+.breadcrumb.align-right ol li + li::before {
+  content: "\002f";
+  margin-right: 0.5rem;
+  color: #65737E;
+}
+
+.breadcrumb {
+  text-align: left;
+  font-size: 1rem;
+}
+.breadcrumb.align-center {
+  text-align: center;
+}
+.breadcrumb.align-left {
+  text-align: left;
+}
+.breadcrumb.align-right {
+  text-align: right;
+}
+.breadcrumb.size-small {
+  font-size: 0.75rem;
+}
+.breadcrumb.size-medium {
+  font-size: 1.25rem;
+}
+.breadcrumb.size-large {
+  font-size: 1.5rem;
+}
+.breadcrumb.greater-seperate ul li + li::before, .breadcrumb.greater-seperate ol li + li::before {
+  content: "\0227B";
+}
+.breadcrumb.arrow-seperate ul li + li::before, .breadcrumb.arrow-seperate ol li + li::before {
+  content: "\02192";
+}
+.breadcrumb.dot-seperate ul li + li::before, .breadcrumb.dot-seperate ol li + li::before {
+  content: "\00b7";
+}
+.breadcrumb.dash-seperate ul li + li::before, .breadcrumb.dash-seperate ol li + li::before {
+  content: "\2013";
+}
+.breadcrumb.bullet-seperate ul li + li::before, .breadcrumb.bullet-seperate ol li + li::before {
+  content: "\2022";
+}
