@@ -887,6 +887,9 @@ button, input {
 
 .dropdown {
   display: inline-block;
+  vertical-align: top;
+  height: 2.5rem;
+  margin-right: 1rem;
 }
 .dropdown .dropdown-trigger {
   display: inline-block;
@@ -894,28 +897,6 @@ button, input {
 .dropdown .button {
   display: flex;
   align-items: center;
-}
-.dropdown .button::after {
-  content: "";
-  display: block;
-  width: 0.6rem;
-  height: 0.6rem;
-  margin-left: 0.6rem;
-  margin-bottom: 0.2rem;
-  border-right: 3px solid #4F5B66;
-  border-bottom: 3px solid #4F5B66;
-  border-radius: 3px 0px;
-  transform: rotate(45deg);
-}
-.dropdown .dropdown-menu {
-  display: none;
-  border: 1px solid #4F5B66;
-  margin-top: 0.2rem;
-  margin-left: 0.2rem;
-  padding: 0.5rem 0;
-  border-radius: 5px;
-  background: #FFFFFF;
-  box-shadow: 0.2rem 0.2rem 0.5rem #C0C5CE;
 }
 .dropdown .dropdown-menu .dropdown-content .dropdown-item {
   display: block;
@@ -940,7 +921,58 @@ button, input {
 }
 .dropdown.hoverable:hover .dropdown-menu {
   display: block;
+  margin-right: calc(-1rem - 1px);
 }
 .dropdown .button:focus + .dropdown-menu {
   display: block;
+  margin-right: calc(-1rem - 1px);
+}
+
+.dropdown .button::after {
+  content: "";
+  display: block;
+  width: 0.6rem;
+  height: 0.6rem;
+  margin-left: 0.6rem;
+  margin-bottom: 0.2rem;
+  border-right: 3px solid #4F5B66;
+  border-bottom: 3px solid #4F5B66;
+  border-radius: 3px 0px;
+  transform: rotate(45deg);
+}
+.dropdown .dropdown-menu {
+  display: none;
+  position: relative;
+  z-index: 20;
+  border: 1px solid #4F5B66;
+  margin-top: 0.2rem;
+  margin-left: 0.2rem;
+  padding: 0.5rem 0;
+  border-radius: 5px;
+  background: #FFFFFF;
+  box-shadow: 0.2rem 0.2rem 0.5rem #C0C5CE;
+}
+.dropdown.up .button::after {
+  margin-top: 0.3rem;
+  margin-bottom: 0.0rem;
+  transform: rotate(-135deg);
+}
+.dropdown.up .dropdown-menu {
+  margin-left: 0;
+  transform: translate(0, calc(-100% - 2.5rem));
+}
+.dropdown.right .button::after {
+  margin-top: 0.2rem;
+  transform: rotate(-45deg);
+}
+.dropdown.right .dropdown-menu {
+  transform: translate(calc(100% - 0.7rem), -2.5rem);
+}
+.dropdown.left .button::after {
+  margin-top: 0.3rem;
+  margin-left: 0.5rem;
+  transform: rotate(-225deg);
+}
+.dropdown.left .dropdown-menu {
+  transform: translate(calc(-100% - 0.3rem), -2.5rem);
 }
