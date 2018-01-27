@@ -163,6 +163,323 @@ p {
   font-size: 1rem;
 }
 
+button, input {
+  font-size: 1rem;
+}
+
+.button {
+  display: inline-flex;
+  color: #4F5B66;
+  padding: 0.5rem 1rem;
+  border: 1px solid #4F5B66;
+  border-radius: 5px;
+}
+.button:hover {
+  color: #343D46;
+  border-color: #343D46;
+}
+.button.outlined {
+  color: #4F5B66;
+  border: 1px solid #4F5B66;
+  background: transparent;
+}
+.button.outlined:hover {
+  color: #FFFFFF;
+  background: #4F5B66;
+}
+.button.inverted {
+  color: #4F5B66;
+  border: none;
+  background: #FFFFFF;
+}
+.button.inverted:hover {
+  color: #FFFFFF;
+  background: #4F5B66;
+}
+.button.rounded {
+  border-radius: 9999px;
+}
+.button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.button.white {
+  border: none;
+  background: #FFFFFF;
+}
+.button.white:hover {
+  background: #ECF0F1;
+}
+.button.white.outlined {
+  color: #4F5B66;
+  border: 1px solid #FFFFFF;
+  background: transparent;
+}
+.button.white.outlined:hover {
+  color: #FFFFFF;
+  background: #ECF0F1;
+}
+.button.light {
+  border: none;
+  background: #C0C5CE;
+}
+.button.light:hover {
+  background: #A7ADBA;
+}
+.button.light.outlined {
+  color: #C0C5CE;
+  border: 1px solid #C0C5CE;
+  background: transparent;
+}
+.button.light.outlined:hover {
+  color: #FFFFFF;
+  background: #C0C5CE;
+}
+.button.light.inverted {
+  color: #C0C5CE;
+  border: none;
+  background: #FFFFFF;
+}
+.button.light.inverted:hover {
+  color: #FFFFFF;
+  background: #C0C5CE;
+}
+.button.grey {
+  border: none;
+  color: #FFFFFF;
+  background: #65737E;
+}
+.button.grey:hover {
+  background: #4F5B66;
+}
+.button.grey.outlined {
+  color: #65737E;
+  border: 1px solid #65737E;
+  background: transparent;
+}
+.button.grey.outlined:hover {
+  color: #FFFFFF;
+  background: #4F5B66;
+}
+.button.grey.inverted {
+  color: #65737E;
+  border: none;
+  background: #FFFFFF;
+}
+.button.grey.inverted:hover {
+  color: #FFFFFF;
+  background: #65737E;
+}
+.button.dark {
+  border: none;
+  color: #FFFFFF;
+  background: #4F5B66;
+}
+.button.dark.outlined {
+  color: #4F5B66;
+  border: 1px solid #343D46;
+  background: transparent;
+}
+.button.dark.outlined:hover {
+  color: #FFFFFF;
+  background: #4F5B66;
+}
+.button.dark.inverted {
+  color: #4F5B66;
+  border: none;
+  background: #FFFFFF;
+}
+.button.dark.inverted:hover {
+  color: #FFFFFF;
+  background: #4F5B66;
+}
+.button.black {
+  border: none;
+  color: #FFFFFF;
+  background: #000000;
+}
+.button.black.outlined {
+  color: #000000;
+  border: 1px solid #000000;
+  background: transparent;
+}
+.button.black.outlined:hover {
+  color: #FFFFFF;
+  background: #000000;
+}
+.button.black.inverted {
+  color: #000000;
+  border: none;
+  background: #FFFFFF;
+}
+.button.black.inverted:hover {
+  color: #FFFFFF;
+  background: #000000;
+}
+.button.text {
+  border: none;
+  text-decoration: underline;
+}
+.button.text:hover {
+  background: #ECF0F1;
+}
+.button.text.inverted {
+  color: #4F5B66;
+  border: none;
+  background: #FFFFFF;
+}
+.button.text.inverted:hover {
+  color: #FFFFFF;
+  background: #4F5B66;
+}
+.button.primary {
+  border: none;
+  color: #FFFFFF;
+  background-color: #3498DB;
+}
+.button.primary.outlined {
+  color: #3498DB;
+  border: 1px solid #3498DB;
+  background: transparent;
+}
+.button.primary.outlined:hover {
+  color: #FFFFFF;
+  background: #3498DB;
+}
+.button.primary.inverted {
+  color: #3498DB;
+  border: none;
+  background: #FFFFFF;
+}
+.button.primary.inverted:hover {
+  color: #FFFFFF;
+  background: #3498DB;
+}
+.button.secondary {
+  border: none;
+  color: #FFFFFF;
+  background-color: #16A085;
+}
+.button.secondary.outlined {
+  color: #16A085;
+  border: 1px solid #16A085;
+  background: transparent;
+}
+.button.secondary.outlined:hover {
+  color: #FFFFFF;
+  background: #16A085;
+}
+.button.secondary.inverted {
+  color: #16A085;
+  border: none;
+  background: #FFFFFF;
+}
+.button.secondary.inverted:hover {
+  color: #FFFFFF;
+  background: #16A085;
+}
+.button.success {
+  border: none;
+  color: #FFFFFF;
+  background-color: #2ECC71;
+}
+.button.success.outlined {
+  color: #2ECC71;
+  border: 1px solid #2ECC71;
+  background: transparent;
+}
+.button.success.outlined:hover {
+  color: #FFFFFF;
+  background: #2ECC71;
+}
+.button.success.inverted {
+  color: #2ECC71;
+  border: none;
+  background: #FFFFFF;
+}
+.button.success.inverted:hover {
+  color: #FFFFFF;
+  background: #2ECC71;
+}
+.button.link {
+  border: none;
+  color: #FFFFFF;
+  background-color: #2980B9;
+}
+.button.link.outlined {
+  color: #2980B9;
+  border: 1px solid #2980B9;
+  background: transparent;
+}
+.button.link.outlined:hover {
+  color: #FFFFFF;
+  background: #2980B9;
+}
+.button.link.inverted {
+  color: #2980B9;
+  border: none;
+  background: #FFFFFF;
+}
+.button.link.inverted:hover {
+  color: #FFFFFF;
+  background: #2980B9;
+}
+.button.warning {
+  border: none;
+  color: #FFFFFF;
+  background-color: #F39C12;
+}
+.button.warning.outlined {
+  color: #F39C12;
+  border: 1px solid #F39C12;
+  background: transparent;
+}
+.button.warning.outlined:hover {
+  color: #FFFFFF;
+  background: #F39C12;
+}
+.button.warning.inverted {
+  color: #F39C12;
+  border: none;
+  background: #FFFFFF;
+}
+.button.warning.inverted:hover {
+  color: #FFFFFF;
+  background: #F39C12;
+}
+.button.danger {
+  border: none;
+  color: #FFFFFF;
+  background-color: #C0392B;
+}
+.button.danger.outlined {
+  color: #C0392B;
+  border: 1px solid #C0392B;
+  background: transparent;
+}
+.button.danger.outlined:hover {
+  color: #FFFFFF;
+  background: #C0392B;
+}
+.button.danger.inverted {
+  color: #C0392B;
+  border: none;
+  background: #FFFFFF;
+}
+.button.danger.inverted:hover {
+  color: #FFFFFF;
+  background: #C0392B;
+}
+.button.size-small {
+  font-size: 0.75rem;
+}
+.button.size-medium {
+  font-size: 1.25rem;
+}
+.button.size-large {
+  font-size: 1.5rem;
+}
+
 .cols {
   display: flex;
   flex-wrap: wrap;
@@ -175,7 +492,7 @@ p {
   margin-left: 0;
   margin-right: 0;
 }
-.cols.is-tile {
+.cols.tile {
   align-items: stretch;
 }
 .cols-mobile, .cols-tablet, .cols-desktop, .cols-widescreen {
@@ -470,13 +787,13 @@ p {
 .breadcrumb.align-right ol li:hover a {
   color: #003B74;
 }
-.breadcrumb ul li.is-active a, .breadcrumb ol li.is-active a,
-.breadcrumb.align-center ul li.is-active a,
-.breadcrumb.align-center ol li.is-active a,
-.breadcrumb.align-left ul li.is-active a,
-.breadcrumb.align-left ol li.is-active a,
-.breadcrumb.align-right ul li.is-active a,
-.breadcrumb.align-right ol li.is-active a {
+.breadcrumb ul li.active a, .breadcrumb ol li.active a,
+.breadcrumb.align-center ul li.active a,
+.breadcrumb.align-center ol li.active a,
+.breadcrumb.align-left ul li.active a,
+.breadcrumb.align-left ol li.active a,
+.breadcrumb.align-right ul li.active a,
+.breadcrumb.align-right ol li.active a {
   color: #4F5B66;
 }
 .breadcrumb ul li + li::before, .breadcrumb ol li + li::before,

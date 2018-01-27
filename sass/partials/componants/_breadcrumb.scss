@@ -20,7 +20,7 @@ $breadcrumb-seperater-color: $dark-grey;
 			&:hover a {
 				color: $breadcrumb-hover-color;
 			}
-			&.is-active a {
+			&.active a {
 				color: $breadcrumb-active-color;
 			}
 			& + li::before {

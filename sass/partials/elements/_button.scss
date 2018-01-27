@@ -1,0 +1,323 @@
+$button-border-size: 1px;
+$button-border-style: solid;
+$button-border-color: $darker-grey;
+$button-border-hover-color: $dark;
+$button-padding-top-bottom: 0.5rem;
+$button-padding-left-right: 1.0rem ;
+
+button,input {
+	font-size: $size-normal;
+}
+
+.button {
+    display: inline-flex;
+	color: $darker-grey;
+    padding: $button-padding-top-bottom $button-padding-left-right;
+	border: $button-border-size $button-border-style $button-border-color;
+    border-radius: $radius;
+	&:hover {
+		color: $dark;
+		border-color: $button-border-hover-color;	
+	}
+	&.outlined {
+		color: $darker-grey;
+		border: $button-border-size $button-border-style $darker-grey;
+		background: transparent;
+		&:hover {
+			color: $white;
+			background: $darker-grey;
+		}
+	}
+	&.inverted {
+		color: $darker-grey;
+		border: none;
+		background: $white;
+		&:hover {
+			color: $white;
+			background: $darker-grey;
+		}
+	}
+	&.rounded {
+		border-radius: 9999px;
+	}
+	&[disabled] {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+	&.white {
+		border: none;
+		background: $white;
+		&:hover {
+			background: $light;
+		}
+		&.outlined {
+			color: $text;
+			border: $button-border-size $button-border-style $white;
+			background: transparent;
+			&:hover {
+				color: $white;
+				background: $light;
+			}
+		}
+	}
+	&.light {
+		border: none;
+		background: $light-grey;
+		&:hover {
+			background: $grey;
+		}
+		&.outlined {
+			color: $light-grey;
+			border: $button-border-size $button-border-style $light-grey;
+			background: transparent;
+			&:hover {
+				color: $white;
+				background: $light-grey;
+			}
+		} 
+		&.inverted {
+			color: $light-grey;
+			border: none;
+			background: $white;
+			&:hover {
+				color: $white;
+				background: $light-grey;
+			}
+		}
+	}
+	&.grey {
+		border: none;
+		color: $white;
+		background: $dark-grey;
+		&:hover {
+			background: $darker-grey;
+		}
+		&.outlined {
+			color: $dark-grey;
+			border: $button-border-size $button-border-style $dark-grey;
+			background: transparent;
+			&:hover {
+				color: $white;
+				background: $darker-grey;
+			}
+		}
+		&.inverted {
+			color: $dark-grey;
+			border: none;
+			background: $white;
+			&:hover {
+				color: $white;
+				background: $dark-grey;
+			}
+		}
+	}
+	&.dark {
+		border: none;
+		color: $white;
+		background: $darker-grey;
+		&.outlined {
+			color: $darker-grey;
+			border: $button-border-size $button-border-style $dark;
+			background: transparent;
+			&:hover {
+				color: $white;
+				background: $darker-grey;
+			}
+		}
+		&.inverted {
+			color: $darker-grey;
+			border: none;
+			background: $white;
+			&:hover {
+				color: $white;
+				background: $darker-grey;
+			}
+		}
+	}
+	&.black {
+		border: none;
+		color: $white;
+		background: $black;
+		&.outlined {
+			color: $black;
+			border: $button-border-size $button-border-style $black;
+			background: transparent;
+			&:hover {
+				color: $white;
+				background: $black;
+			}
+		}
+		&.inverted {
+			color: $black;
+			border: none;
+			background: $white;
+			&:hover {
+				color: $white;
+				background: $black;
+			}
+		}
+	}
+	&.text {
+		border: none;
+		text-decoration: underline;
+		&:hover {
+			background: $light;
+		}
+		&.inverted {
+			color: $text;
+			border: none;
+			background: $white;
+			&:hover {
+				color: $white;
+				background: $text;
+			}
+		}
+	}
+	&.primary {
+		border: none;
+		color: $white;
+		background-color: $primary;
+		&.outlined {
+			color: $primary;
+			border: $button-border-size $button-border-style $primary;
+			background: transparent;
+			&:hover {
+				color: $white;
+				background: $primary;
+			}
+		}
+		&.inverted {
+			color: $primary;
+			border: none;
+			background: $white;
+			&:hover {
+				color: $white;
+				background: $primary;
+			}
+		}
+	}
+	&.secondary {
+		border: none;
+		color: $white;
+		background-color: $secondary;
+		&.outlined {
+			color: $secondary;
+			border: $button-border-size $button-border-style $secondary;
+			background: transparent;
+			&:hover {
+				color: $white;
+				background: $secondary;
+			}
+		}
+		&.inverted {
+			color: $secondary;
+			border: none;
+			background: $white;
+			&:hover {
+				color: $white;
+				background: $secondary;
+			}
+		}
+	}
+	&.success {
+		border: none;
+		color: $white;
+		background-color: $success;
+		&.outlined {
+			color: $success;
+			border: $button-border-size $button-border-style $success;
+			background: transparent;
+			&:hover {
+				color: $white;
+				background: $success;
+			}
+		}
+		&.inverted {
+			color: $success;
+			border: none;
+			background: $white;
+			&:hover {
+				color: $white;
+				background: $success;
+			}
+		}
+	}
+	&.link {
+		border: none;
+		color: $white;
+		background-color: $link;
+		&.outlined {
+			color: $link;
+			border: $button-border-size $button-border-style $link;
+			background: transparent;
+			&:hover {
+				color: $white;
+				background: $link;
+			}
+		}
+		&.inverted {
+			color: $link;
+			border: none;
+			background: $white;
+			&:hover {
+				color: $white;
+				background: $link;
+			}
+		}
+	}
+	&.warning {
+		border: none;
+		color: $white;
+		background-color: $warning;
+		&.outlined {
+			color: $warning;
+			border: $button-border-size $button-border-style $warning;
+			background: transparent;
+			&:hover {
+				color: $white;
+				background: $warning;
+			}
+		}
+		&.inverted {
+			color: $warning;
+			border: none;
+			background: $white;
+			&:hover {
+				color: $white;
+				background: $warning;
+			}
+		}
+	}
+	&.danger {
+		border: none;
+		color: $white;
+		background-color: $danger;
+		&.outlined {
+			color: $danger;
+			border: $button-border-size $button-border-style $danger;
+			background: transparent;
+			&:hover {
+				color: $white;
+				background: $danger;
+			}
+		}
+		&.inverted {
+			color: $danger;
+			border: none;
+			background: $white;
+			&:hover {
+				color: $white;
+				background: $danger;
+			}
+		}
+	}
+	&.size-small {
+		font-size: $size-small;
+	}
+	&.size-medium {
+		font-size: $size-medium;
+	}
+	&.size-large {
+		font-size: $size-large;
+	}
+}
