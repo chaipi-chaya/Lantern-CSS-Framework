@@ -99,5 +99,14 @@ $breadcrumb-seperater-color: $dark-grey;
 			}
 		}
 	}
+	&.triangle-seperate {
+		& ul, & ol {
+			& li {
+				& + li::before {
+					content: "\25b6";
+				}
+			}
+		}
+	}
 }
 

@@ -845,3 +845,6 @@ button, input {
 .breadcrumb.bullet-seperate ul li + li::before, .breadcrumb.bullet-seperate ol li + li::before {
   content: "\2022";
 }
+.breadcrumb.triangle-seperate ul li + li::before, .breadcrumb.triangle-seperate ol li + li::before {
+  content: "\25b6";
+}
