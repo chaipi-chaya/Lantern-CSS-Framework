@@ -4,6 +4,7 @@
 
 $primary: 			$cyan !default;
 $secondary: 		$green !default;
+$info:				$nevy-blue !default;
 $success:			$emerald !default;
 $warning: 			$orange !default;
 $danger: 			$red !default;
@@ -13,12 +14,15 @@ $danger: 			$red !default;
 // use for background and font of each color
 $primary-invert: 	$white !default;
 $secondary-invert: 	$white !default;
+$info-invert:		$white !default;
+$success-invert:	$white !default;
 $warning-invert: 	$white !default;
 $danger-invert: 	$white !default;
 
 // Default colors
 
 $text: 				$darker-grey !default;
+$text-hover: 		$light !default;
 $text-invert: 		$white !default;
 $text-light: 		$grey !default;
 $text-strong: 		$dark !default;

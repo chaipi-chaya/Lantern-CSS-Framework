@@ -161,152 +161,175 @@ button,input {
 		border: none;
 		text-decoration: underline;
 		&:hover {
-			background: $light;
+			background: $text-hover;
 		}
 		&.inverted {
 			color: $text;
 			border: none;
-			background: $white;
+			background: $text-invert;
 			&:hover {
-				color: $white;
+				color: $text-invert;
 				background: $text;
 			}
 		}
 	}
 	&.primary {
 		border: none;
-		color: $white;
+		color: $primary-invert;
 		background-color: $primary;
 		&.outlined {
 			color: $primary;
 			border: $button-border-size $button-border-style $primary;
 			background: transparent;
 			&:hover {
-				color: $white;
+				color: $primary-invert;
 				background: $primary;
 			}
 		}
 		&.inverted {
 			color: $primary;
 			border: none;
-			background: $white;
+			background: $primary-invert;
 			&:hover {
-				color: $white;
+				color: $primary-invert;
 				background: $primary;
 			}
 		}
 	}
 	&.secondary {
 		border: none;
-		color: $white;
+		color: $secondary-invert;
 		background-color: $secondary;
 		&.outlined {
 			color: $secondary;
 			border: $button-border-size $button-border-style $secondary;
 			background: transparent;
 			&:hover {
-				color: $white;
+				color: $secondary-invert;
 				background: $secondary;
 			}
 		}
 		&.inverted {
 			color: $secondary;
 			border: none;
-			background: $white;
+			background: $secondary-invert;
 			&:hover {
-				color: $white;
+				color: $secondary-invert;
 				background: $secondary;
+			}
+		}
+	}
+	&.info {
+		border: none;
+		color: $info-invert;
+		background-color: $info;
+		&.outlined {
+			color: $info;
+			border: $button-border-size $button-border-style $info;
+			background: transparent;
+			&:hover {
+				color: $info-invert;
+				background: $info;
+			}
+		}
+		&.inverted {
+			color: $info;
+			border: none;
+			background: $info-invert;
+			&:hover {
+				color: $info-invert;
+				background: $info;
 			}
 		}
 	}
 	&.success {
 		border: none;
-		color: $white;
+		color: $success-invert;
 		background-color: $success;
 		&.outlined {
 			color: $success;
 			border: $button-border-size $button-border-style $success;
 			background: transparent;
 			&:hover {
-				color: $white;
+				color: $success-invert;
 				background: $success;
 			}
 		}
 		&.inverted {
 			color: $success;
 			border: none;
-			background: $white;
+			background: $success-invert;
 			&:hover {
-				color: $white;
+				color: $success-invert;
 				background: $success;
 			}
 		}
 	}
 	&.link {
 		border: none;
-		color: $white;
+		color: $link-invert;
 		background-color: $link;
 		&.outlined {
 			color: $link;
 			border: $button-border-size $button-border-style $link;
 			background: transparent;
 			&:hover {
-				color: $white;
+				color: $link-invert;
 				background: $link;
 			}
 		}
 		&.inverted {
 			color: $link;
 			border: none;
-			background: $white;
+			background: $link-invert;
 			&:hover {
-				color: $white;
+				color: $link-invert;
 				background: $link;
 			}
 		}
 	}
 	&.warning {
 		border: none;
-		color: $white;
+		color: $warning-invert;
 		background-color: $warning;
 		&.outlined {
 			color: $warning;
 			border: $button-border-size $button-border-style $warning;
 			background: transparent;
 			&:hover {
-				color: $white;
+				color: $warning-invert;
 				background: $warning;
 			}
 		}
 		&.inverted {
 			color: $warning;
 			border: none;
-			background: $white;
+			background: $warning-invert;
 			&:hover {
-				color: $white;
+				color: $warning-invert;
 				background: $warning;
 			}
 		}
 	}
 	&.danger {
 		border: none;
-		color: $white;
+		color: $danger-invert;
 		background-color: $danger;
 		&.outlined {
 			color: $danger;
 			border: $button-border-size $button-border-style $danger;
 			background: transparent;
 			&:hover {
-				color: $white;
+				color: $danger-invert;
 				background: $danger;
 			}
 		}
 		&.inverted {
 			color: $danger;
 			border: none;
-			background: $white;
+			background: $danger-invert;
 			&:hover {
-				color: $white;
+				color: $danger-invert;
 				background: $danger;
 			}
 		}

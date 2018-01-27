@@ -7,25 +7,25 @@ $media-border-color: $grey;
 
 .block {
 	display: flex;
-	& .block-left,
-	& .block-right,
-	& .block-center {
+	.block-left,
+	.block-right,
+	.block-center {
 		display: flex;
 		flex: 1;
 	}
-	& .block-left {
+	.block-left {
 		justify-content: flex-start;
 		align-items: center;
 	}
-	& .block-right {
+	.block-right {
 		justify-content: flex-end;
 		align-items: center;
 	}
-	& .block-center {
+	.block-center {
 		justify-content: center;
 		align-items: center;
 	}
-	& .block-item {
+	.block-item {
 		display: inline-flex;
 		justify-content: center;
 		align-items: center;
@@ -37,15 +37,15 @@ $media-border-color: $grey;
 	
 	@media screen and (max-width: $mobile) {
 		flex-wrap: wrap;
-		& .block-left,
-		& .block-right,
-		& .block-center {
+		.block-left,
+		.block-right,
+		.block-center {
 			display: flex;
 			flex: none;
 			flex-flow: column;
 			width: 100%;
 		}
-		& .block-item {
+		.block-item {
 			margin-bottom: 0;
 			&:not(:last-child) {
 				margin-right: 0;
@@ -67,7 +67,7 @@ $media-border-color: $grey;
 	.media-close {
 		
 	}
-	& .block-media {
+	.block-media {
 		border-top: $media-border-size $media-border-style $media-border-color;
 	}
 	& + .block-media {

@@ -1,0 +1,22 @@
+
+.dropdown {
+	.button {
+		display: flex;
+		align-items: center;
+	}
+	.button::after {
+		content: "";
+		display: block;
+		width: 0.6rem;
+		height: 0.6rem;
+		margin-left: 0.6rem;
+		margin-bottom: 0.2rem;
+		border-right: 3px solid $text;
+		border-bottom: 3px solid $text;
+    	border-radius: 3px 0px;
+		transform: rotate(45deg);
+	}
+	.dropdown-menu {
+		
+	}
+}

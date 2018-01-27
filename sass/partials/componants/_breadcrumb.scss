@@ -8,13 +8,13 @@ $breadcrumb-seperater-color: $dark-grey;
 .breadcrumb.align-center, 
 .breadcrumb.align-left, 
 .breadcrumb.align-right {
-	& ul, & ol {
+	ul, ol {
 		line-height: $breadcrumb-height;
-		& li {
+		li {
 			margin-right: 0.25rem;
 			margin-left: 0.25rem;
 			display: inline-block;
-			& a {
+			a {
 				color: $breadcrumb-link-color;
 			}
 			&:hover a {
@@ -55,8 +55,8 @@ $breadcrumb-seperater-color: $dark-grey;
 		font-size: $size-large;
 	}
 	&.greater-seperate {
-		& ul, & ol {
-			& li {
+		ul, ol {
+			li {
 				& + li::before {
 					content: "\0227B";
 				}
@@ -64,8 +64,8 @@ $breadcrumb-seperater-color: $dark-grey;
 		}
 	}
 	&.arrow-seperate {
-		& ul, & ol {
-			& li {
+		ul, ol {
+			li {
 				& + li::before {
 					content: "\02192";
 				}
@@ -73,8 +73,8 @@ $breadcrumb-seperater-color: $dark-grey;
 		}
 	}
 	&.dot-seperate {
-		& ul, & ol {
-			& li {
+		ul, ol {
+			li {
 				& + li::before {
 					content: "\00b7";
 				}
@@ -82,8 +82,8 @@ $breadcrumb-seperater-color: $dark-grey;
 		}
 	}
 	&.dash-seperate {
-		& ul, & ol {
-			& li {
+		ul, ol {
+			li {
 				& + li::before {
 					content: "\2013";
 				}
@@ -91,8 +91,8 @@ $breadcrumb-seperater-color: $dark-grey;
 		}
 	}
 	&.bullet-seperate {
-		& ul, & ol {
-			& li {
+		ul, ol {
+			li {
 				& + li::before {
 					content: "\2022";
 				}
@@ -100,8 +100,8 @@ $breadcrumb-seperater-color: $dark-grey;
 		}
 	}
 	&.triangle-seperate {
-		& ul, & ol {
-			& li {
+		ul, ol {
+			li {
 				& + li::before {
 					content: "\25b6";
 				}

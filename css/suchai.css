@@ -378,6 +378,29 @@ button, input {
   color: #FFFFFF;
   background: #16A085;
 }
+.button.info {
+  border: none;
+  color: #FFFFFF;
+  background-color: #003B74;
+}
+.button.info.outlined {
+  color: #003B74;
+  border: 1px solid #003B74;
+  background: transparent;
+}
+.button.info.outlined:hover {
+  color: #FFFFFF;
+  background: #003B74;
+}
+.button.info.inverted {
+  color: #003B74;
+  border: none;
+  background: #FFFFFF;
+}
+.button.info.inverted:hover {
+  color: #FFFFFF;
+  background: #003B74;
+}
 .button.success {
   border: none;
   color: #FFFFFF;
@@ -644,7 +667,9 @@ button, input {
 .block {
   display: flex;
 }
-.block .block-left, .block .block-right, .block .block-center {
+.block .block-left,
+.block .block-right,
+.block .block-center {
   display: flex;
   flex: 1;
 }
@@ -673,7 +698,9 @@ button, input {
   .block {
     flex-wrap: wrap;
   }
-  .block .block-left, .block .block-right, .block .block-center {
+  .block .block-left,
+  .block .block-right,
+  .block .block-center {
     display: flex;
     flex: none;
     flex-flow: column;
@@ -710,10 +737,10 @@ button, input {
   padding: 2rem;
 }
 @media screen and (min-width: 1200px) {
-  .section size-medium {
+  .section.size-medium {
     padding: 3rem 1.5rem;
   }
-  .section size-large {
+  .section.size-large {
     padding: 5rem 2.5rem;
   }
 }
@@ -847,4 +874,21 @@ button, input {
 }
 .breadcrumb.triangle-seperate ul li + li::before, .breadcrumb.triangle-seperate ol li + li::before {
   content: "\25b6";
+}
+
+.dropdown .button {
+  display: flex;
+  align-items: center;
+}
+.dropdown .button::after {
+  content: "";
+  display: block;
+  width: 0.6rem;
+  height: 0.6rem;
+  margin-left: 0.6rem;
+  margin-bottom: 0.2rem;
+  border-right: 3px solid #4F5B66;
+  border-bottom: 3px solid #4F5B66;
+  border-radius: 3px 0px;
+  transform: rotate(45deg);
 }
