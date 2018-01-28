@@ -915,6 +915,7 @@ button, input {
   background: #3498DB;
 }
 .dropdown .dropdown-menu .dropdown-content .dropdown-divider {
+  border-color: #4F5B66;
   margin: 0.5rem;
   margin-left: 0;
   margin-right: 0;
@@ -935,8 +936,8 @@ button, input {
   height: 0.6rem;
   margin-left: 0.6rem;
   margin-bottom: 0.2rem;
-  border-right: 3px solid #4F5B66;
-  border-bottom: 3px solid #4F5B66;
+  border-right: 3px solid #2980B9;
+  border-bottom: 3px solid #2980B9;
   border-radius: 3px 0px;
   transform: rotate(45deg);
 }

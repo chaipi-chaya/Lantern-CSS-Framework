@@ -2,6 +2,8 @@ $dropdown-item-hover-color: $text;
 $dropdown-item-hover-background: $light;
 $dropdown-item-active-color: $white;
 $dropdown-item-active-background: $primary;
+$dropdown-arrow-color: $link;
+$dropdown-divider-color: $text;
 $dropdown-border-color: $text;
 $dropdown-border-radius: $radius;
 $dropdown-menu-height: 2.5rem;
@@ -37,6 +39,7 @@ $dropdown-menu-height: 2.5rem;
 				}
 			}
 			.dropdown-divider {
+				border-color: $dropdown-divider-color;
 				margin: 0.5rem;
 				margin-left: 0;
 				margin-right: 0;
@@ -61,8 +64,8 @@ $dropdown-menu-height: 2.5rem;
 		height: 0.6rem;
 		margin-left: 0.6rem;
 		margin-bottom: 0.2rem;
-		border-right: 3px solid $dropdown-border-color;
-		border-bottom: 3px solid $dropdown-border-color;
+		border-right: 3px solid $dropdown-arrow-color;
+		border-bottom: 3px solid $dropdown-arrow-color;
     	border-radius: 3px 0px;
 		transform: rotate(45deg);
 	}
