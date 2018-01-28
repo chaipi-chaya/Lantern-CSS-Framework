@@ -984,10 +984,13 @@ button, input {
   display: block;
   margin-bottom: 0.5rem;
 }
-.nav .toggle-icon {
+.nav .menu {
+  position: relative;
+}
+.nav .menu .toggle-icon {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 8px;
+  right: 5px;
   display: block;
   width: 40px;
   height: 40px;
@@ -996,18 +999,12 @@ button, input {
   background: transparent;
   border: 0px;
 }
-.nav .toggle-icon span {
+.nav .menu .toggle-icon span {
   display: block;
   width: 20px;
   height: 2px;
   background: #343D46;
   margin-bottom: 5px;
-}
-.nav .toggle-icon:focus {
-  left: 400px;
-}
-.nav .toggle-icon:focus + .menu {
-  left: 0px;
 }
 .nav .menu-label {
   color: #65737E;
@@ -1023,32 +1020,22 @@ button, input {
   color: #FFFFFF;
   background: #3498DB;
 }
-.nav.dark {
-  background: #343D46;
-}
-.nav.dark .toggle-icon span {
-  background: #343D46;
-}
-.nav.dark .menu-label {
-  color: #C0C5CE;
-}
-.nav.dark .menu-list li a {
-  color: #FFFFFF;
-}
-.nav.dark .menu-list li a:hover {
-  color: #ECF0F1;
-  background: #65737E;
-}
-.nav.dark .menu-list li a.active {
-  color: #FFFFFF;
-  background: #3498DB;
-}
 .nav.vertical .menu {
   position: relative;
   display: inline-block;
-  right: 100%;
+  left: calc(-32% + 50px);
+  height: 50px;
   padding: 1rem;
   background: #FFFFFF;
+  padding-right: 50px;
+  border-bottom: 1px solid #3498DB;
+  z-index: 9999;
+}
+.nav.vertical .menu:hover {
+  left: 0px;
+  height: auto;
+  border-bottom: 0;
+  padding-bottom: 40px;
 }
 .nav.vertical .menu .menu-label {
   padding: 0.3rem;
@@ -1074,4 +1061,28 @@ button, input {
   border-left: 1px solid #A7ADBA;
   padding-left: 0.5rem;
   margin: 0.5rem 0.3rem;
+}
+.nav.dark {
+  background: #343D46;
+  border-bottom: 1px solid #A7ADBA;
+}
+.nav.dark .menu {
+  background: #343D46;
+}
+.nav.dark .menu .toggle-icon span {
+  background: #FFFFFF;
+}
+.nav.dark .menu .menu-label {
+  color: #C0C5CE;
+}
+.nav.dark .menu .menu-list li a {
+  color: #FFFFFF;
+}
+.nav.dark .menu .menu-list li a:hover {
+  color: #ECF0F1;
+  background: #65737E;
+}
+.nav.dark .menu .menu-list li a.active {
+  color: #FFFFFF;
+  background: #3498DB;
 }

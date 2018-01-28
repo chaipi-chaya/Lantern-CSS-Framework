@@ -7,13 +7,13 @@
 		<link rel="stylesheet" type="text/css" href="css/suchai.css">
 	</head>
 	<body>
-		<nav class="nav vertical toggle">
-		  <button class="toggle-icon">
-			<span></span>
-			<span></span>
-			<span></span>
-		  </button>
+		<aside class="nav vertical dark">
 			<div class="menu">
+			  <button class="toggle-icon">
+				<span></span>
+				<span></span>
+				<span></span>
+			  </button>
 			  <span class="icon">icon</span>
 			  <p class="menu-label">
 				General
@@ -48,7 +48,7 @@
 				<li><a>Balance</a></li>
 			  </ul>
 			</div>
-		</nav>
+		</aside>
 		<section class="section">
 			<div class="container-fluid">
 				<h1 class="title">Test title and subtitle class</h1>
@@ -275,12 +275,12 @@
 			</div>
 		</section>
 		<section class="section">
-			<div class="dropdown">
+			<div class="dropdown hoverable">
 			  <div class="dropdown-trigger">
-				<button id="tab3" class="button" aria-selected="true" aria-controls="panel3" aria-expanded="false" role="tab">
+				<button class="button">
 					<span>Dropdown button</span>
 				</button>
-				  <div id="panel3" class="dropdown-menu" aria-labelledby="tab3" aria-hidden="true" role="tabpanel">
+				  <div class="dropdown-menu">
 					<div class="dropdown-content">
 					  <a href="#" class="dropdown-item">
 						Dropdown item

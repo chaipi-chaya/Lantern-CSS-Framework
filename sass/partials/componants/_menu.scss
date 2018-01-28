@@ -1,5 +1,6 @@
 $menu-border-color: $primary;
 $menu-background-color: $white;
+$menu-dark-border-color: $grey;
 $menu-dark-background-color: $dark;
 $menu-toggle-color: $dark;
 $menu-label-color: $dark-grey;
@@ -17,6 +18,7 @@ $menu-dark-item-hover-color: $light;
 $menu-dark-item-hover-background-color: $dark-grey;
 $menu-dark-item-active-color: $primary-invert;
 $menu-dark-item-active-background-color: $primary;
+$menu-aside-height: auto;
 $submenu-border-left-size: 1px;
 $submenu-border-left-color: $grey;
 
@@ -29,28 +31,25 @@ $submenu-border-left-color: $grey;
 		display: block;
 		margin-bottom: 0.5rem;
 	}
-	.toggle-icon {        
-		position: absolute;
-		top: 5px;
-		left: 5px;
-		display: block;
-		width: 40px;
-		height: 40px;
-		padding: 10px;
-		cursor: pointer;
-		background: transparent;
-		border: 0px;
-		span {
+	.menu {
+		position: relative;
+		.toggle-icon {        
+			position: absolute;
+			top: 8px;
+			right: 5px;
 			display: block;
-			width: 20px;
-			height: 2px;
-			background: $menu-toggle-color;
-			margin-bottom: 5px;
-		}
-		&:focus {
-			left: 400px;
-			& + .menu {
-				left: 0px;
+			width: 40px;
+			height: 40px;
+			padding: 10px;
+			cursor: pointer;
+			background: transparent;
+			border: 0px;
+			span {
+				display: block;
+				width: 20px;
+				height: 2px;
+				background: $menu-toggle-color;
+				margin-bottom: 5px;
 			}
 		}
 	}
@@ -72,38 +71,22 @@ $submenu-border-left-color: $grey;
 			}
 		}
 	}
-	&.dark {
-		background: $menu-dark-background-color;
-		.toggle-icon {   
-			span {
-				background: $menu-toggle-color;
-			}
-		}
-		.menu-label {
-			color: $menu-dark-label-color;
-		}
-		.menu-list {
-			li {
-				a {
-					color: $menu-dark-item-color;
-					&:hover {
-						color: $menu-dark-item-hover-color;
-						background: $menu-dark-item-hover-background-color;
-					}
-					&.active {
-						color: $menu-dark-item-active-color;
-						background: $menu-dark-item-active-background-color;
-					}
-				}
-			}
-		}
-	}
 	&.vertical .menu {
 		position: relative;
 		display: inline-block;
-		right: 100%;
+		left: calc(-32% + 50px);
+		height: 50px;
 		padding: 1rem;
 		background: $menu-background-color;
+		padding-right: 50px;
+		border-bottom: 1px solid $menu-border-color; 
+		z-index: 9999;
+		&:hover {
+			left: 0px;
+			height: $menu-aside-height;
+			border-bottom: 0;
+			padding-bottom: 40px;
+		}
 		.menu-label {
 			padding: 0.3rem;
 			&.uppercase {
@@ -126,6 +109,36 @@ $submenu-border-left-color: $grey;
 					border-left: $submenu-border-left-size solid $submenu-border-left-color;
 					padding-left: 0.5rem;
 					margin: 0.5rem 0.3rem;
+				}
+			}
+		}
+	}
+	&.dark {
+		background: $menu-dark-background-color;
+		border-bottom: 1px solid $menu-dark-border-color; 
+		.menu {
+			background: $menu-dark-background-color;
+			.toggle-icon {   
+				span {
+					background: $menu-dark-toggle-color;
+				}
+			}
+			.menu-label {
+				color: $menu-dark-label-color;
+			}
+			.menu-list {
+				li {
+					a {
+						color: $menu-dark-item-color;
+						&:hover {
+							color: $menu-dark-item-hover-color;
+							background: $menu-dark-item-hover-background-color;
+						}
+						&.active {
+							color: $menu-dark-item-active-color;
+							background: $menu-dark-item-active-background-color;
+						}
+					}
 				}
 			}
 		}
