@@ -46,11 +46,7 @@ $dropdown-menu-height: 2.5rem;
 			}
 		}
 	}
-	&.hoverable:hover .dropdown-menu {
-		display: block;
-		margin-right: calc(-1rem - 1px);
-	}
-	.button:focus + .dropdown-menu {
+	&:hover .dropdown-menu {
 		display: block;
 		margin-right: calc(-1rem - 1px);
 	}
