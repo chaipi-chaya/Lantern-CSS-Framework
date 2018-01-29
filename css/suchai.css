@@ -1020,7 +1020,7 @@ button, input {
   color: #FFFFFF;
   background: #3498DB;
 }
-.nav.vertical .menu {
+.nav .menu {
   position: relative;
   display: inline-block;
   left: calc(-32% + 50px);
@@ -1031,33 +1031,33 @@ button, input {
   border-bottom: 1px solid #3498DB;
   z-index: 9999;
 }
-.nav.vertical .menu:hover {
+.nav .menu:hover {
   left: 0px;
   height: auto;
   border-bottom: 0;
   padding-bottom: 40px;
 }
-.nav.vertical .menu .menu-label {
+.nav .menu .menu-label {
   padding: 0.3rem;
 }
-.nav.vertical .menu .menu-label.uppercase {
+.nav .menu .menu-label.uppercase {
   text-transform: uppercase;
 }
-.nav.vertical .menu .menu-list {
+.nav .menu .menu-list {
   padding: 0.3rem 0.7rem;
 }
-.nav.vertical .menu .menu-list li {
+.nav .menu .menu-list li {
   padding: 0;
 }
-.nav.vertical .menu .menu-list li:not(:first-child) {
+.nav .menu .menu-list li:not(:first-child) {
   border-top: 1px solid #A7ADBA;
 }
-.nav.vertical .menu .menu-list li a {
+.nav .menu .menu-list li a {
   display: block;
   width: 100%;
   padding: 0.5rem;
 }
-.nav.vertical .menu .menu-list li ul {
+.nav .menu .menu-list li ul {
   border-left: 1px solid #A7ADBA;
   padding-left: 0.5rem;
   margin: 0.5rem 0.3rem;

@@ -71,7 +71,7 @@ $submenu-border-left-color: $grey;
 			}
 		}
 	}
-	&.vertical .menu {
+	.menu {
 		position: relative;
 		display: inline-block;
 		left: calc(-32% + 50px);
