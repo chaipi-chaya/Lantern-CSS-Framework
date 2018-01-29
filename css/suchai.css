@@ -96,7 +96,7 @@ a {
   text-decoration: none;
 }
 a:hover, a:focus, a:active {
-  color: #003B74;
+  color: #3273DC;
 }
 
 strong {
@@ -390,25 +390,25 @@ button, input {
 .button.info {
   border: none;
   color: #FFFFFF;
-  background-color: #003B74;
+  background-color: #3273DC;
 }
 .button.info.outlined {
-  color: #003B74;
-  border: 1px solid #003B74;
+  color: #3273DC;
+  border: 1px solid #3273DC;
   background: transparent;
 }
 .button.info.outlined:hover {
   color: #FFFFFF;
-  background: #003B74;
+  background: #3273DC;
 }
 .button.info.inverted {
-  color: #003B74;
+  color: #3273DC;
   border: none;
   background: #FFFFFF;
 }
 .button.info.inverted:hover {
   color: #FFFFFF;
-  background: #003B74;
+  background: #3273DC;
 }
 .button.success {
   border: none;
@@ -821,7 +821,7 @@ button, input {
 .breadcrumb.align-left ol li:hover a,
 .breadcrumb.align-right ul li:hover a,
 .breadcrumb.align-right ol li:hover a {
-  color: #003B74;
+  color: #3273DC;
 }
 .breadcrumb ul li.active a, .breadcrumb ol li.active a,
 .breadcrumb.align-center ul li.active a,
@@ -1049,4 +1049,122 @@ button, input {
 .menu.dark .menu-list li a.active {
   color: #FFFFFF;
   background: #3498DB;
+}
+
+.message {
+  border: 1px solid #A7ADBA;
+  border-radius: 5px;
+  background: #ECF0F1;
+}
+.message:not(last-child) {
+  margin-bottom: 1.5rem;
+}
+.message .message-header {
+  padding: 0.8rem;
+  position: relative;
+  background: #4F5B66;
+  color: #FFFFFF;
+}
+.message .message-header p {
+  display: inline-block;
+}
+.message .message-header .close {
+  position: relative;
+  display: inline-block;
+  float: right;
+  cursor: pointer;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(20, 20, 20, 0.4);
+  height: 1.3rem;
+  width: 1.3rem;
+}
+.message .message-header .close::after {
+  position: absolute;
+  content: "";
+  width: 0.7rem;
+  background: #FFFFFF;
+  height: 0;
+  border: 1px solid #FFFFFF;
+  transform: rotate(-45deg);
+  top: 0.6rem;
+  right: 0.3rem;
+}
+.message .message-header .close::before {
+  position: absolute;
+  content: "";
+  width: 0.7rem;
+  background: #FFFFFF;
+  height: 0;
+  border: 1px solid #FFFFFF;
+  transform: rotate(45deg);
+  top: 0.6rem;
+  right: 0.3rem;
+}
+.message .message-body {
+  padding: 0.8rem;
+}
+.message.dark {
+  border-color: #343D46;
+}
+.message.dark .message-header {
+  background-color: #343D46;
+}
+.message.primary {
+  border-color: #3498DB;
+  background: #f7fbfe;
+}
+.message.primary .message-header {
+  background-color: #3498DB;
+}
+.message.secondary {
+  border-color: #16A085;
+  background: #a8f3e4;
+}
+.message.secondary .message-header {
+  background-color: #16A085;
+}
+.message.info {
+  border-color: #3273DC;
+  background: #f6f9fd;
+}
+.message.info .message-header {
+  background-color: #3273DC;
+}
+.message.link {
+  border-color: #2980B9;
+  background: #d2e7f5;
+}
+.message.link .message-header {
+  background-color: #2980B9;
+}
+.message.success {
+  border-color: #2ECC71;
+  background: #e6f9ee;
+}
+.message.success .message-header {
+  background-color: #2ECC71;
+}
+.message.warning {
+  border-color: #F39C12;
+  background: #fef7ec;
+}
+.message.warning .message-header {
+  background-color: #F39C12;
+}
+.message.danger {
+  border-color: #C0392B;
+  background: #f7ddda;
+}
+.message.danger .message-header {
+  background-color: #C0392B;
+}
+.message.size-small {
+  font-size: 0.75rem;
+}
+.message.size-medium {
+  font-size: 1.25rem;
+}
+.message.size-large {
+  font-size: 1.5rem;
 }
