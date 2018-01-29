@@ -22,37 +22,7 @@ $menu-aside-height: auto;
 $submenu-border-left-size: 1px;
 $submenu-border-left-color: $grey;
 
-.nav {
-	display: block;
-	height: 50px;
-	border-bottom: 1px solid $menu-border-color; 
-	.icon {
-		padding: 0.5rem;
-		display: block;
-		margin-bottom: 0.5rem;
-	}
-	.menu {
-		position: relative;
-		.toggle-icon {        
-			position: absolute;
-			top: 8px;
-			right: 5px;
-			display: block;
-			width: 40px;
-			height: 40px;
-			padding: 10px;
-			cursor: pointer;
-			background: transparent;
-			border: 0px;
-			span {
-				display: block;
-				width: 20px;
-				height: 2px;
-				background: $menu-toggle-color;
-				margin-bottom: 5px;
-			}
-		}
-	}
+.menu {
 	.menu-label {
 		color: $menu-label-color;
 	}
@@ -71,73 +41,67 @@ $submenu-border-left-color: $grey;
 			}
 		}
 	}
-	.menu {
-		position: relative;
-		display: inline-block;
-		left: calc(-32% + 50px);
-		height: 50px;
-		padding: 1rem;
-		background: $menu-background-color;
-		padding-right: 50px;
-		border-bottom: 1px solid $menu-border-color; 
-		z-index: 9999;
-		&:hover {
-			left: 0px;
-			height: $menu-aside-height;
-			border-bottom: 0;
-			padding-bottom: 40px;
+	position: relative;
+	display: inline-block;
+	padding: 1rem;
+	background: $menu-background-color;
+	padding-right: 50px;
+	border-bottom: 1px solid $menu-border-color; 
+	z-index: 9999;
+	&:hover {
+		left: 0px;
+		height: $menu-aside-height;
+		border-bottom: 0;
+		padding-bottom: 40px;
+	}
+	.menu-label {
+		padding: 0.3rem;
+		&.uppercase {
+			text-transform: uppercase;
 		}
-		.menu-label {
-			padding: 0.3rem;
-			&.uppercase {
-				text-transform: uppercase;
+	}
+	.menu-list {
+		padding: 0.3rem 0.7rem;
+		li {
+			padding: 0;
+			&:not(:first-child) {
+				border-top: $menu-item-divider-size solid $menu-item-divider-color;
 			}
-		}
-		.menu-list {
-			padding: 0.3rem 0.7rem;
-			li {
-				padding: 0;
-				&:not(:first-child) {
-					border-top: $menu-item-divider-size solid $menu-item-divider-color;
-				}
-				a {
-					display: block;
-					width: 100%;
-					padding: 0.5rem;
-				}
-				ul {
-					border-left: $submenu-border-left-size solid $submenu-border-left-color;
-					padding-left: 0.5rem;
-					margin: 0.5rem 0.3rem;
-				}
+			a {
+				display: block;
+				width: 100%;
+				padding: 0.5rem;
+			}
+			ul {
+				border-left: $submenu-border-left-size solid $submenu-border-left-color;
+				padding-left: 0.5rem;
+				margin: 0.5rem 0.3rem;
 			}
 		}
 	}
 	&.dark {
 		background: $menu-dark-background-color;
 		border-bottom: 1px solid $menu-dark-border-color; 
-		.menu {
-			background: $menu-dark-background-color;
-			.toggle-icon {   
-				span {
-					background: $menu-dark-toggle-color;
-				}
+		background: $menu-dark-background-color;
+		.toggle-icon {   
+			span {
+				background: $menu-dark-toggle-color;
 			}
-			.menu-label {
-				color: $menu-dark-label-color;
-			}
-			.menu-list {
-				li {
-					a {
-						color: $menu-dark-item-color;
-						&:hover {
-							color: $menu-dark-item-hover-color;
-							background: $menu-dark-item-hover-background-color;
-						}
-						&.active {
-							color: $menu-dark-item-active-color;
-							background: $menu-dark-item-active-background-color;
-						}
+		}
+		.menu-label {
+			color: $menu-dark-label-color;
+		}
+		.menu-list {
+			li {
+				a {
+					color: $menu-dark-item-color;
+					&:hover {
+						color: $menu-dark-item-hover-color;
+						background: $menu-dark-item-hover-background-color;
+					}
+					&.active {
+						color: $menu-dark-item-active-color;
+						background: $menu-dark-item-active-background-color;
 					}
 				}
 			}
