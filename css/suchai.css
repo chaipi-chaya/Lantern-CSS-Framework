@@ -981,7 +981,7 @@ button, input {
   background: #FFFFFF;
   padding-right: 50px;
   border-bottom: 1px solid #3498DB;
-  z-index: 9999;
+  z-index: 99;
 }
 .menu .menu-label {
   color: #65737E;
@@ -996,12 +996,6 @@ button, input {
 .menu .menu-list li a.active {
   color: #FFFFFF;
   background: #3498DB;
-}
-.menu:hover {
-  left: 0px;
-  height: auto;
-  border-bottom: 0;
-  padding-bottom: 40px;
 }
 .menu .menu-label {
   padding: 0.3rem;
@@ -1167,4 +1161,79 @@ button, input {
 }
 .message.size-large {
   font-size: 1.5rem;
+}
+
+.modal {
+  display: none;
+}
+.modal .modal-background {
+  position: fixed;
+  top: 0px;
+  left: -100px;
+  width: 10000px;
+  height: 100%;
+  overflow: hidden;
+  background: #343D46;
+  z-index: 999;
+  opacity: 0.5;
+}
+.modal .modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #FFFFFF;
+  z-index: 9999;
+}
+.modal .close {
+  position: fixed;
+  display: inline-block;
+  float: right;
+  cursor: pointer;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(20, 20, 20, 0.4);
+  height: 1.3rem;
+  width: 1.3rem;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+.modal .close::before {
+  position: absolute;
+  content: "";
+  width: 0.7rem;
+  background: #FFFFFF;
+  height: 0;
+  border: 1px solid #FFFFFF;
+  transform: rotate(45deg);
+  top: 0.6rem;
+  right: 0.3rem;
+}
+.modal .close::after {
+  position: absolute;
+  content: "";
+  width: 0.7rem;
+  background: #FFFFFF;
+  height: 0;
+  border: 1px solid #FFFFFF;
+  transform: rotate(-45deg);
+  top: 0.6rem;
+  right: 0.3rem;
+}
+.modal .close.large {
+  height: 2.2rem;
+  width: 2.2rem;
+}
+.modal .close.large::before {
+  width: 1.2rem;
+  border: 2px solid #FFFFFF;
+  top: 1.0rem;
+  right: 0.5rem;
+}
+.modal .close.large::after {
+  width: 1.2rem;
+  border: 2px solid #FFFFFF;
+  top: 1.0rem;
+  right: 0.5rem;
 }

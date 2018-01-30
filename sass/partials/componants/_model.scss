@@ -1,0 +1,78 @@
+$model-background-color: $dark;
+$model-background-opacity: 0.5;
+$model-content-background-color: $white;
+
+.modal {
+	display: none;
+	.modal-background {
+		position: fixed;
+		top: 0px;
+		left: -100px;
+		width: 10000px;
+		height: 100%;
+		overflow: hidden;
+		background: $model-background-color;
+		z-index: 999;
+		opacity: $model-background-opacity;
+	}
+	.modal-content {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background: $model-content-background-color;
+		z-index: 9999;
+	}
+	.close {
+		position: fixed;
+		display: inline-block;
+		float: right;
+		cursor: pointer;
+		border: 0;
+		border-radius: 50%;
+		background: rgba(20, 20, 20, 0.4);
+		height: 1.3rem;
+		width: 1.3rem;
+		top: 20px;
+		right: 20px;
+		z-index: 9999;
+		&::before {
+			position: absolute;
+			content: "";
+			width: 0.7rem;
+			background: $white;
+			height: 0;
+			border: 1px solid $white;
+			transform: rotate(45deg);
+			top: 0.6rem;
+			right: 0.3rem;
+		}
+		&::after {    
+			position: absolute;
+			content: "";
+			width: 0.7rem;
+			background: $white;
+			height: 0;
+			border: 1px solid $white;
+			transform: rotate(-45deg);
+			top: 0.6rem;
+			right: 0.3rem;
+		}
+		&.large {
+			height: 2.2rem;
+			width: 2.2rem;
+			&::before {
+				width: 1.2rem;
+				border: 2px solid $white;
+				top: 1.0rem;
+				right: 0.5rem;
+			}
+			&::after {   
+				width: 1.2rem;
+				border: 2px solid $white;
+				top: 1.0rem;
+				right: 0.5rem;
+			}
+		}
+	}
+}
