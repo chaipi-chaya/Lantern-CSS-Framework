@@ -12,508 +12,590 @@
 			function modalHide(ele) {
 				ele.parentElement.style.display = 'none';
 			}
+			
+			function navToggle(ele) {
+				if (ele.nextSibling.nextSibling.style.display == 'none') {
+					ele.nextSibling.nextSibling.style.display = 'block';
+					ele.classList.add('active');
+				} else {
+					ele.nextSibling.nextSibling.style.display = 'none';
+					ele.classList.remove('active');
+				}
+				
+			}
 		</script>
 	</head>
-	<body class="cols">
-		<aside class="menu col-4 dark">
-			  <p class="menu-label">
-				General
-			  </p>
-			  <ul class="menu-list">
-				<li><a href="#">Dashboard</a></li>
-				<li><a>Customers</a></li>
-			  </ul>
-			  <p class="menu-label">
-				Administration
-			  </p>
-			  <ul class="menu-list">
-				<li class="menu-item"><a>Team Settings</a></li>
-				<li>
-				  <a class="active">Manage Your Team</a>
-				  <ul>
-					<li><a>Members</a></li>
-					<li><a>Plugins</a></li>
-					<li><a>Add a member</a></li>
-				  </ul>
-				</li>
-				<li><a>Invitations</a></li>
-				<li><a>Cloud Storage Environment Settings</a></li>
-				<li><a>Authentication</a></li>
-			  </ul>
-			  <p class="menu-label">
-				Transactions
-			  </p>
-			  <ul class="menu-list">
-				<li><a>Payments</a></li>
-				<li><a>Transfers</a></li>
-				<li><a>Balance</a></li>
-			  </ul>
-		</aside>
-		<section class="section col-8">
+	<body>
+		<nav class="nav dark">
 			<div class="container-fluid">
-				<h1 class="title">Test title and subtitle class</h1>
-				<hr>
-				<h1 class="title">This is H1 class title</h1>
-				<h2 class="subtitle">This is H2 class subtitle</h2>
-				<hr>
-				<h1 class="title size-1">This is H1 class title and size-1</h1>
-				<h2 class="subtitle size-2">This is H2 class subtitle and size-2</h2>
-				<hr>
-				<h2 class="title size-2">This is H2 class title and size-2</h2>
-				<h3 class="subtitle size-3">This is H3 class subtitle and size-3</h3>
-				<hr>
-				<h3 class="title size-3">This is H3 class title and size-3</h3>
-				<h4 class="subtitle size-4">This is H4 class subtitle and size-4</h4>
-				<hr>
-				<h4 class="title size-4">This is H4 class title and size-4</h4>
-				<h5 class="subtitle size-5">This is H5 class subtitle and size-5</h5>
-				<hr>
-				<h5 class="title size-5">This is H5 class title and size-5</h5>
-				<h6 class="subtitle size-6">This is H6 class subtitle and size-6</h6>
-			</div>
-			<div class="container">
-				<h1 class="title">Test other typo tags</h1>
-				<hr>
-				<p>This is paragraph</p>
-				<hr>
-				<a>This is link</a>
-				<hr>
-				<ul>
-					<li>This is list</li>
-					<li>This is list</li>
-					<li>This is list</li>
-					<li>This is list</li>
+				<ul class="nav-brand">
+					<a class="nav-logo" href="https://bulma.io">
+					  <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+					</a>
+					<li class="nav-item level1">
+						<a class="button">
+							<span>Test</span>
+						</a>
+					</li>
 				</ul>
-				
+				<div class="nav-burger" onclick="navToggle(this)">
+				  <span></span>
+				  <span></span>
+				  <span></span>
+				</div>
+
+			  <ul class="nav-menu">
+				<ul class="nav-start level1">
+				  <li class="nav-item level1"><a href="https://bulma.io/">
+					Home
+					  </a></li>
+				  <li class="nav-item level1 dropdown hoverable">
+					<a class="nav-item level1" href="/documentation/overview/start/">
+					  Docs
+					</a>
+					<ul class="nav-dropdown level2 boxed">
+					  <li class="nav-item level2"><a href="/documentation/overview/start/">
+						Overview
+						  </a></li>
+					  <li class="nav-item level2"><a href="https://bulma.io/documentation/modifiers/syntax/">
+						  Modifiers
+					  </a></li>
+					  <li class="nav-item level2"><a href="https://bulma.io/documentation/columns/basics/">
+						Columns
+						  </a></li>
+					  <li class="nav-item level2"><a href="https://bulma.io/documentation/layout/container/">
+						Layout
+						  </a></li>
+					  <li class="nav-item level2"><a href="https://bulma.io/documentation/form/general/">
+						Form
+						  </a></li>
+					  <hr class="nav-divider">
+					  <li class="nav-item level2"><a href="https://bulma.io/documentation/elements/box/">
+						Elements
+						  </a></li>
+					  <li class="nav-item level2 is-active" ><a href="https://bulma.io/documentation/components/breadcrumb/">
+						Components
+						  </a></li>
+					</ul>
+				  </li>
+				</ul>
+
+				<ul class="nav-end level1">
+					<li class="nav-item level1">
+						<a class="button">
+							<span>Tweet</span>
+						</a>
+					</li>
+					<li class="nav-item level1">
+						<a class="button primary" href="https://github.com/jgthms/bulma/archive/0.5.1.zip">
+						  <span>Download</span>
+						</a>
+					</li>
+				</ul>
+			  </ul>
 			</div>
-			<div class="container-fluid">
-				<div class="cols">
-					<div class="col-1">
-					<div style="height: 100px; background: #eee; width: 100%;"></div></div>
-					<div class="col-1" style="background: #ddd;"></div>
-					<div class="col" style="background: #000;"></div>
+		</nav>
+		<main class="cols-desktop ">
+			<aside class="menu col-4 dark">
+				  <p class="menu-label">
+					General
+				  </p>
+				  <ul class="menu-list">
+					<li><a href="#">Dashboard</a></li>
+					<li><a>Customers</a></li>
+				  </ul>
+				  <p class="menu-label">
+					Administration
+				  </p>
+				  <ul class="menu-list">
+					<li class="menu-item"><a>Team Settings</a></li>
+					<li>
+					  <a class="active">Manage Your Team</a>
+					  <ul>
+						<li><a>Members</a></li>
+						<li><a>Plugins</a></li>
+						<li><a>Add a member</a></li>
+					  </ul>
+					</li>
+					<li><a>Invitations</a></li>
+					<li><a>Cloud Storage Environment Settings</a></li>
+					<li><a>Authentication</a></li>
+				  </ul>
+				  <p class="menu-label">
+					Transactions
+				  </p>
+				  <ul class="menu-list">
+					<li><a>Payments</a></li>
+					<li><a>Transfers</a></li>
+					<li><a>Balance</a></li>
+				  </ul>
+			</aside>
+			<section class="section col-8">
+				<div class="container-fluid">
+					<h1 class="title">Test title and subtitle class</h1>
+					<hr>
+					<h1 class="title">This is H1 class title</h1>
+					<h2 class="subtitle">This is H2 class subtitle</h2>
+					<hr>
+					<h1 class="title size-1">This is H1 class title and size-1</h1>
+					<h2 class="subtitle size-2">This is H2 class subtitle and size-2</h2>
+					<hr>
+					<h2 class="title size-2">This is H2 class title and size-2</h2>
+					<h3 class="subtitle size-3">This is H3 class subtitle and size-3</h3>
+					<hr>
+					<h3 class="title size-3">This is H3 class title and size-3</h3>
+					<h4 class="subtitle size-4">This is H4 class subtitle and size-4</h4>
+					<hr>
+					<h4 class="title size-4">This is H4 class title and size-4</h4>
+					<h5 class="subtitle size-5">This is H5 class subtitle and size-5</h5>
+					<hr>
+					<h5 class="title size-5">This is H5 class title and size-5</h5>
+					<h6 class="subtitle size-6">This is H6 class subtitle and size-6</h6>
 				</div>
-				<div class="cols-desktop tile">
-					<div class="col-1" style="height: 100px; background: #ddd;"></div>
-					<div class="col-10" style="height: 100px; background: #000;"></div>
-					<div class="col-1" style="height: 100px; background: #eee;"></div>
+				<div class="container">
+					<h1 class="title">Test other typo tags</h1>
+					<hr>
+					<p>This is paragraph</p>
+					<hr>
+					<a>This is link</a>
+					<hr>
+					<ul>
+						<li>This is list</li>
+						<li>This is list</li>
+						<li>This is list</li>
+						<li>This is list</li>
+					</ul>
+
 				</div>
-				<div class="cols tile">
-					<div class="col-10" style="height: 100px; background: #fff;">
-						<div class="cols">
-							<div class="col-6" style="background: #777;"></div>
-							<div class="col-6" style="background: #777;"></div>
-						</div>
+				<div class="container-fluid">
+					<div class="cols">
+						<div class="col-1">
+						<div style="height: 100px; background: #eee; width: 100%;"></div></div>
+						<div class="col-1" style="background: #ddd;"></div>
+						<div class="col" style="background: #000;"></div>
 					</div>
-					<div class="col-1" style="height: 100px; background: #eee;"></div>
-					<div class="col-1" style="height: 100px; background: #ddd;"></div>
-				</div>
-				<div class="cols desktop-only tile">
-					<div class="col-1" style="height: 100px; background: #ddd;"></div>
-					<div class="col-10" style="height: 100px; background: #000;"></div>
-					<div class="col-1" style="height: 100px; background: #eee;"></div>
-					<div class="col-1" style="height: 100px; background: #ddd;"></div>
-					<div class="col-10" style="height: 100px; background: #000;"></div>
-					<div class="col-1" style="height: 100px; background: #eee;"></div>
-				</div>
-				<div class="cols">
-					<div class="col-offset-1"></div>
-					<div class="col-10" style="height: 100px; background: #000;"></div>
-					<div class="col-1" style="height: 100px; background: #eee;"></div>
-				</div>
-			</div>
-			<div class="container-fluid">
-				<nav class="block">
-					<!-- Left side -->
-					<div class="block-left">
-						<div class="block-item">
-							<p class="subtitle">
-								<strong>123</strong> posts
-							</p>
-						</div>
-						<div class="block-item">
-							<div class="field has-addons">
-								<p class="control">
-									<input class="input" type="text" placeholder="Find a post">
-								</p>
-								<p class="control">
-									<button class="button">Search</button>
-								</p>
+					<div class="cols-desktop tile">
+						<div class="col-1" style="height: 100px; background: #ddd;"></div>
+						<div class="col-10" style="height: 100px; background: #000;"></div>
+						<div class="col-1" style="height: 100px; background: #eee;"></div>
+					</div>
+					<div class="cols tile">
+						<div class="col-10" style="height: 100px; background: #fff;">
+							<div class="cols">
+								<div class="col-6" style="background: #777;"></div>
+								<div class="col-6" style="background: #777;"></div>
 							</div>
 						</div>
+						<div class="col-1" style="height: 100px; background: #eee;"></div>
+						<div class="col-1" style="height: 100px; background: #ddd;"></div>
 					</div>
-					<!-- Right side -->
-					<div class="block-right">
-						<p class="block-item"><strong>All</strong></p>
-						<p class="block-item"><a>Published</a></p>
-						<p class="block-item"><a>Drafts</a></p>
-						<p class="block-item"><a>Deleted</a></p>
-						<p class="block-item"><a class="button success">New</a></p>
+					<div class="cols desktop-only tile">
+						<div class="col-1" style="height: 100px; background: #ddd;"></div>
+						<div class="col-10" style="height: 100px; background: #000;"></div>
+						<div class="col-1" style="height: 100px; background: #eee;"></div>
+						<div class="col-1" style="height: 100px; background: #ddd;"></div>
+						<div class="col-10" style="height: 100px; background: #000;"></div>
+						<div class="col-1" style="height: 100px; background: #eee;"></div>
 					</div>
-				</nav>
-			</div>
-		</section>
-		<section class="section">
-			<article class="block-media">
-			  <figure class="media-image">
-				<p class="image is-64x64">
-				  <img src="https://bulma.io/images/placeholders/64x64.png">
-				</p>
-			  </figure>
-			  <div class="media-content">
-				<div class="content">
-				  <p>
-					<strong>Barbara Middleton</strong>
-					<br>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta eros lacus, nec ultricies elit blandit non. Suspendisse pellentesque mauris sit amet dolor blandit rutrum. Nunc in tempus turpis.
-					<br>
-					<small><a>Like</a> · <a>Reply</a> · 3 hrs</small>
-				  </p>
+					<div class="cols">
+						<div class="col-offset-1"></div>
+						<div class="col-10" style="height: 100px; background: #000;"></div>
+						<div class="col-1" style="height: 100px; background: #eee;"></div>
+					</div>
 				</div>
-
+				<div class="container-fluid">
+					<nav class="block">
+						<!-- Left side -->
+						<div class="block-left">
+							<div class="block-item">
+								<p class="subtitle">
+									<strong>123</strong> posts
+								</p>
+							</div>
+							<div class="block-item">
+								<div class="field has-addons">
+									<p class="control">
+										<input class="input" type="text" placeholder="Find a post">
+									</p>
+									<p class="control">
+										<button class="button">Search</button>
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- Right side -->
+						<div class="block-right">
+							<p class="block-item"><strong>All</strong></p>
+							<p class="block-item"><a>Published</a></p>
+							<p class="block-item"><a>Drafts</a></p>
+							<p class="block-item"><a>Deleted</a></p>
+							<p class="block-item"><a class="button success">New</a></p>
+						</div>
+					</nav>
+				</div>
+			</section>
+			<section class="section">
 				<article class="block-media">
 				  <figure class="media-image">
-					<p class="image is-48x48">
-					  <img src="https://bulma.io/images/placeholders/48x48.png">
+					<p class="image is-64x64">
+					  <img src="https://bulma.io/images/placeholders/64x64.png">
 					</p>
 				  </figure>
 				  <div class="media-content">
 					<div class="content">
 					  <p>
-						<strong>Sean Brown</strong>
+						<strong>Barbara Middleton</strong>
 						<br>
-						Donec sollicitudin urna eget eros malesuada sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam blandit nisl a nulla sagittis, a lobortis leo feugiat.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta eros lacus, nec ultricies elit blandit non. Suspendisse pellentesque mauris sit amet dolor blandit rutrum. Nunc in tempus turpis.
 						<br>
-						<small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
+						<small><a>Like</a> · <a>Reply</a> · 3 hrs</small>
 					  </p>
 					</div>
 
 					<article class="block-media">
-					  Vivamus quis semper metus, non tincidunt dolor. Vivamus in mi eu lorem cursus ullamcorper sit amet nec massa.
+					  <figure class="media-image">
+						<p class="image is-48x48">
+						  <img src="https://bulma.io/images/placeholders/48x48.png">
+						</p>
+					  </figure>
+					  <div class="media-content">
+						<div class="content">
+						  <p>
+							<strong>Sean Brown</strong>
+							<br>
+							Donec sollicitudin urna eget eros malesuada sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam blandit nisl a nulla sagittis, a lobortis leo feugiat.
+							<br>
+							<small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
+						  </p>
+						</div>
+
+						<article class="block-media">
+						  Vivamus quis semper metus, non tincidunt dolor. Vivamus in mi eu lorem cursus ullamcorper sit amet nec massa.
+						</article>
+
+						<article class="block-media">
+						  Morbi vitae diam et purus tincidunt porttitor vel vitae augue. Praesent malesuada metus sed pharetra euismod. Cras tellus odio, tincidunt iaculis diam non, porta aliquet tortor.
+						</article>
+					  </div>
 					</article>
 
 					<article class="block-media">
-					  Morbi vitae diam et purus tincidunt porttitor vel vitae augue. Praesent malesuada metus sed pharetra euismod. Cras tellus odio, tincidunt iaculis diam non, porta aliquet tortor.
+					  <figure class="media-image">
+						<p class="image is-48x48">
+						  <img src="https://bulma.io/images/placeholders/48x48.png">
+						</p>
+					  </figure>
+					  <div class="media-content">
+						<div class="content">
+						  <p>
+							<strong>Kayli Eunice </strong>
+							<br>
+							Sed convallis scelerisque mauris, non pulvinar nunc mattis vel. Maecenas varius felis sit amet magna vestibulum euismod malesuada cursus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus lacinia non nisl id feugiat.
+							<br>
+							<small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
+						  </p>
+						</div>
+					  </div>
 					</article>
 				  </div>
 				</article>
-
 				<article class="block-media">
 				  <figure class="media-image">
-					<p class="image is-48x48">
-					  <img src="https://bulma.io/images/placeholders/48x48.png">
+					<p class="image is-64x64">
+					  <img src="https://bulma.io/images/placeholders/64x64.png">
 					</p>
 				  </figure>
 				  <div class="media-content">
-					<div class="content">
-					  <p>
-						<strong>Kayli Eunice </strong>
-						<br>
-						Sed convallis scelerisque mauris, non pulvinar nunc mattis vel. Maecenas varius felis sit amet magna vestibulum euismod malesuada cursus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus lacinia non nisl id feugiat.
-						<br>
-						<small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
+					<div class="field">
+					  <p class="control">
+						<textarea class="textarea" placeholder="Add a comment..."></textarea>
+					  </p>
+					</div>
+					<div class="field">
+					  <p class="control">
+						<button class="button">Post comment</button>
 					  </p>
 					</div>
 				  </div>
 				</article>
-			  </div>
-			</article>
-			<article class="block-media">
-			  <figure class="media-image">
-				<p class="image is-64x64">
-				  <img src="https://bulma.io/images/placeholders/64x64.png">
-				</p>
-			  </figure>
-			  <div class="media-content">
-				<div class="field">
-				  <p class="control">
-					<textarea class="textarea" placeholder="Add a comment..."></textarea>
-				  </p>
+			</section>
+			<section class="section">
+				<div class="container-fluid">
+					<nav class="breadcrumb" aria-label="breadcrumbs">
+					  <ul>
+						<li><a href="#">Bulma</a></li>
+						<li><a href="#">Documentation</a></li>
+						<li><a href="#">Components</a></li>
+						<li class="active"><a href="#" aria-current="page">Breadcrumb</a></li>
+					  </ul>
+					</nav>
+					<nav class="breadcrumb align-left size-small" aria-label="breadcrumbs">
+					  <ul>
+						<li><a href="#">Bulma</a></li>
+						<li><a href="#">Documentation</a></li>
+						<li><a href="#">Components</a></li>
+						<li class="active"><a href="#" aria-current="page">Breadcrumb</a></li>
+					  </ul>
+					</nav>
+					<nav class="breadcrumb align-center size-medium" aria-label="breadcrumbs">
+					  <ul>
+						<li><a href="#">Bulma</a></li>
+						<li><a href="#">Documentation</a></li>
+						<li><a href="#">Components</a></li>
+						<li class="active"><a href="#" aria-current="page">Breadcrumb</a></li>
+					  </ul>
+					</nav>
+					<nav class="breadcrumb align-right size-large" aria-label="breadcrumbs">
+					  <ul>
+						<li><a href="#">Bulma</a></li>
+						<li><a href="#">Documentation</a></li>
+						<li><a href="#">Components</a></li>
+						<li class="active"><a href="#" aria-current="page">Breadcrumb</a></li>
+					  </ul>
+					</nav>
 				</div>
-				<div class="field">
-				  <p class="control">
-					<button class="button">Post comment</button>
-				  </p>
+			</section>
+			<section class="section">
+				<div class="dropdown hoverable">
+				  <div class="dropdown-trigger">
+					<button class="button">
+						<span>Dropdown button</span>
+					</button>
+					  <div class="dropdown-menu">
+						<div class="dropdown-content">
+						  <a href="#" class="dropdown-item">
+							Dropdown item
+						  </a>
+						  <a class="dropdown-item">
+							Other dropdown item
+						  </a>
+						  <a href="#" class="dropdown-item active">
+							Active dropdown item
+						  </a>
+						  <a href="#" class="dropdown-item">
+							Other dropdown item
+						  </a>
+						  <hr class="dropdown-divider">
+						  <a href="#" class="dropdown-item">
+							With a divider
+						  </a>
+						</div>
+					  </div>
+				  </div>
 				</div>
-			  </div>
-			</article>
-		</section>
-		<section class="section">
-			<div class="container-fluid">
-				<nav class="breadcrumb" aria-label="breadcrumbs">
-				  <ul>
-					<li><a href="#">Bulma</a></li>
-					<li><a href="#">Documentation</a></li>
-					<li><a href="#">Components</a></li>
-					<li class="active"><a href="#" aria-current="page">Breadcrumb</a></li>
-				  </ul>
-				</nav>
-				<nav class="breadcrumb align-left size-small" aria-label="breadcrumbs">
-				  <ul>
-					<li><a href="#">Bulma</a></li>
-					<li><a href="#">Documentation</a></li>
-					<li><a href="#">Components</a></li>
-					<li class="active"><a href="#" aria-current="page">Breadcrumb</a></li>
-				  </ul>
-				</nav>
-				<nav class="breadcrumb align-center size-medium" aria-label="breadcrumbs">
-				  <ul>
-					<li><a href="#">Bulma</a></li>
-					<li><a href="#">Documentation</a></li>
-					<li><a href="#">Components</a></li>
-					<li class="active"><a href="#" aria-current="page">Breadcrumb</a></li>
-				  </ul>
-				</nav>
-				<nav class="breadcrumb align-right size-large" aria-label="breadcrumbs">
-				  <ul>
-					<li><a href="#">Bulma</a></li>
-					<li><a href="#">Documentation</a></li>
-					<li><a href="#">Components</a></li>
-					<li class="active"><a href="#" aria-current="page">Breadcrumb</a></li>
-				  </ul>
-				</nav>
-			</div>
-		</section>
-		<section class="section">
-			<div class="dropdown hoverable">
-			  <div class="dropdown-trigger">
-				<button class="button">
-					<span>Dropdown button</span>
-				</button>
-				  <div class="dropdown-menu">
-					<div class="dropdown-content">
-					  <a href="#" class="dropdown-item">
-						Dropdown item
-					  </a>
-					  <a class="dropdown-item">
-						Other dropdown item
-					  </a>
-					  <a href="#" class="dropdown-item active">
-						Active dropdown item
-					  </a>
-					  <a href="#" class="dropdown-item">
-						Other dropdown item
-					  </a>
-					  <hr class="dropdown-divider">
-					  <a href="#" class="dropdown-item">
-						With a divider
-					  </a>
-					</div>
+				<div class="dropdown hoverable up">
+				  <div class="dropdown-trigger">
+					<button class="button">
+						<span>Dropdown button</span>
+					</button>
+					  <div class="dropdown-menu">
+						<div class="dropdown-content">
+						  <a href="#" class="dropdown-item">
+							Dropdown item
+						  </a>
+						  <a class="dropdown-item">
+							Other dropdown item
+						  </a>
+						  <a href="#" class="dropdown-item active">
+							Active dropdown item
+						  </a>
+						  <a href="#" class="dropdown-item">
+							Other dropdown item
+						  </a>
+						  <hr class="dropdown-divider">
+						  <a href="#" class="dropdown-item">
+							With a divider
+						  </a>
+						</div>
+					  </div>
 				  </div>
-			  </div>
-			</div>
-			<div class="dropdown hoverable up">
-			  <div class="dropdown-trigger">
-				<button class="button">
-					<span>Dropdown button</span>
-				</button>
-				  <div class="dropdown-menu">
-					<div class="dropdown-content">
-					  <a href="#" class="dropdown-item">
-						Dropdown item
-					  </a>
-					  <a class="dropdown-item">
-						Other dropdown item
-					  </a>
-					  <a href="#" class="dropdown-item active">
-						Active dropdown item
-					  </a>
-					  <a href="#" class="dropdown-item">
-						Other dropdown item
-					  </a>
-					  <hr class="dropdown-divider">
-					  <a href="#" class="dropdown-item">
-						With a divider
-					  </a>
-					</div>
+				</div>
+			</section>
+			<section class="section">
+				<a class="button">Anchor</a>
+				<button class="button">Button</button>
+				<input class="button" type="submit" value="Submit input">
+				<input class="button" type="reset" value="Reset input">
+				<hr>
+				<a class="button white">White</a>
+				<a class="button light">Light</a>
+				<a class="button grey">Grey</a>
+				<a class="button dark">Dark</a>
+				<a class="button black">Black</a>
+				<a class="button text">Text</a>
+				<hr>
+				<a class="button primary">Primary</a>
+				<a class="button secondary">Secondary</a>
+				<a class="button link">Link</a>
+				<a class="button success">Success</a>
+				<a class="button warning">Warning</a>
+				<a class="button danger">Danger</a>
+				<hr>
+				<a class="button size-small">Small</a>
+				<a class="button">Normal</a>
+				<a class="button size-medium">Medium</a>
+				<a class="button size-large">Large</a>
+				<hr>
+				<a class="button white outlined">Outlined</a>
+				<a class="button light outlined">Outlined</a>
+				<a class="button grey outlined">Outlined</a>
+				<a class="button dark outlined">Outlined</a>
+				<a class="button black outlined">Outlined</a>
+				<a class="button text outlined">Outlined</a>
+				<a class="button outlined">Outlined</a>
+				<a class="button primary outlined">Outlined</a>
+				<a class="button link outlined">Outlined</a>
+				<a class="button info outlined">Outlined</a>
+				<a class="button success outlined">Outlined</a>
+				<a class="button danger outlined">Outlined</a>
+				<hr>
+				<a class="button white inverted">Inverted</a>
+				<a class="button light inverted">Inverted</a>
+				<a class="button grey inverted">Inverted</a>
+				<a class="button dark inverted">Inverted</a>
+				<a class="button black inverted">Inverted</a>
+				<a class="button text inverted">Inverted</a>
+				<a class="button primary inverted">Inverted</a>
+				<a class="button link inverted">Inverted</a>
+				<a class="button info inverted">Inverted</a>
+				<a class="button success inverted">Inverted</a>
+				<a class="button danger inverted">Inverted</a>
+				<hr>
+				<a class="button rounded">Rounded</a>
+				<a class="button primary rounded">Rounded</a>
+				<a class="button link rounded">Rounded</a>
+				<a class="button secondary rounded">Rounded</a>
+				<a class="button success rounded">Rounded</a>
+				<a class="button danger rounded">Rounded</a>
+				<hr>
+				<a class="button" title="Disabled button" disabled>Disabled</a>
+				<a class="button primary" title="Disabled button" disabled>Disabled</a>
+				<a class="button link" title="Disabled button" disabled>Disabled</a>
+				<a class="button info" title="Disabled button" disabled>Disabled</a>
+				<a class="button success" title="Disabled button" disabled>Disabled</a>
+				<a class="button warning" title="Disabled button" disabled>Disabled</a>
+				<a class="button danger" title="Disabled button" disabled>Disabled</a>
+			</section>
+			<section class="section">
+				<article class="message dark">
+				  <div class="message-header">
+					<p>Dark</p>
+					<button class="close"></button>
 				  </div>
-			  </div>
-			</div>
-		</section>
-		<section class="section">
-			<a class="button">Anchor</a>
-			<button class="button">Button</button>
-			<input class="button" type="submit" value="Submit input">
-			<input class="button" type="reset" value="Reset input">
-			<hr>
-			<a class="button white">White</a>
-			<a class="button light">Light</a>
-			<a class="button grey">Grey</a>
-			<a class="button dark">Dark</a>
-			<a class="button black">Black</a>
-			<a class="button text">Text</a>
-			<hr>
-			<a class="button primary">Primary</a>
-			<a class="button secondary">Secondary</a>
-			<a class="button link">Link</a>
-			<a class="button success">Success</a>
-			<a class="button warning">Warning</a>
-			<a class="button danger">Danger</a>
-			<hr>
-			<a class="button size-small">Small</a>
-			<a class="button">Normal</a>
-			<a class="button size-medium">Medium</a>
-			<a class="button size-large">Large</a>
-			<hr>
-			<a class="button white outlined">Outlined</a>
-			<a class="button light outlined">Outlined</a>
-			<a class="button grey outlined">Outlined</a>
-			<a class="button dark outlined">Outlined</a>
-			<a class="button black outlined">Outlined</a>
-			<a class="button text outlined">Outlined</a>
-			<a class="button outlined">Outlined</a>
-			<a class="button primary outlined">Outlined</a>
-			<a class="button link outlined">Outlined</a>
-			<a class="button info outlined">Outlined</a>
-			<a class="button success outlined">Outlined</a>
-			<a class="button danger outlined">Outlined</a>
-			<hr>
-			<a class="button white inverted">Inverted</a>
-			<a class="button light inverted">Inverted</a>
-			<a class="button grey inverted">Inverted</a>
-			<a class="button dark inverted">Inverted</a>
-			<a class="button black inverted">Inverted</a>
-			<a class="button text inverted">Inverted</a>
-			<a class="button primary inverted">Inverted</a>
-			<a class="button link inverted">Inverted</a>
-			<a class="button info inverted">Inverted</a>
-			<a class="button success inverted">Inverted</a>
-			<a class="button danger inverted">Inverted</a>
-			<hr>
-			<a class="button rounded">Rounded</a>
-			<a class="button primary rounded">Rounded</a>
-			<a class="button link rounded">Rounded</a>
-			<a class="button secondary rounded">Rounded</a>
-			<a class="button success rounded">Rounded</a>
-			<a class="button danger rounded">Rounded</a>
-			<hr>
-			<a class="button" title="Disabled button" disabled>Disabled</a>
-			<a class="button primary" title="Disabled button" disabled>Disabled</a>
-			<a class="button link" title="Disabled button" disabled>Disabled</a>
-			<a class="button info" title="Disabled button" disabled>Disabled</a>
-			<a class="button success" title="Disabled button" disabled>Disabled</a>
-			<a class="button warning" title="Disabled button" disabled>Disabled</a>
-			<a class="button danger" title="Disabled button" disabled>Disabled</a>
-		</section>
-		<section class="section">
-			<article class="message dark">
-			  <div class="message-header">
-				<p>Dark</p>
-				<button class="close"></button>
-			  </div>
-			  <div class="message-body">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-			  </div>
-			</article>
+				  <div class="message-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+				  </div>
+				</article>
 
-			<article class="message primary">
-			  <div class="message-header">
-				<p>Primary</p>
-				<button class="close"></button>
-			  </div>
-			  <div class="message-body">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-			  </div>
-			</article>
+				<article class="message primary">
+				  <div class="message-header">
+					<p>Primary</p>
+					<button class="close"></button>
+				  </div>
+				  <div class="message-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+				  </div>
+				</article>
 
-			<article class="message link">
-			  <div class="message-header">
-				<p>Link</p>
-				<button class="close"></button>
-			  </div>
-			  <div class="message-body">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-			  </div>
-			</article>
+				<article class="message link">
+				  <div class="message-header">
+					<p>Link</p>
+					<button class="close"></button>
+				  </div>
+				  <div class="message-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+				  </div>
+				</article>
 
-			<article class="message secondary">
-			  <div class="message-header">
-				<p>Secondary</p>
-				<button class="close"></button>
-			  </div>
-			  <div class="message-body">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-			  </div>
-			</article>
+				<article class="message secondary">
+				  <div class="message-header">
+					<p>Secondary</p>
+					<button class="close"></button>
+				  </div>
+				  <div class="message-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+				  </div>
+				</article>
 
-			<article class="message info">
-			  <div class="message-header">
-				<p>Info</p>
-				<button class="close"></button>
-			  </div>
-			  <div class="message-body">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-			  </div>
-			</article>
+				<article class="message info">
+				  <div class="message-header">
+					<p>Info</p>
+					<button class="close"></button>
+				  </div>
+				  <div class="message-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+				  </div>
+				</article>
 
-			<article class="message success">
-			  <div class="message-header">
-				<p>Success</p>
-				<button class="close"></button>
-			  </div>
-			  <div class="message-body">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-			  </div>
-			</article>
+				<article class="message success">
+				  <div class="message-header">
+					<p>Success</p>
+					<button class="close"></button>
+				  </div>
+				  <div class="message-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+				  </div>
+				</article>
 
-			<article class="message warning">
-			  <div class="message-header">
-				<p>Warning</p>
-				<button class="close"></button>
-			  </div>
-			  <div class="message-body">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-			  </div>
-			</article>
+				<article class="message warning">
+				  <div class="message-header">
+					<p>Warning</p>
+					<button class="close"></button>
+				  </div>
+				  <div class="message-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+				  </div>
+				</article>
 
-			<article class="message danger">
-			  <div class="message-header">
-				<p>Danger</p>
-				<button class="close"></button>
-			  </div>
-			  <div class="message-body">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-			  </div>
-			</article>
-			<article class="message size-small">
-			  <div class="message-header">
-				<p>Normal</p>
-				<button class="close"></button>
-			  </div>
-			  <div class="message-body">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-			  </div>
-			</article>
-			<article class="message size-medium">
-			  <div class="message-header">
-				<p>Normal</p>
-				<button class="close"></button>
-			  </div>
-			  <div class="message-body">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-			  </div>
-			</article>
-			<article class="message size-large">
-			  <div class="message-header">
-				<p>Normal</p>
-				<button class="close"></button>
-			  </div>
-			  <div class="message-body">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-			  </div>
-			</article>
-		</section>
-		<section class="section">
-		<button class="button primary" onclick="modalShow(this)">Launch Model</button>
-		<div class="modal">
-		  <div class="modal-background"  onclick="modalHide(this)"></div>
-		  <div class="modal-content">
-			<p class="image is-4by3">
-			  <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
-			</p>
-		  </div>
-		  <button class="close large" onclick="modalHide(this)" aria-label="close"></button>
-		</div>
-		</section>
+				<article class="message danger">
+				  <div class="message-header">
+					<p>Danger</p>
+					<button class="close"></button>
+				  </div>
+				  <div class="message-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+				  </div>
+				</article>
+				<article class="message size-small">
+				  <div class="message-header">
+					<p>Normal</p>
+					<button class="close"></button>
+				  </div>
+				  <div class="message-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+				  </div>
+				</article>
+				<article class="message size-medium">
+				  <div class="message-header">
+					<p>Normal</p>
+					<button class="close"></button>
+				  </div>
+				  <div class="message-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+				  </div>
+				</article>
+				<article class="message size-large">
+				  <div class="message-header">
+					<p>Normal</p>
+					<button class="close"></button>
+				  </div>
+				  <div class="message-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+				  </div>
+				</article>
+			</section>
+			<section class="section">
+			<button class="button primary" onclick="modalShow(this)">Launch Model</button>
+				<div class="modal">
+				  <div class="modal-background"  onclick="modalHide(this)"></div>
+				  <div class="modal-content">
+					<p class="image is-4by3">
+					  <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
+					</p>
+				  </div>
+				  <button class="close large" onclick="modalHide(this)" aria-label="close"></button>
+				</div>
+			</section>
+		</main>
 	</body>
 </html>

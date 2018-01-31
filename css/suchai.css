@@ -174,6 +174,7 @@ button, input {
   border: 1px solid #4F5B66;
   border-radius: 5px;
   cursor: pointer;
+  background: #FFFFFF;
 }
 .button:hover {
   color: #343D46;
@@ -651,11 +652,19 @@ button, input {
   .widescreen-only {
     display: none;
   }
+
+  .mobile-hidden {
+    display: none;
+  }
 }
 @media screen and (min-width: 600px) and (max-width: 900px) {
   .mobile-only,
   .desktop-only,
   .widescreen-only {
+    display: none;
+  }
+
+  .tablet-hidden {
     display: none;
   }
 }
@@ -665,11 +674,19 @@ button, input {
   .widescreen-only {
     display: none;
   }
+
+  .desktop-hidden {
+    display: none;
+  }
 }
 @media screen and (min-width: 1200px) {
   .mobile-only,
   .tablet-only,
   .desktop-only {
+    display: none;
+  }
+
+  .widescreen-hidden {
     display: none;
   }
 }
@@ -934,7 +951,7 @@ button, input {
   margin-bottom: 0.2rem;
   border-right: 3px solid #2980B9;
   border-bottom: 3px solid #2980B9;
-  border-radius: 3px 0px;
+  border-radius: 2px 0px;
   transform: rotate(45deg);
 }
 .dropdown .dropdown-menu {
@@ -1236,4 +1253,206 @@ button, input {
   border: 2px solid #FFFFFF;
   top: 1.0rem;
   right: 0.5rem;
+}
+
+.nav, nav.horizontal {
+  position: relative;
+  width: 100%;
+  background: #FFFFFF;
+}
+.nav .container, .nav .container-fluid, nav.horizontal .container, nav.horizontal .container-fluid {
+  display: flex;
+  vertical-align: middle;
+  flex-wrap: wrap;
+}
+.nav .nav-burger, nav.horizontal .nav-burger {
+  display: none;
+  position: absolute;
+  top: 0.2rem;
+  right: 0.4rem;
+  border: 1px solid #343D46;
+  float: right;
+  width: 2.2rem;
+  height: 2.1rem;
+  margin: 0.5rem 0.4rem;
+  padding: 0.2rem 0.1rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.nav .nav-burger span, nav.horizontal .nav-burger span {
+  border: 1px solid #343D46;
+  display: block;
+  margin: 5px 0.3rem;
+}
+.nav .nav-burger:hover, nav.horizontal .nav-burger:hover {
+  border-color: #FFFFFF;
+  background: #343D46;
+}
+.nav .nav-burger:hover span, nav.horizontal .nav-burger:hover span {
+  border-color: #FFFFFF;
+}
+.nav ul.nav-brand, nav.horizontal ul.nav-brand {
+  display: inline-block;
+}
+.nav ul.nav-brand .nav-logo, nav.horizontal ul.nav-brand .nav-logo {
+  display: inline-block;
+  padding: 0.6rem;
+  vertical-align: middle;
+}
+.nav ul.nav-brand .nav-item, nav.horizontal ul.nav-brand .nav-item {
+  display: inline-flex;
+  padding: 0.6rem;
+  vertical-align: middle;
+}
+.nav ul.nav-menu, nav.horizontal ul.nav-menu {
+  display: inline-block;
+}
+.nav ul.level1 li.level1 a:not(.button), nav.horizontal ul.level1 li.level1 a:not(.button) {
+  display: flex;
+  padding: 1rem 1.5rem;
+  color: #3498DB;
+}
+.nav ul.level1 li.level1 a:not(.button):hover, nav.horizontal ul.level1 li.level1 a:not(.button):hover {
+  background: #ECF0F1;
+}
+.nav ul.level1 li.level1.dropdown, nav.horizontal ul.level1 li.level1.dropdown {
+  position: relative;
+  height: initial;
+  margin-right: 0;
+}
+.nav ul.level1 li.level1.dropdown > a.nav-item::after, nav.horizontal ul.level1 li.level1.dropdown > a.nav-item::after {
+  content: "";
+  display: inline-block;
+  width: 0.6rem;
+  height: 0.6rem;
+  margin-left: 0.6rem;
+  margin-top: 0.2rem;
+  border-right: 3px solid #3498DB;
+  border-bottom: 3px solid #3498DB;
+  border-radius: 2px 0px;
+  transform: rotate(45deg);
+}
+.nav ul.level1 li.level1.dropdown .nav-dropdown, nav.horizontal ul.level1 li.level1.dropdown .nav-dropdown {
+  overflow: hidden;
+  display: none;
+  position: absolute;
+  z-index: 999;
+  background: #FFFFFF;
+  box-shadow: 0.3rem 0.3rem 1.5rem #A7ADBA;
+  border-radius: 5px;
+  min-width: 180px;
+  top: 100%;
+  left: 0;
+}
+.nav ul.level1 li.level1.dropdown .nav-dropdown.align-right, nav.horizontal ul.level1 li.level1.dropdown .nav-dropdown.align-right {
+  right: 0;
+  left: inherit;
+}
+.nav ul.level1 li.level1.dropdown .nav-dropdown.border, nav.horizontal ul.level1 li.level1.dropdown .nav-dropdown.border {
+  border: 1px solid #A7ADBA;
+  box-shadow: 0;
+}
+.nav ul.level1 li.level1.dropdown .nav-dropdown li.nav-item, nav.horizontal ul.level1 li.level1.dropdown .nav-dropdown li.nav-item {
+  display: block;
+}
+.nav ul.level1 li.level1.dropdown .nav-dropdown .nav-divider, nav.horizontal ul.level1 li.level1.dropdown .nav-dropdown .nav-divider {
+  margin: 0.5rem;
+  border-color: #A7ADBA;
+}
+.nav ul.level1 li.level1.dropdown:hover .nav-dropdown, nav.horizontal ul.level1 li.level1.dropdown:hover .nav-dropdown {
+  display: block;
+}
+.nav ul.level1 li.level1:not(last-child) a.button, nav.horizontal ul.level1 li.level1:not(last-child) a.button {
+  margin-right: 0.5rem;
+}
+.nav .nav-menu, nav.horizontal .nav-menu {
+  flex: 1;
+}
+.nav .nav-menu .nav-start, nav.horizontal .nav-menu .nav-start {
+  display: inline-flex;
+  float: left;
+  height: 100%;
+  align-items: center;
+}
+.nav .nav-menu .nav-end, nav.horizontal .nav-menu .nav-end {
+  display: inline-flex;
+  float: right;
+  height: 100%;
+  align-items: center;
+}
+.nav.dark, nav.horizontal.dark {
+  background: #343D46;
+}
+.nav.dark ul.level1 li.level1 a:not(.button), nav.horizontal.dark ul.level1 li.level1 a:not(.button) {
+  color: #FFFFFF;
+}
+.nav.dark ul.level1 li.level1 a:not(.button):hover, nav.horizontal.dark ul.level1 li.level1 a:not(.button):hover {
+  background: #4F5B66;
+}
+.nav.dark ul.level1 li.level1.dropdown > a.nav-item::after, nav.horizontal.dark ul.level1 li.level1.dropdown > a.nav-item::after {
+  border-color: #FFFFFF;
+}
+.nav.dark ul.level1 li.level1.dropdown .nav-dropdown, nav.horizontal.dark ul.level1 li.level1.dropdown .nav-dropdown {
+  background: #343D46;
+}
+@media screen and (max-width: 900px) {
+  .nav .nav-burger, nav.horizontal .nav-burger {
+    display: block;
+    border-color: #FFFFFF;
+  }
+  .nav .nav-burger span, nav.horizontal .nav-burger span {
+    border-color: #FFFFFF;
+  }
+  .nav .nav-burger:hover, nav.horizontal .nav-burger:hover {
+    border-color: #343D46;
+    background: #FFFFFF;
+  }
+  .nav .nav-burger:hover span, nav.horizontal .nav-burger:hover span {
+    border-color: #343D46;
+  }
+  .nav ul.nav-menu, nav.horizontal ul.nav-menu {
+    display: none;
+    min-width: 100%;
+  }
+  .nav ul.nav-menu .nav-start,
+  .nav ul.nav-menu .nav-end, nav.horizontal ul.nav-menu .nav-start,
+  nav.horizontal ul.nav-menu .nav-end {
+    display: block;
+    height: inherit;
+    width: 100%;
+  }
+  .nav ul.nav-menu .nav-start li.level1,
+  .nav ul.nav-menu .nav-end li.level1, nav.horizontal ul.nav-menu .nav-start li.level1,
+  nav.horizontal ul.nav-menu .nav-end li.level1 {
+    display: block;
+    width: 100%;
+  }
+  .nav ul.nav-menu .nav-start li.level1.dropdown > a.nav-item,
+  .nav ul.nav-menu .nav-end li.level1.dropdown > a.nav-item, nav.horizontal ul.nav-menu .nav-start li.level1.dropdown > a.nav-item,
+  nav.horizontal ul.nav-menu .nav-end li.level1.dropdown > a.nav-item {
+    background: #ECF0F1;
+  }
+  .nav ul.nav-menu .nav-start li.level1.dropdown > a.nav-item::after,
+  .nav ul.nav-menu .nav-end li.level1.dropdown > a.nav-item::after, nav.horizontal ul.nav-menu .nav-start li.level1.dropdown > a.nav-item::after,
+  nav.horizontal ul.nav-menu .nav-end li.level1.dropdown > a.nav-item::after {
+    display: none;
+  }
+  .nav ul.nav-menu .nav-start li.level1 .nav-dropdown,
+  .nav ul.nav-menu .nav-end li.level1 .nav-dropdown, nav.horizontal ul.nav-menu .nav-start li.level1 .nav-dropdown,
+  nav.horizontal ul.nav-menu .nav-end li.level1 .nav-dropdown {
+    display: block;
+    position: inherit;
+    box-shadow: none;
+    padding-left: 1rem;
+    width: 100%;
+  }
+  .nav ul.nav-menu .nav-start li.level1:not(last-child) a.button,
+  .nav ul.nav-menu .nav-end li.level1:not(last-child) a.button, nav.horizontal ul.nav-menu .nav-start li.level1:not(last-child) a.button,
+  nav.horizontal ul.nav-menu .nav-end li.level1:not(last-child) a.button {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+  .nav.dark ul.nav-menu li.level1.dropdown > a.nav-item, nav.horizontal.dark ul.nav-menu li.level1.dropdown > a.nav-item {
+    background: #4F5B66;
+  }
 }

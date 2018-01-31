@@ -16,6 +16,7 @@ button,input {
 	border: $button-border-size $button-border-style $button-border-color;
     border-radius: $radius;
 	cursor: pointer;
+	background: $white;
 	&:hover {
 		color: $dark;
 		border-color: $button-border-hover-color;	
