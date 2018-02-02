@@ -117,6 +117,10 @@ p {
   line-height: 1.3rem;
 }
 
+.shadow {
+  box-shadow: 0.2rem 0.2rem 0.5rem #A7ADBA;
+}
+
 .title {
   font-size: 2rem;
   font-weight: 700;
@@ -1589,4 +1593,91 @@ button, input {
 }
 .pagination.rounded .pagination-previous, .pagination.rounded .pagination-next, .pagination.rounded .pagination-item {
   border-radius: 999px;
+}
+
+.tabs ul li {
+  display: inline-block;
+  margin-right: -5px;
+}
+.tabs ul li a {
+  color: #4F5B66;
+  border: 1px solid #C0C5CE;
+  background: #FFFFFF;
+  display: block;
+  padding: 1em;
+}
+.tabs ul li a:hover {
+  background: #ECF0F1;
+}
+.tabs ul li.active a {
+  color: #FFFFFF;
+  background: #2980B9;
+  border-color: #2980B9;
+}
+.tabs ul li:first-child a {
+  border-radius: 5px 0 0 5px;
+}
+.tabs ul li:last-child a {
+  border-radius: 0 5px 5px 0;
+}
+.tabs.rounded ul li:first-child a {
+  border-radius: 999px 0 0 999px;
+}
+.tabs.rounded ul li:last-child a {
+  border-radius: 0 999px 999px 0;
+}
+.tabs.bordered ul {
+  border-bottom: 1px solid #C0C5CE;
+}
+.tabs.bordered ul li a {
+  border: 0;
+  border-radius: 0;
+}
+.tabs.bordered ul li a:hover {
+  border-bottom: 1px solid #4F5B66;
+  background: #FFFFFF;
+}
+.tabs.bordered ul li.active a {
+  color: #2980B9;
+  background: #FFFFFF;
+  border-bottom: 1px solid #2980B9;
+  margin-bottom: -1px;
+}
+.tabs.boxed ul {
+  border-bottom: 1px solid #C0C5CE;
+}
+.tabs.boxed ul li {
+  margin-right: -4px;
+}
+.tabs.boxed ul li a {
+  border: 0;
+  border-radius: 0;
+}
+.tabs.boxed ul li a:hover {
+  border-bottom: 1px solid #4F5B66;
+  background: #FFFFFF;
+  margin-bottom: -1px;
+}
+.tabs.boxed ul li.active a {
+  color: #2980B9;
+  background: #FFFFFF;
+  border: 1px solid #C0C5CE;
+  border-bottom: 1px solid #FFFFFF;
+  margin-bottom: -1px;
+  border-radius: 5px 5px 0 0;
+}
+.tabs.center {
+  text-align: center;
+}
+.tabs.right {
+  text-align: right;
+}
+.tabs.small {
+  font-size: 0.75rem;
+}
+.tabs.medium {
+  font-size: 1.25rem;
+}
+.tabs.large {
+  font-size: 1.5rem;
 }

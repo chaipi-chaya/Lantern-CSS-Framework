@@ -7,6 +7,7 @@ $dropdown-divider-color: $text;
 $dropdown-border-color: $text;
 $dropdown-border-radius: $radius;
 $dropdown-menu-height: 2.5rem;
+$dropdown-shadow-color: $light-grey;
 
 .dropdown {
 	display: inline-block;
@@ -75,7 +76,7 @@ $dropdown-menu-height: 2.5rem;
 		padding: 0.5rem 0;
 		border-radius: $dropdown-border-radius;
 		background: $white;
-		box-shadow: 0.2rem 0.2rem 0.5rem $light-grey;
+		box-shadow: 0.2rem 0.2rem 0.5rem $dropdown-shadow-color;
 	}
 	&.up {
 		.button::after {
