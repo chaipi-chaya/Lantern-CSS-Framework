@@ -2,9 +2,13 @@ $nav-brand-padding: 0.6rem;
 $nav-background-color: $white;
 $nav-dark-background-color: $dark;
 $nav-item-color: $primary;
+$nav-item-active-color: $white;
 $nav-dark-item-color: $white;
+$nav-dark-item-active-color: $white;
 $nav-item-background-color: $light;
 $nav-dark-item-background-color: $darker-grey;
+$nav-item-active-background-color: $primary;
+$nav-dark-item-active-background-color: $darker-grey;
 $nav-item-padding: 1.0rem 1.5rem;
 $nav-dropdown-border-color: $grey;
 $nav-dropdown-arrow-color: $primary;
@@ -14,7 +18,7 @@ $nav-burger-color: $dark;
 $nav-dark-burger-color: $white;
 $nav-divider-color: $grey;
 
-.nav, nav.horizontal {
+.nav {
 	position: relative;
 	width: 100%;
 	background: $nav-background-color;
@@ -30,22 +34,41 @@ $nav-divider-color: $grey;
 		right: 0.4rem;
 		border: 1px solid $nav-burger-color;
 		float: right;
-		width: 2.2rem;
+		width: 2.15rem;
 		height: 2.1rem;
 		margin: 0.5rem 0.4rem;
-		padding: 0.2rem 0.1rem;
+		padding: 0.25rem 0.1rem;
 		border-radius: $nav-burger-raduis;
 		cursor: pointer;
 		span {
-			border: 1px solid $nav-burger-color;
+			border: 0.5px solid $nav-burger-color;
 			display: block;
 			margin: 5px 0.3rem;
 		}
 		&:hover {
-			border-color: $nav-background-color;
+			border: 1px solid $nav-background-color;
 			background: $nav-burger-color;
 			span {
 				border-color: $nav-background-color;
+				background: $nav-burger-color;
+			}
+		}
+		&.active {
+			span {
+				position: absolute;
+			}
+			span:nth-child(2) {
+				opacity: 0;
+			}
+			span:first-child {   
+				width: 1.2rem;
+				transform-origin: 0% 0%;
+    			transform: translate(4px, 0px) rotate(45deg);
+			}
+			span:last-child {
+				width: 1.2rem;
+				transform-origin: 0% 100%; 
+				transform: translate(4px, 13px) rotate(-45deg);
 			}
 		}
 	}
@@ -129,6 +152,10 @@ $nav-divider-color: $grey;
 			&:not(last-child) a.button {
 				margin-right: 0.5rem;
 			}
+			&.active a:not(.button), & .level2.active a:not(.button) { 
+				color: $nav-item-active-color;
+				background: $nav-item-active-background-color;
+			}
 		}
 	}
 	.nav-menu {
@@ -148,13 +175,29 @@ $nav-divider-color: $grey;
 	}
 	&.dark {
 		background: $nav-dark-background-color;
+		.nav-burger {
+			&.active {
+				span {
+					border: 1px solid $nav-dark-burger-color;
+					background: $nav-dark-burger-color;
+				}
+				&:hover {
+					border: 1px solid $nav-dark-background-color;
+					background: $nav-dark-burger-color;
+					span {
+						border: 1px solid $nav-dark-background-color;
+						background: $nav-dark-background-color;
+					}
+				}
+			}
+		}
 		ul.level1 {
 			li.level1 {
-					a:not(.button) {
-						color: $nav-dark-item-color;
-						&:hover {
-							background: $nav-dark-item-background-color;
-						}
+				a:not(.button) {
+					color: $nav-dark-item-color;
+					&:hover {
+						background: $nav-dark-item-background-color;
+					}
 				}
 				&.dropdown {
 					> a.nav-item {
@@ -167,21 +210,25 @@ $nav-divider-color: $grey;
 					}
 				}
 			}
+			&.active a:not(.button), & .level2.active a:not(.button) { 
+				color: $nav-dark-item-active-color;
+				background: $nav-dark-item-active-background-color;
+			}
 		}
 	}
 	// in mobile and tablet
 	@media screen and (max-width: $tablet) {
 		.nav-burger {
 			display: block;
-			border-color: $nav-dark-burger-color;
+			border-color: $nav-burger-color;
 			span {
-				border-color: $nav-dark-burger-color;
+				border-color: $nav-burger-color;
 			}
 			&:hover {
-				border-color: $nav-dark-background-color;
-				background: $nav-dark-burger-color;
+				border-color: $nav-background-color;
+				background: $nav-burger-color;
 				span {
-					border-color: $nav-dark-background-color;
+					border-color: $nav-background-color;
 				}
 			}
 		}

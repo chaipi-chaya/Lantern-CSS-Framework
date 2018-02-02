@@ -14,7 +14,8 @@
 			}
 			
 			function navToggle(ele) {
-				if (ele.nextSibling.nextSibling.style.display == 'none') {
+				if (ele.nextSibling.nextSibling.style.display == 'none' ||
+				    ele.nextSibling.nextSibling.style.display == '') {
 					ele.nextSibling.nextSibling.style.display = 'block';
 					ele.classList.add('active');
 				} else {
@@ -26,7 +27,7 @@
 		</script>
 	</head>
 	<body>
-		<nav class="nav dark">
+		<nav class="nav">
 			<div class="container-fluid">
 				<ul class="nav-brand">
 					<a class="nav-logo" href="https://bulma.io">
