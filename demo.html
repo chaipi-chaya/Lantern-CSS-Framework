@@ -96,7 +96,7 @@
 			  </ul>
 			</div>
 		</nav>
-		<main class="cols-desktop ">
+		<main class="cols-desktop">
 			<aside class="menu col-4 dark">
 				  <p class="menu-label">
 					General
@@ -585,16 +585,45 @@
 				  </div>
 				</article>
 			</section>
-			<section class="section">
-			<button class="button primary" onclick="modalShow(this)">Launch Model</button>
-				<div class="modal">
-				  <div class="modal-background"  onclick="modalHide(this)"></div>
-				  <div class="modal-content">
-					<p class="image is-4by3">
-					  <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
-					</p>
-				  </div>
-				  <button class="close large" onclick="modalHide(this)" aria-label="close"></button>
+			<section class="section col-12">
+				<div class="container-fluid">
+					<button class="button primary" onclick="modalShow(this)">Launch Model</button>
+					<div class="modal">
+					  <div class="modal-background"  onclick="modalHide(this)"></div>
+					  <div class="modal-content">
+						<p class="image is-4by3">
+						  <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
+						</p>
+					  </div>
+					  <button class="close large" onclick="modalHide(this)" aria-label="close"></button>
+					</div>
+					<nav class="pagination" role="navigation" aria-label="pagination">
+					  <a class="pagination-previous">Previous</a>
+					  <ul class="pagination-list">
+						<li class="pagination-item">
+						  <a aria-label="Goto page 1">1</a>
+						</li>
+						<li class="pagination-dot">
+						  <span>&hellip;</span>
+						</li>
+						<li class="pagination-item">
+						  <a aria-label="Goto page 45">45</a>
+						</li>
+						<li class="pagination-item active">
+						  <a aria-label="Page 46" aria-current="page">46</a>
+						</li>
+						<li class="pagination-item">
+						  <a aria-label="Goto page 47">47</a>
+						</li>
+						<li class="pagination-dot">
+						  <span>&hellip;</span>
+						</li>
+						<li class="pagination-item">
+						  <a aria-label="Goto page 86">86</a>
+						</li>
+					  </ul>
+					  <a class="pagination-next" disabled>Next page</a>
+					</nav>
 				</div>
 			</section>
 		</main>

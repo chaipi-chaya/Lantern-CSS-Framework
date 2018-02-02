@@ -1487,3 +1487,106 @@ button, input {
     background: #4F5B66;
   }
 }
+
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+.pagination .pagination-previous, .pagination .pagination-next {
+  display: inline-block;
+  border: 1px solid #A7ADBA;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  color: #4F5B66;
+  padding: 0.5rem 0.8rem;
+}
+.pagination .pagination-previous:hover, .pagination .pagination-next:hover {
+  color: #4F5B66;
+  border-color: #4F5B66;
+  background: #FFFFFF;
+}
+.pagination .pagination-previous[disabled], .pagination .pagination-next[disabled] {
+  border-color: #C0C5CE;
+  background: #C0C5CE;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.pagination .pagination-item {
+  display: inline-block;
+  border: 1px solid #A7ADBA;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+}
+.pagination .pagination-item a {
+  display: block;
+  color: #4F5B66;
+  border-radius: 5px;
+  padding: 0.5em;
+  height: 2.25em;
+  min-width: 2.25em;
+  text-align: center;
+}
+.pagination .pagination-item a:hover {
+  color: #4F5B66;
+}
+.pagination .pagination-item:not(.active):hover {
+  border-color: #4F5B66;
+}
+.pagination .pagination-item.active {
+  background: #2980B9;
+  border-color: #2980B9;
+}
+.pagination .pagination-item.active a {
+  color: #FFFFFF;
+}
+.pagination .pagination-item.active a:hover {
+  color: #FFFFFF;
+}
+.pagination .pagination-dot, .pagination .pagination-list {
+  display: inline-block;
+}
+.pagination.left .pagination-list {
+  order: 1;
+  flex: 1;
+}
+.pagination.left .pagination-previous {
+  order: 2;
+  margin-right: 5px;
+}
+.pagination.left .pagination-next {
+  order: 3;
+}
+.pagination.right .pagination-list {
+  order: 3;
+  flex: 1;
+}
+.pagination.right .pagination-previous {
+  order: 1;
+}
+.pagination.right .pagination-next {
+  order: 2;
+  margin-right: 5px;
+}
+.pagination.center .pagination-list {
+  order: 2;
+}
+.pagination.center .pagination-previous {
+  order: 1;
+}
+.pagination.center .pagination-next {
+  order: 3;
+}
+.pagination.small .pagination-previous, .pagination.small .pagination-next, .pagination.small .pagination-item a {
+  font-size: 0.75rem;
+}
+.pagination.medium .pagination-previous, .pagination.medium .pagination-next, .pagination.medium .pagination-item a {
+  font-size: 1.25rem;
+}
+.pagination.large .pagination-previous, .pagination.large .pagination-next, .pagination.large .pagination-item a {
+  font-size: 1.5rem;
+}
+.pagination.rounded .pagination-previous, .pagination.rounded .pagination-next, .pagination.rounded .pagination-item {
+  border-radius: 999px;
+}
