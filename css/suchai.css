@@ -461,13 +461,13 @@ button, input {
   color: #FFFFFF;
   background: #C0392B;
 }
-.button.size-small {
+.button.small {
   font-size: 0.75rem;
 }
-.button.size-medium {
+.button.medium {
   font-size: 1.25rem;
 }
-.button.size-large {
+.button.large {
   font-size: 1.5rem;
 }
 
@@ -566,6 +566,63 @@ button, input {
   font-size: 1.5rem;
 }
 
+.close {
+  position: relative;
+  display: inline-block;
+  float: right;
+  cursor: pointer;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(20, 20, 20, 0.4);
+  height: 1.3rem;
+  width: 1.3rem;
+  z-index: 9999;
+}
+.close::before, .close::after {
+  position: absolute;
+  content: "";
+  width: 0.7rem;
+  background: #FFFFFF;
+  height: 0;
+  border: 1px solid #FFFFFF;
+  transform: rotate(45deg);
+  top: 0.6rem;
+  right: 0.3rem;
+}
+.close::after {
+  transform: rotate(-45deg);
+}
+.close.small {
+  height: 1.1rem;
+  width: 1.1rem;
+}
+.close.small::before, .close.small::after {
+  width: 0.6rem;
+  border: 1px solid #FFFFFF;
+  top: 0.5rem;
+  right: 0.2rem;
+}
+.close.medium {
+  height: 1.8rem;
+  width: 1.8rem;
+}
+.close.medium::before, .close.medium::after {
+  width: 1rem;
+  border: 1.5px solid #FFFFFF;
+  top: 0.8rem;
+  right: 0.4rem;
+}
+.close.large {
+  height: 2.2rem;
+  width: 2.2rem;
+}
+.close.large::before, .close.large::after {
+  width: 1.2rem;
+  border: 2px solid #FFFFFF;
+  top: 1.0rem;
+  right: 0.5rem;
+}
+
 .image {
   display: block;
 }
@@ -605,6 +662,76 @@ button, input {
 .image.size-256 {
   height: 256px;
   width: 256px;
+}
+
+.notification {
+  position: relative;
+  background: #ECF0F1;
+  padding: 1.25rem 1.5rem;
+  border-radius: 5px;
+}
+.notification .close {
+  top: -0.7rem;
+  right: -1.0rem;
+}
+.notification.primary {
+  color: #FFFFFF;
+  background: #3498DB;
+}
+.notification.primary a {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+.notification.secondary {
+  color: #FFFFFF;
+  background: #16A085;
+}
+.notification.secondary a {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+.notification.link {
+  color: #FFFFFF;
+  background: #2980B9;
+}
+.notification.link a {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+.notification.info {
+  color: #FFFFFF;
+  background: #3273DC;
+}
+.notification.info a {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+.notification.success {
+  color: #FFFFFF;
+  background: #2ECC71;
+}
+.notification.success a {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+.notification.warning {
+  color: #FFFFFF;
+  background: #F39C12;
+}
+.notification.warning a {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+.notification.danger {
+  color: #FFFFFF;
+  background: #C0392B;
+}
+.notification.danger a {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+.notification:not(:last-child) {
+  margin-bottom: 1.0rem;
 }
 
 .title {
@@ -1014,13 +1141,13 @@ button, input {
 .breadcrumb.align-right {
   text-align: right;
 }
-.breadcrumb.size-small {
+.breadcrumb.small {
   font-size: 0.75rem;
 }
-.breadcrumb.size-medium {
+.breadcrumb.medium {
   font-size: 1.25rem;
 }
-.breadcrumb.size-large {
+.breadcrumb.large {
   font-size: 1.5rem;
 }
 .breadcrumb.greater-seperate ul li + li::before, .breadcrumb.greater-seperate ol li + li::before {
@@ -1219,39 +1346,6 @@ button, input {
 .message .message-header p {
   display: inline-block;
 }
-.message .message-header .close {
-  position: relative;
-  display: inline-block;
-  float: right;
-  cursor: pointer;
-  border: 0;
-  border-radius: 50%;
-  background: rgba(20, 20, 20, 0.4);
-  height: 1.3rem;
-  width: 1.3rem;
-}
-.message .message-header .close::after {
-  position: absolute;
-  content: "";
-  width: 0.7rem;
-  background: #FFFFFF;
-  height: 0;
-  border: 1px solid #FFFFFF;
-  transform: rotate(-45deg);
-  top: 0.6rem;
-  right: 0.3rem;
-}
-.message .message-header .close::before {
-  position: absolute;
-  content: "";
-  width: 0.7rem;
-  background: #FFFFFF;
-  height: 0;
-  border: 1px solid #FFFFFF;
-  transform: rotate(45deg);
-  top: 0.6rem;
-  right: 0.3rem;
-}
 .message .message-body {
   padding: 0.8rem;
 }
@@ -1310,13 +1404,13 @@ button, input {
 .message.danger .message-header {
   background-color: #C0392B;
 }
-.message.size-small {
+.message.small {
   font-size: 0.75rem;
 }
-.message.size-medium {
+.message.medium {
   font-size: 1.25rem;
 }
-.message.size-large {
+.message.large {
   font-size: 1.5rem;
 }
 
@@ -1344,55 +1438,8 @@ button, input {
 }
 .modal .close {
   position: fixed;
-  display: inline-block;
-  float: right;
-  cursor: pointer;
-  border: 0;
-  border-radius: 50%;
-  background: rgba(20, 20, 20, 0.4);
-  height: 1.3rem;
-  width: 1.3rem;
   top: 20px;
   right: 20px;
-  z-index: 9999;
-}
-.modal .close::before {
-  position: absolute;
-  content: "";
-  width: 0.7rem;
-  background: #FFFFFF;
-  height: 0;
-  border: 1px solid #FFFFFF;
-  transform: rotate(45deg);
-  top: 0.6rem;
-  right: 0.3rem;
-}
-.modal .close::after {
-  position: absolute;
-  content: "";
-  width: 0.7rem;
-  background: #FFFFFF;
-  height: 0;
-  border: 1px solid #FFFFFF;
-  transform: rotate(-45deg);
-  top: 0.6rem;
-  right: 0.3rem;
-}
-.modal .close.large {
-  height: 2.2rem;
-  width: 2.2rem;
-}
-.modal .close.large::before {
-  width: 1.2rem;
-  border: 2px solid #FFFFFF;
-  top: 1.0rem;
-  right: 0.5rem;
-}
-.modal .close.large::after {
-  width: 1.2rem;
-  border: 2px solid #FFFFFF;
-  top: 1.0rem;
-  right: 0.5rem;
 }
 
 .nav {

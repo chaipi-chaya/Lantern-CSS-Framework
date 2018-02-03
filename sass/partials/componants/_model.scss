@@ -25,54 +25,7 @@ $model-content-background-color: $white;
 	}
 	.close {
 		position: fixed;
-		display: inline-block;
-		float: right;
-		cursor: pointer;
-		border: 0;
-		border-radius: 50%;
-		background: rgba(20, 20, 20, 0.4);
-		height: 1.3rem;
-		width: 1.3rem;
 		top: 20px;
 		right: 20px;
-		z-index: 9999;
-		&::before {
-			position: absolute;
-			content: "";
-			width: 0.7rem;
-			background: $white;
-			height: 0;
-			border: 1px solid $white;
-			transform: rotate(45deg);
-			top: 0.6rem;
-			right: 0.3rem;
-		}
-		&::after {    
-			position: absolute;
-			content: "";
-			width: 0.7rem;
-			background: $white;
-			height: 0;
-			border: 1px solid $white;
-			transform: rotate(-45deg);
-			top: 0.6rem;
-			right: 0.3rem;
-		}
-		&.large {
-			height: 2.2rem;
-			width: 2.2rem;
-			&::before {
-				width: 1.2rem;
-				border: 2px solid $white;
-				top: 1.0rem;
-				right: 0.5rem;
-			}
-			&::after {   
-				width: 1.2rem;
-				border: 2px solid $white;
-				top: 1.0rem;
-				right: 0.5rem;
-			}
-		}
 	}
 }
