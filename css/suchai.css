@@ -734,6 +734,56 @@ button, input {
   margin-bottom: 1.0rem;
 }
 
+.progress {
+  display: block;
+  font-size: 0.75rem;
+  height: 1rem;
+  width: 100%;
+  text-indent: -9999px;
+  -webkit-appearance: none;
+}
+.progress:not(last-child) {
+  margin-bottom: 0.5rem;
+}
+.progress::-webkit-progress-bar {
+  background: #ECF0F1;
+  border-radius: 999px;
+}
+.progress::-webkit-progress-value {
+  background: #4F5B66;
+  border-radius: 999px;
+}
+.progress.primary::-webkit-progress-value {
+  background: #3498DB;
+}
+.progress.secondary::-webkit-progress-value {
+  background: #16A085;
+}
+.progress.link::-webkit-progress-value {
+  background: #2980B9;
+}
+.progress.info::-webkit-progress-value {
+  background: #3273DC;
+}
+.progress.success::-webkit-progress-value {
+  background: #2ECC71;
+}
+.progress.warning::-webkit-progress-value {
+  background: #F39C12;
+}
+.progress.danger::-webkit-progress-value {
+  background: #C0392B;
+}
+.progress.small {
+  height: 0.75rem;
+}
+.progress.medium {
+  height: 1.25rem;
+}
+.progress.large {
+  height: 1.5rem;
+}
+
 .title {
   font-size: 2rem;
   font-weight: 700;
