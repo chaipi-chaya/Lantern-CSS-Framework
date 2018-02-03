@@ -6,7 +6,7 @@ $hr-border-size: 0.5px;
 $hr-border-style: solid;
 $hr-border-color: $grey;
 $hr-height: 0px;
-$p-line-height: 1.3rem;
+$p-line-height: 1.5em;
 
 html {
 	background-color: $html-background-color;
@@ -43,7 +43,7 @@ hr {
 	margin-right: $hr-margin-right;
 }
 
-p {    
+* {    
 	line-height: $p-line-height;
 }
 
