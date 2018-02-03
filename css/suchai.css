@@ -490,6 +490,7 @@ button, input {
   background: #FFFFFF;
   height: 0;
   border: 1px solid #FFFFFF;
+  border-radius: 5px;
   transform: rotate(45deg);
   top: 0.6rem;
   right: 0.3rem;
@@ -852,6 +853,122 @@ button, input {
 }
 .table.striped tbody tr:not(.active):nth-child(2n) {
   background: #ECF0F1;
+}
+
+.tags .tag {
+  margin-bottom: 0.5em;
+}
+
+.addons .tag:first-child {
+  border-radius: 5px 0 0 5px;
+  margin-right: -4px;
+}
+.addons .tag:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+.tag {
+  color: #4F5B66;
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.75rem;
+  background: #ECF0F1;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+.tag.close {
+  float: inherit;
+  padding: 0.75rem;
+}
+.tag.close::before, .tag.close::after {
+  width: 0.9rem;
+  top: 0.65rem;
+  right: 0.25rem;
+  background: #4F5B66;
+  border: 1px solid #4F5B66;
+}
+.tag.close.normal {
+  padding: 1rem;
+}
+.tag.close.normal::before, .tag.close.normal::after {
+  width: 1.4rem;
+  top: 0.85rem;
+  right: 0.3rem;
+  border: 1.5px solid #4F5B66;
+}
+.tag.close.medium {
+  padding: 1.25rem;
+}
+.tag.close.medium::before, .tag.close.medium::after {
+  width: 1.9rem;
+  top: 1.1rem;
+  right: 0.25rem;
+  border: 2px solid #4F5B66;
+}
+.tag.close.large {
+  padding: 1.5rem;
+}
+.tag.close.large::before, .tag.close.large::after {
+  width: 2.5rem;
+  top: 1.25rem;
+  right: 0.25rem;
+  border: 3px solid #4F5B66;
+}
+.tag.black {
+  color: #FFFFFF;
+  background: #000000;
+}
+.tag.dark {
+  color: #FFFFFF;
+  background: #343D46;
+}
+.tag.light {
+  color: #FFFFFF;
+  background: #C0C5CE;
+}
+.tag.white {
+  color: #343D46;
+  background: #FFFFFF;
+}
+.tag.primary {
+  color: #FFFFFF;
+  background: #3498DB;
+}
+.tag.secondary {
+  color: #FFFFFF;
+  background: #16A085;
+}
+.tag.info {
+  color: #FFFFFF;
+  background: #3273DC;
+}
+.tag.link {
+  color: #FFFFFF;
+  background: #2980B9;
+}
+.tag.success {
+  color: #FFFFFF;
+  background: #2ECC71;
+}
+.tag.warning {
+  color: #FFFFFF;
+  background: #F39C12;
+}
+.tag.danger {
+  color: #FFFFFF;
+  background: #C0392B;
+}
+.tag.rounded {
+  border-radius: 999px;
+}
+.tag.normal {
+  font-size: 1rem;
+}
+.tag.medium {
+  font-size: 1.25rem;
+}
+.tag.large {
+  font-size: 1.5rem;
 }
 
 .title {
