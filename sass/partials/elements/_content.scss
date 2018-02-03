@@ -65,9 +65,6 @@ $content-font-weight: $weight-medium;
 				&:first-child {
 					border-left: 0;
 				}
-				&:hover {
-					background: $content-table-hover-color;
-				}
 			}
 		}
 		tbody {
@@ -79,9 +76,9 @@ $content-font-weight: $weight-medium;
 					&:first-child {
 						border-left: 0;
 					}
-					&:hover {
-						background: $content-table-hover-color;
-					}
+				}
+				&:hover {
+					background: $content-table-hover-color;
 				}
 				&:last-child {
 					border-bottom: 0;

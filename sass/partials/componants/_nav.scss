@@ -1,21 +1,21 @@
 $nav-brand-padding: 0.6rem;
 $nav-background-color: $white;
-$nav-dark-background-color: $dark;
+//$nav-dark-background-color: $dark;
 $nav-item-color: $primary;
 $nav-item-active-color: $white;
-$nav-dark-item-color: $white;
-$nav-dark-item-active-color: $white;
+//$nav-dark-item-color: $white;
+//$nav-dark-item-active-color: $white;
 $nav-item-background-color: $light;
-$nav-dark-item-background-color: $darker-grey;
+//$nav-dark-item-background-color: $darker-grey;
 $nav-item-active-background-color: $primary;
-$nav-dark-item-active-background-color: $darker-grey;
+//$nav-dark-item-active-background-color: $darker-grey;
 $nav-item-padding: 1.0rem 1.5rem;
 $nav-dropdown-border-color: $grey;
 $nav-dropdown-arrow-color: $primary;
-$nav-dark-dropdown-arrow-color: $white;
+//$nav-dark-dropdown-arrow-color: $white;
 $nav-burger-raduis: $radius-small;
 $nav-burger-color: $dark;
-$nav-dark-burger-color: $white;
+//$nav-dark-burger-color: $white;
 $nav-divider-color: $grey;
 
 .nav {
@@ -173,49 +173,49 @@ $nav-divider-color: $grey;
 			align-items: center;
 		}
 	}
-	&.dark {
-		background: $nav-dark-background-color;
-		.nav-burger {
-			&.active {
-				span {
-					border: 1px solid $nav-dark-burger-color;
-					background: $nav-dark-burger-color;
-				}
-				&:hover {
-					border: 1px solid $nav-dark-background-color;
-					background: $nav-dark-burger-color;
-					span {
-						border: 1px solid $nav-dark-background-color;
-						background: $nav-dark-background-color;
-					}
-				}
-			}
-		}
-		ul.level1 {
-			li.level1 {
-				a:not(.button) {
-					color: $nav-dark-item-color;
-					&:hover {
-						background: $nav-dark-item-background-color;
-					}
-				}
-				&.dropdown {
-					> a.nav-item {
-						&::after {
-							border-color: $nav-dark-dropdown-arrow-color;
-						}
-					}
-					.nav-dropdown {
-						background: $nav-dark-background-color;
-					}
-				}
-			}
-			&.active a:not(.button), & .level2.active a:not(.button) { 
-				color: $nav-dark-item-active-color;
-				background: $nav-dark-item-active-background-color;
-			}
-		}
-	}
+//	&.dark {
+//		background: $nav-dark-background-color;
+//		.nav-burger {
+//			&.active {
+//				span {
+//					border: 1px solid $nav-dark-burger-color;
+//					background: $nav-dark-burger-color;
+//				}
+//				&:hover {
+//					border: 1px solid $nav-dark-background-color;
+//					background: $nav-dark-burger-color;
+//					span {
+//						border: 1px solid $nav-dark-background-color;
+//						background: $nav-dark-background-color;
+//					}
+//				}
+//			}
+//		}
+//		ul.level1 {
+//			li.level1 {
+//				a:not(.button) {
+//					color: $nav-dark-item-color;
+//					&:hover {
+//						background: $nav-dark-item-background-color;
+//					}
+//				}
+//				&.dropdown {
+//					> a.nav-item {
+//						&::after {
+//							border-color: $nav-dark-dropdown-arrow-color;
+//						}
+//					}
+//					.nav-dropdown {
+//						background: $nav-dark-background-color;
+//					}
+//				}
+//			}
+//			&.active a:not(.button), & .level2.active a:not(.button) { 
+//				color: $nav-dark-item-active-color;
+//				background: $nav-dark-item-active-background-color;
+//			}
+//		}
+//	}
 	// in mobile and tablet
 	@media screen and (max-width: $tablet) {
 		.nav-burger {
@@ -265,8 +265,8 @@ $nav-divider-color: $grey;
 				}
 			}
 		}
-		&.dark ul.nav-menu li.level1.dropdown > a.nav-item {
-			background: $nav-dark-item-background-color;
-		}
+//		&.dark ul.nav-menu li.level1.dropdown > a.nav-item {
+//			background: $nav-dark-item-background-color;
+//		}
 	}
 }
