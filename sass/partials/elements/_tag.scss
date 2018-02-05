@@ -17,6 +17,12 @@ $tag-radius: $radius;
 	.tag:last-child {
 		border-radius: 0 $radius $radius 0;
 	}
+	.tag.close {
+		&::before, &::after {
+			top: 0.7rem;
+    		right: 0.3rem;
+		}
+	}
 }
 
 .tag {
@@ -30,6 +36,7 @@ $tag-radius: $radius;
 	&.close {
 		float: inherit;
 		padding: $size-small;
+		border: 2px solid $tag-background-color;
 		&::before, &::after {
 			width: 0.9rem;
 			top: 0.65rem;

@@ -2,8 +2,9 @@ $button-border-size: 1px;
 $button-border-style: solid;
 $button-border-color: $darker-grey;
 $button-border-hover-color: $dark;
-$button-padding-top-bottom: 0.5rem;
-$button-padding-left-right: 1.0rem ;
+$button-padding-top-bottom: 0.3rem;
+$button-padding-left-right: 1.0rem;
+$button-hover-background-color: $light;
 
 button,input {
 	font-size: $size-normal;
@@ -17,15 +18,19 @@ button,input {
     border-radius: $radius;
 	cursor: pointer;
 	background: $white;
-	&:hover {
-		color: $dark;
-		border-color: $button-border-hover-color;	
+	&.static:hover {
+		cursor: inherit;
+	}
+	&:not(.static):hover {
+		color: $darker-grey;
+		border-color: $button-border-hover-color;
+		background: $button-hover-background-color;
 	}
 	&.outlined {
 		color: $darker-grey;
 		border: $button-border-size $button-border-style $darker-grey;
 		background: transparent;
-		&:hover {
+		&:not(.static):hover {
 			color: $white;
 			background: $darker-grey;
 		}
@@ -34,7 +39,7 @@ button,input {
 		color: $darker-grey;
 		border: none;
 		background: $white;
-		&:hover {
+		&:not(.static):hover {
 			color: $white;
 			background: $darker-grey;
 		}
@@ -50,13 +55,16 @@ button,input {
 		border: none;
 		background: $white;
 		&:hover {
+			background: $white;
+		}
+		&:not(.static):hover {
 			background: $light;
 		}
 		&.outlined {
 			color: $text;
 			border: $button-border-size $button-border-style $white;
 			background: transparent;
-			&:hover {
+			&:not(.static):hover {
 				color: $white;
 				background: $light;
 			}
@@ -64,15 +72,20 @@ button,input {
 	}
 	&.light {
 		border: none;
+		color: $white;
 		background: $light-grey;
 		&:hover {
+			color: $white;
+			background: $light-grey;
+		}
+		&:not(.static):hover {
 			background: $grey;
 		}
 		&.outlined {
 			color: $light-grey;
 			border: $button-border-size $button-border-style $light-grey;
 			background: transparent;
-			&:hover {
+			&:not(.static):hover {
 				color: $white;
 				background: $light-grey;
 			}
@@ -81,7 +94,7 @@ button,input {
 			color: $light-grey;
 			border: none;
 			background: $white;
-			&:hover {
+			&:not(.static):hover {
 				color: $white;
 				background: $light-grey;
 			}
@@ -92,13 +105,18 @@ button,input {
 		color: $white;
 		background: $dark-grey;
 		&:hover {
+			color: $white;
+			background: $dark-grey;
+		}
+		&:not(.static):hover {
+			color: $white;
 			background: $darker-grey;
 		}
 		&.outlined {
 			color: $dark-grey;
 			border: $button-border-size $button-border-style $dark-grey;
 			background: transparent;
-			&:hover {
+			&:not(.static):hover {
 				color: $white;
 				background: $darker-grey;
 			}
@@ -107,7 +125,7 @@ button,input {
 			color: $dark-grey;
 			border: none;
 			background: $white;
-			&:hover {
+			&:not(.static):hover {
 				color: $white;
 				background: $dark-grey;
 			}
@@ -117,11 +135,15 @@ button,input {
 		border: none;
 		color: $white;
 		background: $darker-grey;
+		&:hover {
+			color: $white;
+			background: $darker-grey;
+		}
 		&.outlined {
 			color: $darker-grey;
 			border: $button-border-size $button-border-style $dark;
 			background: transparent;
-			&:hover {
+			&:not(.static):hover {
 				color: $white;
 				background: $darker-grey;
 			}
@@ -130,7 +152,7 @@ button,input {
 			color: $darker-grey;
 			border: none;
 			background: $white;
-			&:hover {
+			&:not(.static):hover {
 				color: $white;
 				background: $darker-grey;
 			}
@@ -140,11 +162,15 @@ button,input {
 		border: none;
 		color: $white;
 		background: $black;
+		&:hover {
+			color: $white;
+			background: $black;
+		}
 		&.outlined {
 			color: $black;
 			border: $button-border-size $button-border-style $black;
 			background: transparent;
-			&:hover {
+			&:not(.static):hover {
 				color: $white;
 				background: $black;
 			}
@@ -153,7 +179,7 @@ button,input {
 			color: $black;
 			border: none;
 			background: $white;
-			&:hover {
+			&:not(.static):hover {
 				color: $white;
 				background: $black;
 			}
@@ -163,12 +189,16 @@ button,input {
 		border: none;
 		text-decoration: underline;
 		&:hover {
+			color: $text;
+		}
+		&:not(.static):hover {
+			color: $text;
 			background: $text-hover;
 		}
 		&.outlined {
 			color: $text;
 			background: transparent;
-			&:hover {
+			&:not(.static):hover {
 				color: $text-invert;
 				background: $text;
 			}
@@ -177,7 +207,7 @@ button,input {
 			color: $text;
 			border: none;
 			background: $text-invert;
-			&:hover {
+			&:not(.static):hover {
 				color: $text-invert;
 				background: $text;
 			}
@@ -187,11 +217,15 @@ button,input {
 		border: none;
 		color: $primary-invert;
 		background-color: $primary;
+		&:hover {
+			color: $primary-invert;
+			background-color: $primary;
+		}
 		&.outlined {
 			color: $primary;
 			border: $button-border-size $button-border-style $primary;
 			background: transparent;
-			&:hover {
+			&:not(.static):hover {
 				color: $primary-invert;
 				background: $primary;
 			}
@@ -200,7 +234,7 @@ button,input {
 			color: $primary;
 			border: none;
 			background: $primary-invert;
-			&:hover {
+			&:not(.static):hover {
 				color: $primary-invert;
 				background: $primary;
 			}
@@ -210,11 +244,15 @@ button,input {
 		border: none;
 		color: $secondary-invert;
 		background-color: $secondary;
+		&:hover {
+			color: $secondary-invert;
+			background-color: $secondary;
+		}
 		&.outlined {
 			color: $secondary;
 			border: $button-border-size $button-border-style $secondary;
 			background: transparent;
-			&:hover {
+			&:not(.static):hover {
 				color: $secondary-invert;
 				background: $secondary;
 			}
@@ -223,7 +261,7 @@ button,input {
 			color: $secondary;
 			border: none;
 			background: $secondary-invert;
-			&:hover {
+			&:not(.static):hover {
 				color: $secondary-invert;
 				background: $secondary;
 			}
@@ -233,11 +271,15 @@ button,input {
 		border: none;
 		color: $info-invert;
 		background-color: $info;
+		&:hover {
+			color: $info-invert;
+			background-color: $info;
+		}
 		&.outlined {
 			color: $info;
 			border: $button-border-size $button-border-style $info;
 			background: transparent;
-			&:hover {
+			&:not(.static):hover {
 				color: $info-invert;
 				background: $info;
 			}
@@ -246,7 +288,7 @@ button,input {
 			color: $info;
 			border: none;
 			background: $info-invert;
-			&:hover {
+			&:not(.static):hover {
 				color: $info-invert;
 				background: $info;
 			}
@@ -256,11 +298,15 @@ button,input {
 		border: none;
 		color: $success-invert;
 		background-color: $success;
+		&:hover {
+			color: $success-invert;
+			background-color: $success;
+		}
 		&.outlined {
 			color: $success;
 			border: $button-border-size $button-border-style $success;
 			background: transparent;
-			&:hover {
+			&:not(.static):hover {
 				color: $success-invert;
 				background: $success;
 			}
@@ -269,7 +315,7 @@ button,input {
 			color: $success;
 			border: none;
 			background: $success-invert;
-			&:hover {
+			&:not(.static):hover {
 				color: $success-invert;
 				background: $success;
 			}
@@ -279,11 +325,15 @@ button,input {
 		border: none;
 		color: $link-invert;
 		background-color: $link;
+		&:hover {
+			color: $link-invert;
+			background-color: $link;
+		}
 		&.outlined {
 			color: $link;
 			border: $button-border-size $button-border-style $link;
 			background: transparent;
-			&:hover {
+			&:not(.static):hover {
 				color: $link-invert;
 				background: $link;
 			}
@@ -292,7 +342,7 @@ button,input {
 			color: $link;
 			border: none;
 			background: $link-invert;
-			&:hover {
+			&:not(.static):hover {
 				color: $link-invert;
 				background: $link;
 			}
@@ -302,11 +352,15 @@ button,input {
 		border: none;
 		color: $warning-invert;
 		background-color: $warning;
+		&:hover {
+			color: $warning-invert;
+			background-color: $warning;
+		}
 		&.outlined {
 			color: $warning;
 			border: $button-border-size $button-border-style $warning;
 			background: transparent;
-			&:hover {
+			&:not(.static):hover {
 				color: $warning-invert;
 				background: $warning;
 			}
@@ -315,7 +369,7 @@ button,input {
 			color: $warning;
 			border: none;
 			background: $warning-invert;
-			&:hover {
+			&:not(.static):hover {
 				color: $warning-invert;
 				background: $warning;
 			}
@@ -325,11 +379,15 @@ button,input {
 		border: none;
 		color: $danger-invert;
 		background-color: $danger;
+		&:hover {
+			color: $danger-invert;
+			background-color: $danger;
+		}
 		&.outlined {
 			color: $danger;
 			border: $button-border-size $button-border-style $danger;
 			background: transparent;
-			&:hover {
+			&:not(.static):hover {
 				color: $danger-invert;
 				background: $danger;
 			}
@@ -338,7 +396,7 @@ button,input {
 			color: $danger;
 			border: none;
 			background: $danger-invert;
-			&:hover {
+			&:not(.static):hover {
 				color: $danger-invert;
 				background: $danger;
 			}

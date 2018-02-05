@@ -151,64 +151,100 @@ $default-gap: $gap-2;
 	display: inline-flex;
 	flex: 1;
 	padding: $default-gap; 
-	&-1, &-offset-1 {
+	&-1 {
 		display: inline-flex;
 		width: 8.333334%;
 		padding: $default-gap;
 	}
-	&-2, &-offset-2 {
+	&-2 {
 		display: inline-flex;
 		width: 16.666667%;
 		padding: $default-gap;
 	}
-	&-3, &-offset-3 {
+	&-3 {
 		display: inline-flex;
 		width: 25%;
 		padding: $default-gap;
 	}
-	&-4, &-offset-4 {
+	&-4 {
 		display: inline-flex;
 		width: 33.333334%;
 		padding: $default-gap;
 	}
-	&-5, &-offset-5 {
+	&-5 {
 		display: inline-flex;
 		width: 41.666667%;
 		padding: $default-gap;
 	}
-	&-6, &-offset-6 {
+	&-6 {
 		display: inline-flex;
 		width: 50%;
 		padding: $default-gap;
 	}
-	&-7, &-offset-7 {
+	&-7 {
 		display: inline-flex;
 		width: 58.333%;
 		padding: $default-gap;
 	}
-	&-8, &-offset-8 {
+	&-8 {
 		display: inline-flex;
 		width: 66.666667%;
 		padding: $default-gap;
 	}
-	&-9, &-offset-9 {
+	&-9 {
 		display: inline-flex;
 		width: 75%;
 		padding: $default-gap;
 	}
-	&-10, &-offset-10 {
+	&-10 {
 		display: inline-flex;
 		width: 83.333334%;
 		padding: $default-gap;
 	}
-	&-11, &-offset-11 {
+	&-11 {
 		display: inline-flex;
 		width: 91.666667%;
 		padding: $default-gap;
 	}
-	&-12, &-offset-12 {
+	&-12 {
 		display: inline-flex;
 		width: 100%;
 		padding: $default-gap;
+	}
+	&-offset-1 {
+		margin-left: 8.333334%;
+	}
+	&-offset-2 {
+		margin-left: 16.666667%;
+	}
+	&-offset-3 {
+		margin-left: 25%;
+	}
+	&-offset-4 {
+		margin-left: 33.333334%;
+	}
+	&-offset-5 {
+		margin-left: 41.666667%;
+	}
+	&-offset-6 {
+		margin-left: 50%;
+	}
+	&-offset-7 {
+		margin-left: 58.333%;
+	}
+	&-offset-8 {
+		margin-left: 66.666667%;
+	}
+	&-offset-9 {
+		margin-left: 75%;
+	}
+	&-offset-10 {
+		margin-left: 83.333334%;
+	}
+	&-offset-11 {
+		margin-left: 91.666667%;
+	}
+	&-offset-12 {
+		margin-left: 100%;
 	}
 }

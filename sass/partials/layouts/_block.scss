@@ -34,7 +34,9 @@ $media-border-color: $grey;
 			margin-right: $default-gap;
 		}
 	}
-	
+	.field {
+		margin-bottom: 0;
+	}
 	@media screen and (max-width: $mobile) {
 		flex-wrap: wrap;
 		.block-left,
