@@ -87,6 +87,47 @@ $table-radius: 7px;
         }
     }
 
+    .button {
+        padding: 0.35rem 1rem;
+    }
+
+    tr.asp-pagination {
+        table, table tbody {
+            display: block;
+        }
+
+        table tr {
+            float: right;
+        }
+
+        table td {
+            text-align: center;
+            line-height: 0px;
+
+            &:hover {
+                background: $dark;
+
+                a, span {
+                    color: $table-header-color;
+                }
+            }
+        }
+
+        table tbody tr:first-child:not(.active) {
+            color: $dark;
+            background-color: transparent;
+            border-bottom: 0px;
+
+            td {
+                text-align: center;
+            }
+
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+
     &.first-col-center {
         tbody {
             tr {

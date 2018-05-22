@@ -255,6 +255,11 @@ $form-in-row-input-width: 3;
 	}
 }
 
+
+.input:not(.button)[type=date] {
+    padding: 0.4rem 0.7rem;
+}
+
 select {
 	-webkit-appearance: none; 
 	-moz-appearance: none;
@@ -395,21 +400,37 @@ select {
 }
 
 .file {
-	input {
-		display: none;
-	}
-	span {
-		padding: 0.5rem 0.7rem;
-		border: 1px solid $grey;
-		&.label {
-			background: $light;
-		}
-		&:nth-child(2){
-			margin-right: -1px;
-			border-radius: $radius 0 0 $radius;
-		}
-		&:last-child{
-			border-radius: 0 $radius $radius 0;
-		}
-	}
+    input {
+        display: none;
+    }
+
+    label {
+        display: flex;
+        text-align: center;
+        width: 100%;
+    }
+
+    span {
+        padding: 0.5rem 0.7rem;
+        border: 1px solid $grey;
+
+        &.label {
+            background: $light;
+            line-height: 1.3em;
+        }
+
+        &.name {
+            background: $white;
+            flex: 1;
+        }
+
+        &:nth-child(2) {
+            margin-right: -1px;
+            border-radius: $radius 0 0 $radius;
+        }
+
+        &:last-child {
+            border-radius: 0 $radius $radius 0;
+        }
+    }
 }
