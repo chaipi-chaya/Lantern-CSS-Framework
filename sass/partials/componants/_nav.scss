@@ -217,3 +217,60 @@ $nav-divider-color: $grey;
 		}
 	}
 }
+
+// asp net menu
+.nav-asp {
+
+    .main-menu {
+        ul.level1 {
+            > li {
+                a:not(.button) {
+                    display: flex;
+                    padding: $nav-item-padding;
+                    color: $nav-item-color;
+
+                    &:hover {
+                        background: $nav-item-background-color;
+                    }
+                }
+
+                a.static {
+                    padding: $nav-item-padding !important;
+                }
+
+                a.popout {
+                    background-image: none !important;
+
+                    &::after {
+                        content: "";
+                        display: inline-block;
+                        width: 0.6rem;
+                        height: 0.6rem;
+                        margin-left: 0.6rem;
+                        margin-top: 0.2rem;
+                        margin-bottom: 0.1rem;
+                        border-right: 3px solid $nav-dropdown-arrow-color;
+                        border-bottom: 3px solid $nav-dropdown-arrow-color;
+                        border-radius: 2px 0px;
+                        transform: rotate(45deg);
+                    }
+                }
+
+                &:not(last-child) a.button {
+                    margin-right: 0.5rem;
+                }
+
+                &.active a:not(.button), & .level2.active a:not(.button) {
+                    color: $nav-item-active-color;
+                    background: $nav-item-active-background-color;
+                }
+
+                ul.dynamic {
+                    min-width: 100%;
+                    background: $nav-background-color;
+                    z-index: 999 !important;
+                }
+            }
+        }
+    }
+}
