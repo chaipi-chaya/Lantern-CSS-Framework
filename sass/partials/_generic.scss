@@ -38,6 +38,7 @@ hr {
 	border-style: $hr-border-style;
 	border-color: $hr-border-color;
 	height: $hr-height;
+    width: 100%;
 	margin: $hr-margin;
 	margin-left: $hr-margin-left;
 	margin-right: $hr-margin-right;
@@ -47,4 +48,7 @@ hr {
 	line-height: $p-line-height;
 }
 
-
+pre {
+    width: 100%;
+    white-space: pre-wrap;
+}

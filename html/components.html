@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Lantern Manual!</title>
+		<link rel="stylesheet" type="text/css" href="../css/lantern.css">
+    </head>
+	<body>
+        <!-- begin of nav -->
+		<nav class="nav">
+			<div class="container-fluid">
+            <div class="nav-burger" onclick="navToggle(this)">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+                <ul class="nav-menu">
+                    <ul class="nav-start level1">
+                      <li class="nav-item level1"><a href="index.html">
+                        Overview
+                          </a></li>
+                      <li class="nav-item level1"><a href="modifiers.html">
+                        Modifiers
+                          </a></li>
+                      <li class="nav-item level1 dropdown hoverable">
+                        <a class="nav-item level1" href="Layout/layout.html">
+                          Layout
+                        </a>
+                        <ul class="nav-dropdown level2 boxed">
+                          <li class="nav-item level2"><a href="Layout/sections.html">
+                            Sections
+                              </a></li>
+                          <li class="nav-item level2"><a href="Layout/container.html">
+                              Container
+                          </a></li>
+                          <li class="nav-item level2"><a href="Layout/columns.html">
+                              Columns
+                          </a></li>
+                          <li class="nav-item level2"><a href="Layout/block.html">
+                              Block
+                          </a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item level1"><a href="contents.html">
+                        Contents
+                          </a></li>
+                      <li class="nav-item level1"><a href="components.html">
+                        Components
+                          </a></li>
+                      <li class="nav-item level1"><a href="elements.html">
+                        Elements
+                          </a></li>
+                      <li class="nav-item level1"><a href="utilities.html">
+                        Utilities
+                          </a></li>
+                      <li class="nav-item level1"><a href="fields.html">
+                        Fields
+                          </a></li>
+                      <li class="nav-item level1"><a href="supalerk.html">
+                        Supalerk version
+                          </a></li>
+                    </ul>
+                </ul>
+			</div>
+		</nav>
+        <!-- end of nav -->
+		<main class="cols">
+            <section class="section col-12">
+				<div class="container-fluid">
+                    <!-- begin of content -->
+                    <!-- Two col each menu with discription -->
+                    <div class="cols">
+                        <h2 class="title size-2 col-12">Components</h2>
+                        <hr>
+                        <div class="col-6">
+                            <div class="cols">
+                                <div class="col-12">
+                                    <a class="bg-link" href="#breadcrumb">
+                                        <h3 class="title size-4">Breadcrumb</h3>
+                                    </a>
+                                </div>
+                                <div class="col-12">
+                                    <a class="bg-link" href="#dropdown">
+                                        <h3 class="title size-4">Dropdown</h3>
+                                    </a>
+                                </div>
+                                <div class="col-12">
+                                    <a class="bg-link" href="#menu">
+                                        <h3 class="title size-4">Menu</h3>
+                                    </a>
+                                </div>
+                                <div class="col-12">
+                                    <a class="bg-link" href="#message">
+                                        <h3 class="title size-4">Message</h3>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="cols">
+                                <div class="col-12">
+                                    <a class="bg-link" href="#model">
+                                        <h3 class="title size-4">Model</h3>
+                                    </a>
+                                </div>
+                                <div class="col-12">
+                                    <a class="bg-link" href="#nav">
+                                        <h3 class="title size-4">Nav</h3>
+                                    </a>
+                                </div>
+                                <div class="col-12">
+                                    <a class="bg-link" href="#tabs">
+                                        <h3 class="title size-4">Tabs</h3>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  start of each component -->
+                        <hr>
+                        <!-- breadcrumb -->
+                        <div class="col-12">
+                            <div class="cols">
+                                <h3 id="breadcrumb" class="title size-4 fullwidth">Breadcrumb</h3>
+                                <div class="col-6">
+                                    <div class="cols">
+                                        <div class="col-12">
+                                            <nav class="breadcrumb" aria-label="breadcrumbs">
+                                              <ul>
+                                                <li><a href="#">Test</a></li>
+                                                <li><a href="#">Documentation</a></li>
+                                                <li><a href="#">Components</a></li>
+                                                <li class="active"><a href="#" aria-current="page">Breadcrumb</a></li>
+                                              </ul>
+                                            </nav>
+                                        </div>
+                                        <div class="col-12">
+                                            <span>เปลี่ยนขนาดได้โดยการเพิ่ม class small, medium, large</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                <pre>
+                                    <code class="html">      
+<span class="nt">&lt;nav&gt;</span>
+    <span class="nt">&lt;ul&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a </span><span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Test<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a </span><span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Documentation<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a </span><span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Components<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;li</span><span class="na">class=</span><span class="s">"active"</span><span>&gt;</span><span class="nt">&lt;a </span><span class="na">href=</span><span class="s">"#"</span><span class="na"> aria-current=</span><span class="s">"page"</span><span class="nt">&gt;</span>Breadcrumb<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+                                    </code>
+                                </pre>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <!-- dropdown -->
+                        <div class="col-12">
+                            <div class="cols">
+                                <h3 id="dropdown" class="title size-4 fullwidth">Dropdown</h3>
+                                <div class="col-6">
+                                    <div class="cols">
+                                        <div class="col-12">
+                                            <div class="dropdown hoverable">
+                                              <div class="dropdown-trigger">
+                                                <button class="button">
+                                                    <span>Dropdown button</span>
+                                                </button>
+                                                  <div class="dropdown-menu">
+                                                    <div class="dropdown-content">
+                                                      <a href="#" class="dropdown-item">
+                                                        Dropdown item
+                                                      </a>
+                                                      <a class="dropdown-item">
+                                                        Other dropdown item
+                                                      </a>
+                                                      <a href="#" class="dropdown-item active">
+                                                        Active dropdown item
+                                                      </a>
+                                                      <a href="#" class="dropdown-item">
+                                                        Other dropdown item
+                                                      </a>
+                                                      <hr class="dropdown-divider">
+                                                      <a href="#" class="dropdown-item">
+                                                        With a divider
+                                                      </a>
+                                                    </div>
+                                                  </div>
+                                              </div>
+                                            </div>
+                                            <div class="dropdown hoverable up">
+                                              <div class="dropdown-trigger">
+                                                <button class="button">
+                                                    <span>Dropdown button</span>
+                                                </button>
+                                                  <div class="dropdown-menu">
+                                                    <div class="dropdown-content">
+                                                      <a href="#" class="dropdown-item">
+                                                        Dropdown item
+                                                      </a>
+                                                      <a class="dropdown-item">
+                                                        Other dropdown item
+                                                      </a>
+                                                      <a href="#" class="dropdown-item active">
+                                                        Active dropdown item
+                                                      </a>
+                                                      <a href="#" class="dropdown-item">
+                                                        Other dropdown item
+                                                      </a>
+                                                      <hr class="dropdown-divider">
+                                                      <a href="#" class="dropdown-item">
+                                                        With a divider
+                                                      </a>
+                                                    </div>
+                                                  </div>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <span>สามารถเปิดทางด้านบนซ้ายและขวาโดยการเพิ่ม class up, right left ตามลำดับ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                <pre>
+                                    <code class="html">
+<span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"dropdown hoverable"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"dropdown-trigger"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button </span><span class="na">class=</span><span class="s">"button"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span&gt;</span>Dropdown button<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"dropdown-content"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;a </span><span class="na">href=</span><span class="s">"#"</span><span class="na">class=</span><span class="s">"dropdown-item"</span><span class="nt">&gt;</span>Dropdown item<span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;a </span><span class="na">href=</span><span class="s">"#"</span><span class="na">class=</span><span class="s">"dropdown-item"</span><span class="nt">&gt;</span>Other dropdown item<span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;a </span><span class="na">href=</span><span class="s">"#"</span><span class="na">class=</span><span class="s">"dropdown-item"</span><span class="nt">&gt;</span>Active dropdown item<span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;a </span><span class="na">href=</span><span class="s">"#"</span><span class="na">class=</span><span class="s">"dropdown-item"</span><span class="nt">&gt;</span>Other dropdown item<span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;hr </span><span class="na">class=</span><span class="s">"dropdown-divider"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;a </span><span class="na">href=</span><span class="s">"#"</span><span class="na">class=</span><span class="s">"dropdown-item"</span><span class="nt">&gt;</span>With a divider<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+                                    </code>
+                                </pre>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <!-- menu -->
+                        <div class="col-12">
+                            <div class="cols">
+                                <h3 id="menu" class="title size-4 fullwidth">Menu</h3>
+                                <div class="col-6">
+                                    <div class="cols">
+                                        <div class="col-12">
+                                            <aside class="menu fullwidth">
+                                                  <p class="menu-label">
+                                                    General
+                                                  </p>
+                                                  <ul class="menu-list">
+                                                    <li><a href="#">Dashboard</a></li>
+                                                    <li><a>Customers</a></li>
+                                                  </ul>
+                                                  <p class="menu-label">
+                                                    Administration
+                                                  </p>
+                                                  <ul class="menu-list">
+                                                    <li class="menu-item"><a>Team Settings</a></li>
+                                                    <li>
+                                                      <a class="active">Manage Your Team</a>
+                                                      <ul>
+                                                        <li><a>Members</a></li>
+                                                        <li><a>Plugins</a></li>
+                                                        <li><a>Add a member</a></li>
+                                                      </ul>
+                                                    </li>
+                                                    <li><a>Invitations</a></li>
+                                                    <li><a>Cloud Storage Environment Settings</a></li>
+                                                    <li><a>Authentication</a></li>
+                                                  </ul>
+                                                  <p class="menu-label">
+                                                    Transactions
+                                                  </p>
+                                                  <ul class="menu-list">
+                                                    <li><a>Payments</a></li>
+                                                    <li><a>Transfers</a></li>
+                                                    <li><a>Balance</a></li>
+                                                  </ul>
+                                            </aside>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <pre>
+                                        <code class="html">
+<span class="nt">&lt;aside </span><span class="na">class=</span><span class="s">"menu"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p </span><span class="na">class=</span><span class="s">"menu-label"</span><span class="nt">&gt;</span>General<span class="nt">&lt;p&gt;</span>
+    <span class="nt">&lt;ul </span><span class="na">class=</span><span class="s">"menu-list"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a </span><span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Dropdown item<span class="nt">&lt;/a&gt;</span><span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a&gt;</span>Dropdown item<span class="nt">&lt;/a&gt;</span><span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;p </span><span class="na">class=</span><span class="s">"menu-label"</span><span class="nt">&gt;</span>Administration<span class="nt">&lt;p&gt;</span>
+        <span class="nt">&lt;ul </span><span class="na">class=</span><span class="s">"menu-list"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a </span><span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Team Settings<span class="nt">&lt;/a&gt;</span><span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a </span><span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>Manage Your Team<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;ul&gt;</span>
+                <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a&gt;</span>Invitations<span class="nt">&lt;/a&gt;</span><span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a&gt;</span>Cloud Storage Environment Settings<span class="nt">&lt;/a&gt;</span><span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a&gt;</span>Add a member<span class="nt">&lt;/a&gt;</span><span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a&gt;</span>Members<span class="nt">&lt;/a&gt;</span><span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a&gt;</span>Plugins<span class="nt">&lt;/a&gt;</span><span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a&gt;</span>Authentication<span class="nt">&lt;/a&gt;</span><span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;p </span><span class="na">class=</span><span class="s">"menu-label"</span><span class="nt">&gt;</span>Transactions<span class="nt">&lt;p&gt;</span>
+    <span class="nt">&lt;ul </span><span class="na">class=</span><span class="s">"menu-list"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a&gt;</span>Payments<span class="nt">&lt;/a&gt;</span><span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a&gt;</span>Transfers<span class="nt">&lt;/a&gt;</span><span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a&gt;</span>Balance<span class="nt">&lt;/a&gt;</span><span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/aside&gt;</span>
+        
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <!-- message -->
+                        <div class="col-12">
+                            <div class="cols">
+                                <h3 id="message" class="title size-4 fullwidth">Message</h3>
+                                <div class="col-6">
+                                    <div class="cols">
+                                        <div class="col-12">
+                                            <span>สามารถเปลี่ยนขนาดได้โดยการเพิ่ม class small, medium และ large หลัง class message</span>
+                                        </div>
+                                        <div class="col-12">
+                                            <span>สามารถเปลี่ยนสีได้โดยการเพิ่ม class dark, primary, secondary, info, success, warning และ danger หลัง class message</span>
+                                        </div>
+                                        <div class="col-12">
+                                            <span>ต้องเพิ่ม function กดปิด message ใน javascript เอง</span>
+                                        </div>
+                                        <div class="col-12">
+                                            <article class="message">
+                                              <div class="message-header">
+                                                <p>Message</p>
+                                                <button class="close"></button>
+                                              </div>
+                                              <div class="message-body">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                                              </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <pre>
+                                        <code class="html">
+<span class="nt">&lt;article </span><span class="na">class=</span><span class="s">"message"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"message-header"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Message<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;button </span><span class="na">class=</span><span class="s">"close"</span><span class="nt">&gt;</span><span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"message-body"</span><span class="nt">&gt;</span>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="nt">&lt;strong&gt;</span>Pellentesque risus mi<span class="nt">&lt;/strong&gt;</span>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <span class="nt">&lt;a&gt;</span>felis venenatis<span class="nt">&lt;/a&gt;</span> efficitur. Aenean ac <span class="nt">&lt;em&gt;</span>eleifend lacus<span class="nt">&lt;/em&gt;</span>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/article&gt;</span>
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <!-- model -->
+                        <div class="col-12">
+                            <div class="cols">
+                                <h3 id="model" class="title size-4 fullwidth">Model</h3>
+                                <div class="col-6">
+                                    <div class="cols">
+                                        <div class="col-12">
+                                            <span>สามารถเปลี่ยนขนาดได้โดยการเพิ่ม class small, medium และ large หลัง class message</span>
+                                        </div>
+                                        <div class="col-12">
+                                            <span>สามารถเปลี่ยนสีได้โดยการเพิ่ม class dark, primary, secondary, info, success, warning และ danger หลัง class message</span>
+                                        </div>
+                                        <div class="col-12">
+                                            <span>ต้องเพิ่ม function กดปิด message ใน javascript เอง ตัวอย่างอยู่ในไฟล์ demo.html</span>
+                                        </div>
+                                        <div class="col-12">
+                                            <button class="button primary" onclick="modalShow(this)">Launch Model</button>
+                                            <div class="modal">
+                                              <div class="modal-background" onclick="modalHide(this)"></div>
+                                              <div class="modal-content">
+                                                  <!-- content -->
+                                              </div>
+                                              <button class="close large" onclick="modalHide(this)" aria-label="close"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <pre>
+                                        <code class="html">
+<span class="nt">&lt;button </span><span class="na">class=</span><span class="s">"button primary"</span><span class="na"> onclick=</span><span class="s">"modalShow(this)"</span><span class="nt">&gt;</span>Launch Model<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"modal"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"modal-background"</span><span class="na"> onclick=</span><span class="s">"modalShow(this)"</span><span class="nt">&gt;</span><span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"modal-content"</span><span class="na"> onclick=</span><span class="s">"modalShow(this)"</span><span class="nt">&gt;</span>&gt;!-- content --&gt;<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;button </span><span class="na">class=</span><span class="s">"close large"</span><span class="na"> onclick=</span><span class="s">"modalShow(this)"</span><span class="na"> aria-label=</span><span class="s">"close"</span><span class="nt">&gt;</span><span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <!-- nav -->
+                        <div class="col-12">
+                            <div class="cols">
+                                <h3 id="nav" class="title size-4 fullwidth">Nav</h3>
+                                <div class="col-12">
+                                    <div class="cols">
+                                        <div class="col-12">
+                                            <span>class nav-logo เอาไว้ใส่รูปโลโก้ ต้องอยู่ใน class nav-brand</span>
+                                        </div>
+                                        <div class="col-12">
+                                            <span>class nav-burger เอาไว้แสดงตัวปุ่มเมนูขนาดเล็ก จะขึ้นมาเมื่อขนาดหน้าจอเล้กลง ปรับแต่งได้ในไฟล์ _initial.scss</span>
+                                        </div>
+                                        <div class="col-12">
+                                            <span>class nav-start เป็น div ชั้นนอกเอาไว้จัดชุดเมนูให้อยู่ทางซ้าย</span>
+                                        </div>
+                                        <div class="col-12">
+                                            <span>class nav-end เป็น div ชั้นนอกเอาไว้จัดชุดเมนูให้อยู่ทางขวา</span>
+                                        </div>
+                                        <div class="col-12">
+                                            <span>class nav-item ต้องใส่เอาไว้ทุกอันที่เป็นตัวเลือกใน menu</span>
+                                        </div>
+                                        <div class="col-12">
+                                            <span>class level1 คือชั้นนอกสุด level2 คือชั้นในภายใต้ class nav-dropdown</span>
+                                        </div>
+                                        <div class="col-12">
+                                            <span>class nav-divider ใน hr เอาไว้แบบเมนูใน dropdown</span>
+                                        </div>
+                                        <div class="col-12">
+                                            <nav class="nav">
+                                                <div class="container-fluid">
+                                                    <ul class="nav-brand">
+                                                        <a class="nav-logo">
+                                                        </a>
+                                                        <li class="nav-item level1">
+                                                            <a class="button">
+                                                                <span>Test</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="nav-burger" onclick="navToggle(this)">
+                                                      <span></span>
+                                                      <span></span>
+                                                      <span></span>
+                                                    </div>
+
+                                                  <ul class="nav-menu">
+                                                    <ul class="nav-start level1">
+                                                      <li class="nav-item level1"><a>
+                                                        Home
+                                                          </a></li>
+                                                      <li class="nav-item level1 dropdown hoverable">
+                                                        <a class="nav-item level1">
+                                                          Docs
+                                                        </a>
+                                                        <ul class="nav-dropdown level2 boxed">
+                                                          <li class="nav-item level2"><a>
+                                                            Overview
+                                                              </a></li>
+                                                          <li class="nav-item level2"><a>
+                                                              Modifiers
+                                                          </a></li>
+                                                          <li class="nav-item level2"><a>
+                                                            Columns
+                                                              </a></li>
+                                                          <li class="nav-item level2"><a>
+                                                            Layout
+                                                              </a></li>
+                                                          <li class="nav-item level2"><a>
+                                                            Form
+                                                              </a></li>
+                                                          <hr class="nav-divider">
+                                                          <li class="nav-item level2"><a>
+                                                            Elements
+                                                              </a></li>
+                                                          <li class="nav-item level2 active"><a>
+                                                            Components
+                                                              </a></li>
+                                                        </ul>
+                                                      </li>
+                                                    </ul>
+
+                                                    <ul class="nav-end level1">
+                                                        <li class="nav-item level1">
+                                                            <a class="button">
+                                                                <span>Tweet</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item level1">
+                                                            <a class="button primary">
+                                                              <span>Download</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                  </ul>
+                                                </div>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <!-- tabs -->
+                        <div class="col-12">
+                            <div class="cols">
+                                <h3 id="tabs" class="title size-4 fullwidth">Tabs</h3>
+                                <div class="col-6">
+                                    <div class="cols">
+                                        <div class="col-12">
+                                            <span>สามารถเพิ่มรูปแบบได้โดยการเพิ่ม class</span>
+                                        </div>
+                                        <div class="col-12">
+                                            <span>แบบ ธรรมดา</span>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="tabs fullwidth">
+                                              <ul>
+                                                <li class="active"><a>Pictures</a></li>
+                                                <li><a>Music</a></li>
+                                                <li><a>Videos</a></li>
+                                                <li><a>Documents</a></li>
+                                              </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <span>แบบ boxed</span>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="tabs boxed fullwidth">
+                                              <ul>
+                                                <li class="active"><a>Pictures</a></li>
+                                                <li><a>Music</a></li>
+                                                <li><a>Videos</a></li>
+                                                <li><a>Documents</a></li>
+                                              </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <span>แบบ bordered</span>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="tabs bordered fullwidth">
+                                              <ul>
+                                                <li class="active"><a>Pictures</a></li>
+                                                <li><a>Music</a></li>
+                                                <li><a>Videos</a></li>
+                                                <li><a>Documents</a></li>
+                                              </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <span>แบบ rounded</span>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="tabs rounded fullwidth">
+                                              <ul>
+                                                <li class="active"><a>Pictures</a></li>
+                                                <li><a>Music</a></li>
+                                                <li><a>Videos</a></li>
+                                                <li><a>Documents</a></li>
+                                              </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <span>แก้ไขขนาดได้โดยการเพิ่ม class small medium และ large</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <pre>
+                                        <code class="html">
+<span class="nt">&lt;div </span><span class="na">class=</span><span class="s">"tabs boxed"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul&gt;</span>
+        <span class="nt">&lt;li </span><span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span><span class="nt">&lt;a&gt;</span>Pictures<span class="nt">&lt;/a&gt;</span><span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a&gt;</span>Music<span class="nt">&lt;/a&gt;</span><span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a&gt;</span>Videos<span class="nt">&lt;/a&gt;</span><span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a&gt;</span>Documents<span class="nt">&lt;/a&gt;</span><span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  end of each component -->
+                    </div>
+                    <!-- end of content -->
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

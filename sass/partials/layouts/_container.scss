@@ -8,7 +8,7 @@ $default-gap: $gap-2;
 		max-width: $mobile;
 	}
 	@media screen and (min-width: $mobile) and (max-width: $tablet) {
-		max-width: $tablet;
+		max-width: $mobile;
 	}
 	@media screen and (min-width: $tablet) and (max-width: $desktop) {
 		max-width: $tablet;

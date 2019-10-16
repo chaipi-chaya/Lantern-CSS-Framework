@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Lantern Manual!</title>
+		<link rel="stylesheet" type="text/css" href="../../css/lantern.css">
+        <style>
+            
+            .bg-cyan > span {
+                display: block; width: 100%; height: 50px; line-height: 50px;
+                background: #3498DB;
+                color: #FFFFFF;
+                padding: 0rem 0.5rem;
+            }
+            .bg-gray {
+                background: #DDDDDD;
+            }
+            
+        </style>
+    </head>
+	<body>
+        <!-- begin of nav -->
+		<nav class="nav">
+			<div class="container-fluid">
+            <div class="nav-burger" onclick="navToggle(this)">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+                <ul class="nav-menu">
+                    <ul class="nav-start level1">
+                      <li class="nav-item level1"><a href="../index.html">
+                        Overview
+                          </a></li>
+                      <li class="nav-item level1"><a href="../modifiers.html">
+                        Modifiers
+                          </a></li>
+                      <li class="nav-item level1 dropdown hoverable">
+                        <a class="nav-item level1" href="layout.html">
+                          Layout
+                        </a>
+                        <ul class="nav-dropdown level2 boxed">
+                          <li class="nav-item level2"><a href="sections.html">
+                            Sections
+                              </a></li>
+                          <li class="nav-item level2"><a href="container.html">
+                              Container
+                          </a></li>
+                          <li class="nav-item level2"><a href="columns.html">
+                              Columns
+                          </a></li>
+                          <li class="nav-item level2"><a href="block.html">
+                              Block
+                          </a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item level1"><a href="../contents.html">
+                        Contents
+                          </a></li>
+                      <li class="nav-item level1"><a href="../components.html">
+                        Components
+                          </a></li>
+                      <li class="nav-item level1"><a href="../elements.html">
+                        Elements
+                          </a></li>
+                      <li class="nav-item level1"><a href="../utilities.html">
+                        Utilities
+                          </a></li>
+                      <li class="nav-item level1"><a href="../fields.html">
+                        Fields
+                          </a></li>
+                      <li class="nav-item level1"><a href="../supalerk.html">
+                        Supalerk version
+                          </a></li>
+                    </ul>
+                </ul>
+			</div>
+		</nav>
+        <!-- end of nav -->
+		<main class="cols">
+            <section class="section col-12">
+				<div class="container-fluid">
+                    <!-- begin of content -->
+                    <div class="cols">
+                        <h2 class="title size-2 col-12">Block</h2>
+                        <span class="subtitle size-3 col-12">ใช้จัดหน้า</span>
+                        <hr>
+                        <div class="col-12">
+                            <div class="cols">
+                                <h3 class="title size-5 col-12">ทั่วไป</h3>
+                                <span class="subtitle size-6 col-12">สร้าง class cols ครอบ col เอาไว้</span>
+                            </div>
+                        </div>
+                        <section class="demo section fullwidth">
+                            <h3 class="subtitle size-4" style="margin-bottom: 10px;">ตัวอย่าง</h3>
+                            <div class="blocks" style="text-align: center;">
+                                <div class="block-left bg-gray">
+                                    <div class="block-item bg-cyan">
+                                        <span>block-item ใน block-left</span>
+                                    </div>
+                                </div>
+                                <div class="block-center bg-gray">
+                                    <div class="block-item bg-cyan">
+                                        <span>block-item ใน block-center</span>
+                                    </div>
+                                </div>
+                                <div class="block-right bg-gray">
+                                    <div class="block-item bg-cyan">
+                                        <span>block-item ใน block-right</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="cols">
+                                    <pre>
+                                        <code class="html">
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"blocks"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block-left"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"block-item"</span><span class="nt">&gt;</span>
+            block-item ใน block-left
+        <span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block-center"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"block-item"</span><span class="nt">&gt;</span>
+            block-item ใน block-center
+        <span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block-right"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"block-item"</span><span class="nt">&gt;</span>
+            block-item ใน block-right
+        <span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- end of content -->
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

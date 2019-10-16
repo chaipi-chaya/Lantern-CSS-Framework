@@ -5,13 +5,14 @@ $media-border-size: 1px;
 $media-border-style: solid;
 $media-border-color: $grey;
 
-.block {
+.blocks {
 	display: flex;
 	.block-left,
 	.block-right,
 	.block-center {
 		display: flex;
 		flex: 1;
+        padding: $default-gap;
 	}
 	.block-left {
 		justify-content: flex-start;

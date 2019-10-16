@@ -1,3 +1,29 @@
 .fullwidth {
 	width: 100%;
 }
+
+// for <a> background link //
+.bg-link {
+    display: block;
+    width: 100%;
+}
+
+// color //
+.color-primary {
+    color: $primary;
+}
+.color-secondary {
+    color: $secondary;
+}
+.color-info {
+    color: $info;
+}
+.color-success {
+    color: $success;
+}
+.color-warning {
+    color: $warning;
+}
+.color-danger {
+    color: $danger;
+}

@@ -79,7 +79,7 @@ $nav-divider-color: $grey;
 		}
 	}
 	ul.nav-menu {
-		display: inline-block;
+		display: flex;
 	}
 	ul.level1 {
 		li.level1 {
@@ -102,7 +102,7 @@ $nav-divider-color: $grey;
 						width: 0.6rem;
 						height: 0.6rem;
 						margin-left: 0.6rem;
-						margin-top: 0.2rem;
+						margin-top: 0.4rem;
 						border-right: 3px solid $nav-dropdown-arrow-color;
 						border-bottom: 3px solid $nav-dropdown-arrow-color;
 						border-radius: 2px 0px;
@@ -155,15 +155,15 @@ $nav-divider-color: $grey;
 		flex: 1;
 		.nav-start {
 			display: inline-flex;
-			float: left;
-			height: 100%;
 			align-items: center;
+            justify-content: flex-start;
+            flex: 1;
 		}
 		.nav-end {
 			display: inline-flex;
-			float: right;
-			height: 100%;
 			align-items: center;
+            justify-content: flex-end;
+            flex: 1;
 		}
 	}
 	// in mobile and tablet
